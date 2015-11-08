@@ -183,6 +183,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormIngresoStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Ingreso Stock";
             this.Load += new System.EventHandler(this.FormIngresoStock_Load);
             this.ResumeLayout(false);
