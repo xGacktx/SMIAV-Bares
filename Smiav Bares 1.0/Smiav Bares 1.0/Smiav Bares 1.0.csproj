@@ -50,6 +50,7 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBConnect.cs" />
     <Compile Include="FormIngresoStock.cs">
       <SubType>Form</SubType>
     </Compile>
