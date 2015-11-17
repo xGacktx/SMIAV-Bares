@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +56,12 @@
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="GarzonUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarzonUI.Designer.cs">
+      <DependentUpon>GarzonUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIngresoStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +88,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="smiav_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smiav_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GarzonUI.resx">
+      <DependentUpon>GarzonUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresoStock.resx">
       <DependentUpon>FormIngresoStock.cs</DependentUpon>
@@ -111,6 +135,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="smiav_dbDataSet.xsc">
+      <DependentUpon>smiav_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet.xss">
+      <DependentUpon>smiav_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet1.xsc">
+      <DependentUpon>smiav_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet1.xss">
+      <DependentUpon>smiav_dbDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -58,12 +58,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(378, 85);
+            this.textBox1.Location = new System.Drawing.Point(378, 82);
             this.textBox1.MinimumSize = new System.Drawing.Size(4, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.UseSystemPasswordChar = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -85,6 +86,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LoginAdmin
             // 

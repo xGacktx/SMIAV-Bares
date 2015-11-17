@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabStock = new System.Windows.Forms.TabControl();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnRut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNick = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -55,10 +51,22 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ColumnIDProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNombreProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrecioProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrecioDescuentoProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.smiav_dbDataSet = new Smiav_Bares_1._0.smiav_dbDataSet();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
+            this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smiav_dbDataSet1 = new Smiav_Bares_1._0.smiav_dbDataSet1();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,6 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiavdbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStock
@@ -90,7 +103,7 @@
             this.tabUsuarios.Padding = new System.Windows.Forms.Padding(3);
             this.tabUsuarios.Size = new System.Drawing.Size(801, 314);
             this.tabUsuarios.TabIndex = 0;
-            this.tabUsuarios.Text = "Gestion Usuarios";
+            this.tabUsuarios.Text = "Gestión Usuarios";
             this.tabUsuarios.UseVisualStyleBackColor = true;
             this.tabUsuarios.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -124,42 +137,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnRut,
-            this.ColumnNombre,
-            this.ColumnCargo,
-            this.ColumnNick,
-            this.ColumnPassword});
+            this.rutDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.cargoDataGridViewTextBoxColumn,
+            this.nickDataGridViewTextBoxColumn,
+            this.claveDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.usuarioBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(52, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(545, 247);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnRut
-            // 
-            this.ColumnRut.HeaderText = "Rut";
-            this.ColumnRut.Name = "ColumnRut";
-            // 
-            // ColumnNombre
-            // 
-            this.ColumnNombre.HeaderText = "Nombre";
-            this.ColumnNombre.Name = "ColumnNombre";
-            // 
-            // ColumnCargo
-            // 
-            this.ColumnCargo.HeaderText = "Cargo";
-            this.ColumnCargo.Name = "ColumnCargo";
-            // 
-            // ColumnNick
-            // 
-            this.ColumnNick.HeaderText = "Nick";
-            this.ColumnNick.Name = "ColumnNick";
-            // 
-            // ColumnPassword
-            // 
-            this.ColumnPassword.HeaderText = "Password";
-            this.ColumnPassword.Name = "ColumnPassword";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabPage3
             // 
@@ -172,7 +163,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(801, 314);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Gestion Stock";
+            this.tabPage3.Text = "Gestión Stock";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -259,7 +250,7 @@
             this.tabProductos.Padding = new System.Windows.Forms.Padding(3);
             this.tabProductos.Size = new System.Drawing.Size(801, 314);
             this.tabProductos.TabIndex = 3;
-            this.tabProductos.Text = "Gestion Productos";
+            this.tabProductos.Text = "Gestión Productos";
             this.tabProductos.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -292,37 +283,106 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnIDProd,
-            this.ColumnNombreProd,
-            this.ColumnPrecioProd,
-            this.ColumnPrecioDescuentoProd});
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn1,
+            this.precioDataGridViewTextBoxColumn,
+            this.preciodescDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.productoBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(18, 18);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(443, 279);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // ColumnIDProd
+            // smiav_dbDataSet
             // 
-            this.ColumnIDProd.HeaderText = "ID";
-            this.ColumnIDProd.Name = "ColumnIDProd";
+            this.smiav_dbDataSet.DataSetName = "smiav_dbDataSet";
+            this.smiav_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ColumnNombreProd
+            // usuarioBindingSource
             // 
-            this.ColumnNombreProd.HeaderText = "Nombre";
-            this.ColumnNombreProd.Name = "ColumnNombreProd";
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.smiav_dbDataSet;
             // 
-            // ColumnPrecioProd
+            // usuarioTableAdapter
             // 
-            this.ColumnPrecioProd.HeaderText = "Precio";
-            this.ColumnPrecioProd.Name = "ColumnPrecioProd";
+            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // ColumnPrecioDescuentoProd
+            // rutDataGridViewTextBoxColumn
             // 
-            this.ColumnPrecioDescuentoProd.HeaderText = "Precio Descuento";
-            this.ColumnPrecioDescuentoProd.Name = "ColumnPrecioDescuentoProd";
+            this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
+            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
+            this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // cargoDataGridViewTextBoxColumn
+            // 
+            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
+            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
+            // 
+            // nickDataGridViewTextBoxColumn
+            // 
+            this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
+            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
+            this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
+            // 
+            // claveDataGridViewTextBoxColumn
+            // 
+            this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
+            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
+            this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
+            // 
+            // smiavdbDataSetBindingSource
+            // 
+            this.smiavdbDataSetBindingSource.DataSource = this.smiav_dbDataSet;
+            this.smiavdbDataSetBindingSource.Position = 0;
+            // 
+            // smiav_dbDataSet1
+            // 
+            this.smiav_dbDataSet1.DataSetName = "smiav_dbDataSet1";
+            this.smiav_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.smiav_dbDataSet1;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // preciodescDataGridViewTextBoxColumn
+            // 
+            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
+            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento";
+            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
             // 
             // AdminUI
             // 
@@ -333,7 +393,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdminUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Smiav Bares 1.0";
+            this.Text = "SMIAV Bares 1.0";
+            this.Load += new System.EventHandler(this.AdminUI_Load);
             this.tabStock.ResumeLayout(false);
             this.tabUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -341,6 +402,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiavdbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,21 +419,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNick;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPassword;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabProductos;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombreProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecioProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrecioDescuentoProd;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -378,5 +435,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVolumenStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCantidadStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBarraStock;
+        private smiav_dbDataSet smiav_dbDataSet;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private smiav_dbDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource smiavdbDataSetBindingSource;
+        private smiav_dbDataSet1 smiav_dbDataSet1;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private smiav_dbDataSet1TableAdapters.productoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciodescDataGridViewTextBoxColumn;
     }
 }

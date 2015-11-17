@@ -27,9 +27,9 @@ namespace ConnectCsharpToMysql
         private void Initialize()
         {
             server = "localhost";
-            database = "connectcsharptomysql";
-            uid = "username";
-            password = "password";
+            database = "smiav_db";
+            uid = "root";
+            password = "R00t..";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
@@ -54,11 +54,11 @@ namespace ConnectCsharpToMysql
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        MessageBox.Show("No se pudo conectar con el servidor.  Contacte a un administrador");
                         break;
 
                     case 1045:
-                        MessageBox.Show("Invalid username/password, please try again");
+                        MessageBox.Show("usuario/contraseña Invalidos, por favor intente nuevamente");
                         break;
                 }
                 return false;
@@ -81,9 +81,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void Insert()
+        public void InsertUsuario(string rut, string clave, string cargo, string nick, string nombre)
         {
-            string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
+            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('John Smith', '33')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -136,32 +136,39 @@ namespace ConnectCsharpToMysql
         }
 
         //Select statement
-        public List<string>[] Select()
+        public List<string> SelectUsuario(string clave)
         {
-            string query = "SELECT * FROM tableinfo";
+            string query = "SELECT cargo, nick FROM usuario WHERE clave = '"+clave+"'";
 
             //Create a list to store the result
-            List<string>[] list = new List<string>[3];
-            list[0] = new List<string>();
-            list[1] = new List<string>();
-            list[2] = new List<string>();
+            List<string> list = new List<string>();
 
             //Open connection
             if (this.OpenConnection() == true)
-            {
+            {   
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                
+
+                string cargo;
+                string nick;
+
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    list[0].Add(dataReader["id"] + "");
-                    list[1].Add(dataReader["name"] + "");
-                    list[2].Add(dataReader["age"] + "");
-                }
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
 
+                    cargo = dataReader["cargo"].ToString();
+                    nick = dataReader["nick"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+
+                    list.Add(cargo);
+                    list.Add(nick);
+                }
                 //close Data Reader
                 dataReader.Close();
 
@@ -178,9 +185,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Count statement
-        public int Count()
+        public int CountUsuario(string clave)
         {
-            string query = "SELECT Count(*) FROM tableinfo";
+            string query = "SELECT Count(*) FROM usuario WHERE clave='"+clave+"'";
             int Count = -1;
 
             //Open Connection

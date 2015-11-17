@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.AdminButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.garzonButton = new System.Windows.Forms.Button();
+            this.bartenderButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -46,25 +46,27 @@
             this.AdminButton.UseVisualStyleBackColor = true;
             this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
-            // button2
+            // garzonButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(267, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 44);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Garzón";
-            this.button2.UseVisualStyleBackColor = true;
+            this.garzonButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.garzonButton.Location = new System.Drawing.Point(267, 82);
+            this.garzonButton.Name = "garzonButton";
+            this.garzonButton.Size = new System.Drawing.Size(145, 44);
+            this.garzonButton.TabIndex = 1;
+            this.garzonButton.Text = "Garzón";
+            this.garzonButton.UseVisualStyleBackColor = true;
+            this.garzonButton.Click += new System.EventHandler(this.garzonButton_Click);
             // 
-            // button3
+            // bartenderButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(267, 132);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 44);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Bartender";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bartenderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bartenderButton.Location = new System.Drawing.Point(267, 132);
+            this.bartenderButton.Name = "bartenderButton";
+            this.bartenderButton.Size = new System.Drawing.Size(145, 44);
+            this.bartenderButton.TabIndex = 2;
+            this.bartenderButton.Text = "Bartender";
+            this.bartenderButton.UseVisualStyleBackColor = true;
+            this.bartenderButton.Click += new System.EventHandler(this.bartenderButton_Click);
             // 
             // button4
             // 
@@ -75,6 +77,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Cajera";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label1
             // 
@@ -93,13 +96,13 @@
             this.ClientSize = new System.Drawing.Size(471, 269);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bartenderButton);
+            this.Controls.Add(this.garzonButton);
             this.Controls.Add(this.AdminButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Smiav Bares 1.0";
+            this.Text = "SMIAV Bares 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,8 +112,8 @@
         #endregion
 
         private System.Windows.Forms.Button AdminButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button garzonButton;
+        private System.Windows.Forms.Button bartenderButton;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
     }

@@ -43,5 +43,36 @@ namespace Smiav_Bares_1._0
         {
 
         }
+
+        private void AdminUI_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'smiav_dbDataSet1.producto' table. You can move, or remove it, as needed.
+            this.productoTableAdapter.Fill(this.smiav_dbDataSet1.producto);
+            // TODO: This line of code loads data into the 'smiav_dbDataSet.usuario' table. You can move, or remove it, as needed.
+            this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            // Confirmacion para cerrar la ventana
+            switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
