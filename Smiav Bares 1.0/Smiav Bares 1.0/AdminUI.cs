@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConnectCsharpToMysql;
 
 namespace Smiav_Bares_1._0
 {
@@ -22,12 +23,14 @@ namespace Smiav_Bares_1._0
 
         }
 
+        //agregar nuevo usuario
         private void button1_Click(object sender, EventArgs e)
         {
             FormNuevoUsuario L = new FormNuevoUsuario();
             L.Visible = true;
         }
 
+        //abastecer stock
         private void button7_Click(object sender, EventArgs e)
         {
             FormIngresoStock form = new FormIngresoStock();
@@ -36,7 +39,7 @@ namespace Smiav_Bares_1._0
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -65,13 +68,49 @@ namespace Smiav_Bares_1._0
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
             // Confirmacion para cerrar la ventana
-            switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.YesNo))
+            switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.OKCancel))
             {
-                case DialogResult.No:
+                case DialogResult.Cancel:
                     e.Cancel = true;
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //eliminar Usuario
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                string rut = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                string nombre = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                Console.WriteLine(rut);
+                switch (MessageBox.Show(this, "¿Esta seguro de eliminar al usuario " + nombre + "?", "Confirmacion de seguridad", MessageBoxButtons.OKCancel))
+                {
+                    case DialogResult.OK:
+                        DBConnect c = new DBConnect();
+                        c.Delete(rut);
+                        MessageBox.Show(this, "El usuario ha sido eliminado", "Información", MessageBoxButtons.OK);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
             }
         }
     }

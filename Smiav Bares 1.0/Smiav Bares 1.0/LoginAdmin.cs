@@ -35,9 +35,9 @@ namespace Smiav_Bares_1._0
             {
 
                 List<string> usuario = c.SelectUsuario(clave);
-                int cont = c.CountUsuario(clave);
+                int cont = c.CountUsuario(clave, "clave");
 
-                if (cont == 1 && usuario[0].Equals("Jefe de perso"))
+                if (cont == 1 && usuario[0].Equals("Jefe Personal"))
                 {
                     //cierra la ventana actual y muestra la siguiente
                     this.Hide();
@@ -93,11 +93,6 @@ namespace Smiav_Bares_1._0
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -106,9 +101,13 @@ namespace Smiav_Bares_1._0
             L.Show();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-
+            Console.WriteLine("keypressed");
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

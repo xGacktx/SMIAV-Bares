@@ -69,7 +69,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Alias";
+            this.label3.Text = "Nick";
             // 
             // label4
             // 
@@ -83,20 +83,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 156);
+            this.label5.Location = new System.Drawing.Point(51, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Password";
+            this.label5.Text = "Contraseña";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 192);
+            this.label6.Location = new System.Drawing.Point(5, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Confirmar Password";
+            this.label6.Text = "Confirmar Contraseña";
             // 
             // textBox1
             // 
@@ -139,8 +139,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Garzón",
             "Bartender",
-            "Cajera",
-            "Administradora"});
+            "Cajero",
+            "Jefe Personal"});
             this.comboBox1.Location = new System.Drawing.Point(124, 116);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 21);
@@ -154,6 +154,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -163,6 +164,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormNuevoUsuario
             // 

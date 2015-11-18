@@ -83,7 +83,7 @@ namespace ConnectCsharpToMysql
         //Insert statement
         public void InsertUsuario(string rut, string clave, string cargo, string nick, string nombre)
         {
-            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('John Smith', '33')";
+            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('"+rut+"', '"+clave+"', '"+cargo+"', '"+nick+"', '"+nombre+"')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -123,9 +123,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Delete statement
-        public void Delete()
+        public void Delete(string rut)
         {
-            string query = "DELETE FROM tableinfo WHERE name='John Smith'";
+            string query = "DELETE FROM usuario WHERE rut='"+rut+"'";
 
             if (this.OpenConnection() == true)
             {
@@ -185,9 +185,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Count statement
-        public int CountUsuario(string clave)
+        public int CountUsuario(string clave, string campo)
         {
-            string query = "SELECT Count(*) FROM usuario WHERE clave='"+clave+"'";
+            string query = "SELECT Count(*) FROM usuario WHERE "+campo+"='"+clave+"'";
             int Count = -1;
 
             //Open Connection
