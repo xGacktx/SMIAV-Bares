@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.AdminButton = new System.Windows.Forms.Button();
             this.garzonButton = new System.Windows.Forms.Button();
             this.bartenderButton = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@
             this.Controls.Add(this.garzonButton);
             this.Controls.Add(this.AdminButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SMIAV Bares 1.0";

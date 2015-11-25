@@ -196,5 +196,10 @@ namespace Smiav_Bares_1._0
         {
 
         }
+
+        private void FormNuevoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
