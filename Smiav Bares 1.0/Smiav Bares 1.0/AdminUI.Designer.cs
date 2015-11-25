@@ -31,10 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.tabStock = new System.Windows.Forms.TabControl();
             this.tabUsuarios = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.botonEliminarUsuario = new System.Windows.Forms.Button();
+            this.botonEditarUsuario = new System.Windows.Forms.Button();
+            this.botonAgregarUsuario = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet = new Smiav_Bares_1._0.smiav_dbDataSet();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -62,12 +68,6 @@
             this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
             this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
-            this.button10 = new System.Windows.Forms.Button();
-            this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,9 +96,9 @@
             // tabUsuarios
             // 
             this.tabUsuarios.Controls.Add(this.button10);
-            this.tabUsuarios.Controls.Add(this.button3);
-            this.tabUsuarios.Controls.Add(this.button2);
-            this.tabUsuarios.Controls.Add(this.button1);
+            this.tabUsuarios.Controls.Add(this.botonEliminarUsuario);
+            this.tabUsuarios.Controls.Add(this.botonEditarUsuario);
+            this.tabUsuarios.Controls.Add(this.botonAgregarUsuario);
             this.tabUsuarios.Controls.Add(this.dataGridView1);
             this.tabUsuarios.Location = new System.Drawing.Point(4, 22);
             this.tabUsuarios.Name = "tabUsuarios";
@@ -109,35 +109,45 @@
             this.tabUsuarios.UseVisualStyleBackColor = true;
             this.tabUsuarios.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button3
+            // button10
             // 
-            this.button3.Location = new System.Drawing.Point(651, 230);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 38);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Eliminar Usuario";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button10.Location = new System.Drawing.Point(651, 145);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(124, 38);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Refrescar Datos";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button2
+            // botonEliminarUsuario
             // 
-            this.button2.Location = new System.Drawing.Point(651, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Editar Usuario";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.botonEliminarUsuario.Location = new System.Drawing.Point(651, 230);
+            this.botonEliminarUsuario.Name = "botonEliminarUsuario";
+            this.botonEliminarUsuario.Size = new System.Drawing.Size(124, 38);
+            this.botonEliminarUsuario.TabIndex = 3;
+            this.botonEliminarUsuario.Text = "Eliminar Usuario";
+            this.botonEliminarUsuario.UseVisualStyleBackColor = true;
+            this.botonEliminarUsuario.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // botonEditarUsuario
             // 
-            this.button1.Location = new System.Drawing.Point(651, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar Usuario";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botonEditarUsuario.Location = new System.Drawing.Point(651, 82);
+            this.botonEditarUsuario.Name = "botonEditarUsuario";
+            this.botonEditarUsuario.Size = new System.Drawing.Size(124, 38);
+            this.botonEditarUsuario.TabIndex = 2;
+            this.botonEditarUsuario.Text = "Editar Usuario";
+            this.botonEditarUsuario.UseVisualStyleBackColor = true;
+            this.botonEditarUsuario.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // botonAgregarUsuario
+            // 
+            this.botonAgregarUsuario.Location = new System.Drawing.Point(651, 21);
+            this.botonAgregarUsuario.Name = "botonAgregarUsuario";
+            this.botonAgregarUsuario.Size = new System.Drawing.Size(124, 38);
+            this.botonAgregarUsuario.TabIndex = 1;
+            this.botonAgregarUsuario.Text = "Agregar Usuario";
+            this.botonAgregarUsuario.UseVisualStyleBackColor = true;
+            this.botonAgregarUsuario.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -157,10 +167,46 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(545, 275);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // rutDataGridViewTextBoxColumn
+            // 
+            this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
+            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
+            this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
+            this.rutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cargoDataGridViewTextBoxColumn
+            // 
+            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
+            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
+            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nickDataGridViewTextBoxColumn
+            // 
+            this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
+            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
+            this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
+            this.nickDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claveDataGridViewTextBoxColumn
+            // 
+            this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
+            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
+            this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
+            this.claveDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usuarioBindingSource
             // 
@@ -236,31 +282,37 @@
             // 
             this.ColumnIDStock.HeaderText = "ID";
             this.ColumnIDStock.Name = "ColumnIDStock";
+            this.ColumnIDStock.ReadOnly = true;
             // 
             // ColumnNombreStock
             // 
             this.ColumnNombreStock.HeaderText = "Nombre";
             this.ColumnNombreStock.Name = "ColumnNombreStock";
+            this.ColumnNombreStock.ReadOnly = true;
             // 
             // ColumnTipoStock
             // 
             this.ColumnTipoStock.HeaderText = "Tipo";
             this.ColumnTipoStock.Name = "ColumnTipoStock";
+            this.ColumnTipoStock.ReadOnly = true;
             // 
             // ColumnVolumenStock
             // 
             this.ColumnVolumenStock.HeaderText = "Volumen";
             this.ColumnVolumenStock.Name = "ColumnVolumenStock";
+            this.ColumnVolumenStock.ReadOnly = true;
             // 
             // ColumnCantidadStock
             // 
             this.ColumnCantidadStock.HeaderText = "Cantidad";
             this.ColumnCantidadStock.Name = "ColumnCantidadStock";
+            this.ColumnCantidadStock.ReadOnly = true;
             // 
             // ColumnBarraStock
             // 
             this.ColumnBarraStock.HeaderText = "Barra";
             this.ColumnBarraStock.Name = "ColumnBarraStock";
+            this.ColumnBarraStock.ReadOnly = true;
             // 
             // tabProductos
             // 
@@ -328,24 +380,28 @@
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn1
             // 
             this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
             this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // preciodescDataGridViewTextBoxColumn
             // 
             this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
             this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento";
             this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
+            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productoBindingSource
             // 
@@ -370,58 +426,12 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(651, 145);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(124, 38);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Refrescar Datos";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // rutDataGridViewTextBoxColumn
-            // 
-            this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
-            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
-            this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
-            this.rutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cargoDataGridViewTextBoxColumn
-            // 
-            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
-            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
-            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nickDataGridViewTextBoxColumn
-            // 
-            this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
-            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
-            this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
-            this.nickDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claveDataGridViewTextBoxColumn
-            // 
-            this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
-            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
-            this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
-            this.claveDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // AdminUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 386);
             this.Controls.Add(this.tabStock);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdminUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SMIAV Bares 1.0";
@@ -446,9 +456,9 @@
 
         private System.Windows.Forms.TabControl tabStock;
         private System.Windows.Forms.TabPage tabUsuarios;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botonEliminarUsuario;
+        private System.Windows.Forms.Button botonEditarUsuario;
+        private System.Windows.Forms.Button botonAgregarUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabProductos;

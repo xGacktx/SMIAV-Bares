@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConnectCsharpToMysql;
+using System.Windows;
 
 namespace Smiav_Bares_1._0
 {
@@ -22,14 +23,15 @@ namespace Smiav_Bares_1._0
         {
 
         }
-
+       
         //agregar nuevo usuario
         private void button1_Click(object sender, EventArgs e)
         {
-            FormNuevoUsuario L = new FormNuevoUsuario();
+            FormNuevoUsuario L = new FormNuevoUsuario(false,null);
             L.Visible = true;
+      
         }
-
+        
         //abastecer stock
         private void button7_Click(object sender, EventArgs e)
         {
@@ -84,9 +86,11 @@ namespace Smiav_Bares_1._0
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//Boton Editar
         {
-
+            string rut = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            FormNuevoUsuario L = new FormNuevoUsuario(true,rut);
+            L.Visible = true;
         }
 
         //eliminar Usuario
@@ -103,6 +107,7 @@ namespace Smiav_Bares_1._0
                         DBConnect c = new DBConnect();
                         c.Delete(rut);
                         MessageBox.Show(this, "El usuario ha sido eliminado", "Información", MessageBoxButtons.OK);
+                        this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
                         break;
                     default:
                         break;

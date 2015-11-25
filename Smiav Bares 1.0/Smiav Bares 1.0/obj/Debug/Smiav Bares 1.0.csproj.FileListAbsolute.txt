@@ -40,3 +40,17 @@ C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\ob
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache

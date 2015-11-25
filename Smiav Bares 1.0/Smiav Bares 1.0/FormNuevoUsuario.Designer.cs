@@ -34,14 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxRut = new System.Windows.Forms.TextBox();
+            this.textBoxNick = new System.Windows.Forms.TextBox();
+            this.textBoxClave = new System.Windows.Forms.TextBox();
+            this.textBoxClave2 = new System.Windows.Forms.TextBox();
+            this.comboBoxCargo = new System.Windows.Forms.ComboBox();
+            this.buttonAceptar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,87 +98,90 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Confirmar Contraseña";
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBoxNombre.Location = new System.Drawing.Point(124, 25);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(170, 20);
+            this.textBoxNombre.TabIndex = 6;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxRut
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBoxRut.Location = new System.Drawing.Point(124, 55);
+            this.textBoxRut.Name = "textBoxRut";
+            this.textBoxRut.Size = new System.Drawing.Size(170, 20);
+            this.textBoxRut.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxNick
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBoxNick.Location = new System.Drawing.Point(124, 85);
+            this.textBoxNick.Name = "textBoxNick";
+            this.textBoxNick.Size = new System.Drawing.Size(170, 20);
+            this.textBoxNick.TabIndex = 8;
             // 
-            // textBox4
+            // textBoxClave
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 20);
-            this.textBox4.TabIndex = 9;
+            this.textBoxClave.Location = new System.Drawing.Point(124, 153);
+            this.textBoxClave.Name = "textBoxClave";
+            this.textBoxClave.PasswordChar = '*';
+            this.textBoxClave.Size = new System.Drawing.Size(170, 20);
+            this.textBoxClave.TabIndex = 9;
             // 
-            // textBox5
+            // textBoxClave2
             // 
-            this.textBox5.Location = new System.Drawing.Point(124, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 20);
-            this.textBox5.TabIndex = 10;
+            this.textBoxClave2.Location = new System.Drawing.Point(124, 189);
+            this.textBoxClave2.Name = "textBoxClave2";
+            this.textBoxClave2.PasswordChar = '*';
+            this.textBoxClave2.Size = new System.Drawing.Size(170, 20);
+            this.textBoxClave2.TabIndex = 10;
             // 
-            // comboBox1
+            // comboBoxCargo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCargo.FormattingEnabled = true;
+            this.comboBoxCargo.Items.AddRange(new object[] {
             "Garzón",
             "Bartender",
             "Cajero",
             "Jefe Personal"});
-            this.comboBox1.Location = new System.Drawing.Point(124, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 21);
-            this.comboBox1.TabIndex = 11;
+            this.comboBoxCargo.Location = new System.Drawing.Point(124, 116);
+            this.comboBoxCargo.Name = "comboBoxCargo";
+            this.comboBoxCargo.Size = new System.Drawing.Size(170, 21);
+            this.comboBoxCargo.TabIndex = 11;
             // 
-            // button1
+            // buttonAceptar
             // 
-            this.button1.Location = new System.Drawing.Point(148, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAceptar.Location = new System.Drawing.Point(148, 224);
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.Size = new System.Drawing.Size(70, 36);
+            this.buttonAceptar.TabIndex = 12;
+            this.buttonAceptar.Text = "Aceptar";
+            this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(224, 224);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 36);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCancelar.Location = new System.Drawing.Point(224, 224);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(70, 36);
+            this.buttonCancelar.TabIndex = 13;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 274);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonAceptar);
+            this.Controls.Add(this.comboBoxCargo);
+            this.Controls.Add(this.textBoxClave2);
+            this.Controls.Add(this.textBoxClave);
+            this.Controls.Add(this.textBoxNick);
+            this.Controls.Add(this.textBoxRut);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -202,13 +205,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxRut;
+        private System.Windows.Forms.TextBox textBoxNick;
+        private System.Windows.Forms.TextBox textBoxClave;
+        private System.Windows.Forms.TextBox textBoxClave2;
+        private System.Windows.Forms.ComboBox comboBoxCargo;
+        private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }
