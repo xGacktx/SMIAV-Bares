@@ -55,6 +55,12 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoProducto.Designer.cs">
+      <DependentUpon>FormNuevoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsumoConnect.cs" />
     <Compile Include="ProductoConnect.cs" />
     <Compile Include="UsuarioConnect.cs" />
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoProducto.resx">
+      <DependentUpon>FormNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GarzonUI.resx">
       <DependentUpon>GarzonUI.cs</DependentUpon>

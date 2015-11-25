@@ -68,6 +68,7 @@
             this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
             this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,7 +112,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(651, 145);
+            this.button10.Location = new System.Drawing.Point(625, 158);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(124, 38);
             this.button10.TabIndex = 4;
@@ -121,7 +122,7 @@
             // 
             // botonEliminarUsuario
             // 
-            this.botonEliminarUsuario.Location = new System.Drawing.Point(651, 230);
+            this.botonEliminarUsuario.Location = new System.Drawing.Point(625, 243);
             this.botonEliminarUsuario.Name = "botonEliminarUsuario";
             this.botonEliminarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonEliminarUsuario.TabIndex = 3;
@@ -131,7 +132,7 @@
             // 
             // botonEditarUsuario
             // 
-            this.botonEditarUsuario.Location = new System.Drawing.Point(651, 82);
+            this.botonEditarUsuario.Location = new System.Drawing.Point(625, 95);
             this.botonEditarUsuario.Name = "botonEditarUsuario";
             this.botonEditarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonEditarUsuario.TabIndex = 2;
@@ -141,7 +142,7 @@
             // 
             // botonAgregarUsuario
             // 
-            this.botonAgregarUsuario.Location = new System.Drawing.Point(651, 21);
+            this.botonAgregarUsuario.Location = new System.Drawing.Point(625, 34);
             this.botonAgregarUsuario.Name = "botonAgregarUsuario";
             this.botonAgregarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonAgregarUsuario.TabIndex = 1;
@@ -316,6 +317,7 @@
             // 
             // tabProductos
             // 
+            this.tabProductos.Controls.Add(this.button1);
             this.tabProductos.Controls.Add(this.button4);
             this.tabProductos.Controls.Add(this.button5);
             this.tabProductos.Controls.Add(this.button6);
@@ -346,6 +348,7 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "Editar Producto";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -355,6 +358,7 @@
             this.button6.TabIndex = 8;
             this.button6.Text = "Agregar Producto";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView2
             // 
@@ -426,6 +430,16 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(625, 158);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Refrescar Datos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // AdminUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,5 +507,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

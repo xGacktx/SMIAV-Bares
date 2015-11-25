@@ -188,6 +188,7 @@ namespace ConnectCsharpToMysql
                 return list;
             }
         }
+
         //Select Usuario mediante rut para obtener todos sus campos
         public List<string> SelectUsuarioFull(string rut)
         {

@@ -81,9 +81,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void InsertProducto(string rut, string clave, string cargo, string nick, string nombre)
+        public void InsertProducto(string ID, string nom, string precio, string precioDescuento)
         {
-            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('" + rut + "', '" + clave + "', '" + cargo + "', '" + nick + "', '" + nombre + "')";
+            string query = "INSERT INTO producto (id, nombre, precio, precio_desc) VALUES('" + ID + "', '" + nom + "', '" + precio + "', '" + precioDescuento + "')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -100,9 +100,11 @@ namespace ConnectCsharpToMysql
         }
 
         //Update statement
-        public void UpdateProducto()
+        public void UpdateProducto(string nom, string precio, string precioDescuento, string ID)
         {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+            string query;
+            //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
+            query = "UPDATE producto SET id='"+ ID +"' , nombre='" + nom + "' , precio='" + precio + "' , precio_desc='" + precioDescuento + "' WHERE ID='" + ID + "' ";
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -123,9 +125,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Eliminar buscando por rut
-        public void DeleteProducto(string rut)
+        public void DeleteProducto(string ID)
         {
-            string query = "DELETE FROM usuario WHERE rut='" + rut + "'";
+            string query = "DELETE FROM producto WHERE ID='" + ID + "'";
 
             if (this.OpenConnection() == true)
             {
@@ -138,7 +140,7 @@ namespace ConnectCsharpToMysql
         //Select statement
         public List<string> SelectProducto(string clave)
         {
-            string query = "SELECT cargo, nick FROM usuario WHERE clave = '" + clave + "'";
+            string query = "SELECT cargo, nick FROM producto WHERE clave = '" + clave + "'";
 
             //Create a list to store the result
             List<string> list = new List<string>();
@@ -184,11 +186,66 @@ namespace ConnectCsharpToMysql
             }
         }
 
+        // retorna todos los datos del un usuario
+        public List<string> SelectProductoFull(string ID)
+        {
+            string query = "SELECT id, nombre, precio, precio_desc FROM producto WHERE id = '" + ID + "'";
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string Id;
+                string nombre;
+                string precio;
+                string precioDescuento;
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+                    nombre = dataReader["nombre"].ToString();
+                    Id = dataReader["id"].ToString();
+                    precio = dataReader["precio"].ToString();
+                    precioDescuento = dataReader["precio_desc"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+                    list.Add(Id);
+                    list.Add(nombre);
+                    list.Add(precio);
+                    list.Add(precioDescuento);
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
         //Count statement
         public int CountProducto(string clave, string campo)
         {
-            string query = "SELECT Count(*) FROM usuario WHERE " + campo + "='" + clave + "'";
+            string query = "SELECT Count(*) FROM producto WHERE " + campo + "='" + clave + "'";
             int Count = -1;
+
+            Console.WriteLine("clave:"+clave+"campo:"+campo);
 
             //Open Connection
             if (this.OpenConnection() == true)

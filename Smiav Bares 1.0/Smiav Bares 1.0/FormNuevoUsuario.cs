@@ -16,6 +16,7 @@ namespace Smiav_Bares_1._0
     {
         private bool editar;
         private string rutgrid;
+
         public FormNuevoUsuario(bool editar,string rut)
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Smiav_Bares_1._0
             if (editar)
             {
                 //String rut = 
-                DBConnect c = new DBConnect();
+                UsuarioConnect c = new UsuarioConnect();
                 List<string> usuario = c.SelectUsuarioFull(rutgrid);
                 textBoxNombre.Text = usuario[0];
                 textBoxRut.Text = rutgrid;
@@ -43,7 +44,8 @@ namespace Smiav_Bares_1._0
             string contraseña = textBoxClave.Text;
             string confirmcontra = textBoxClave2.Text;
             string cargo = comboBoxCargo.Text;
-            DBConnect c = new DBConnect();
+            UsuarioConnect c = new UsuarioConnect();
+
             if (!editar)
             {
                 //busca campos vacios
@@ -59,7 +61,6 @@ namespace Smiav_Bares_1._0
                     }
                     else
                     {
-                        //DBConnect c = new DBConnect();
                         int contRut = c.CountUsuario(rut, "rut");
                         int contClave = c.CountUsuario(contraseña, "clave");
                         if (contRut == 0)
@@ -124,7 +125,7 @@ namespace Smiav_Bares_1._0
                 else {
                     if (contraseña.Equals("") && confirmcontra.Equals("") )
                     {             
-                        c.updateUsuario(nombre, rutgrid, nick, cargo, null);
+                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, null);
                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito ", "Actualizacion Exitosa", MessageBoxButtons.OK);
                         this.Close();                    
                     }
@@ -144,7 +145,7 @@ namespace Smiav_Bares_1._0
 
                                     if (contClave == 0)
                                     {
-                                        c.updateUsuario(nombre, rutgrid, nick, cargo, contraseña);
+                                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, contraseña);
                                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito", "Ingreso Actualización", MessageBoxButtons.OK);
                                         this.Close();
                                     }
@@ -164,7 +165,7 @@ namespace Smiav_Bares_1._0
                                 {
                                     if (contClave == 0)
                                     {
-                                        c.updateUsuario(nombre, rutgrid, nick, cargo, contraseña);
+                                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, contraseña);
                                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito", "Ingreso Actualización", MessageBoxButtons.OK);
                                         this.Close();
 

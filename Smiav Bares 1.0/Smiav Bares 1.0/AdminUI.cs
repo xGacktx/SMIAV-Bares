@@ -39,9 +39,30 @@ namespace Smiav_Bares_1._0
             form.Visible = true;
         }
 
+        // Boton Eliminar Producto
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            if (dataGridView2.SelectedRows.Count == 1)
+            {
+                string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+                string nombre = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+                Console.WriteLine(ID);
+                switch (MessageBox.Show(this, "¿Esta seguro de eliminar el Producto " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
+                {
+                    case DialogResult.OK:
+                        ProductoConnect c = new ProductoConnect();
+                        c.DeleteProducto(ID);
+                        MessageBox.Show(this, "El producto ha sido eliminado", "Información", MessageBoxButtons.OK);
+                        this.productoTableAdapter.Fill(this.smiav_dbDataSet1.producto);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -80,20 +101,22 @@ namespace Smiav_Bares_1._0
             }
         }
 
+        // Refrescar tabla Usuarios
         private void button10_Click(object sender, EventArgs e)
         {
             this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
         }
 
-
-        private void button2_Click(object sender, EventArgs e)//Boton Editar
+        // Editar Usuario
+        private void button2_Click(object sender, EventArgs e)
         {
             string rut = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             FormNuevoUsuario L = new FormNuevoUsuario(true,rut);
             L.Visible = true;
+
         }
 
-        //eliminar Usuario
+        // Eliminar Usuario
         private void button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
@@ -104,8 +127,8 @@ namespace Smiav_Bares_1._0
                 switch (MessageBox.Show(this, "¿Esta seguro de eliminar al usuario " + nombre + "?", "Confirmacion de seguridad", MessageBoxButtons.OKCancel))
                 {
                     case DialogResult.OK:
-                        DBConnect c = new DBConnect();
-                        c.Delete(rut);
+                        UsuarioConnect c = new UsuarioConnect();
+                        c.DeleteUsuario(rut);
                         MessageBox.Show(this, "El usuario ha sido eliminado", "Información", MessageBoxButtons.OK);
                         this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
                         break;
@@ -117,6 +140,26 @@ namespace Smiav_Bares_1._0
             {
                 MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
             }
+        }
+
+        // Boton agregar producto
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormNuevoProducto L = new FormNuevoProducto(false, null);
+            L.Visible = true;
+        }
+
+        // Boton refrescar productos
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.productoTableAdapter.Fill(this.smiav_dbDataSet1.producto);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            FormNuevoProducto L = new FormNuevoProducto(true, ID);
+            L.Visible = true;
         }
     }
 }

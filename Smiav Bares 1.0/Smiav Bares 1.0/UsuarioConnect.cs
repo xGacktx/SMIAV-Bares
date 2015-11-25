@@ -100,9 +100,15 @@ namespace ConnectCsharpToMysql
         }
 
         //Update statement
-        public void UpdateUsuario()
+        public void UpdateUsuario(string nombre, string rut, string nick, string cargo, string clave)
         {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+            string query;
+            //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
+            if (clave == null) query = "UPDATE usuario SET nombre='" + nombre + "' , nick='" + nick + "' , cargo='" + cargo + "' WHERE rut='" + rut + "' ";
+            else
+            {
+                query = "UPDATE usuario SET nombre='" + nombre + "' , nick='" + nick + "' , cargo='" + cargo + "', clave='" + clave + "' WHERE rut='" + rut + "' ";
+            }
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -123,7 +129,7 @@ namespace ConnectCsharpToMysql
         }
 
         //Eliminar buscando por rut
-        public void Eliminar(string rut)
+        public void DeleteUsuario(string rut)
         {
             string query = "DELETE FROM usuario WHERE rut='" + rut + "'";
 
@@ -168,6 +174,58 @@ namespace ConnectCsharpToMysql
 
                     list.Add(cargo);
                     list.Add(nick);
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
+        // retorna todos los datos del un usuario
+        public List<string> SelectUsuarioFull(string rut)
+        {
+            string query = "SELECT nombre, rut, nick, cargo FROM usuario WHERE rut = '" + rut + "'";
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string nombre;
+                string nick;
+                string cargo;
+
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+                    nombre = dataReader["nombre"].ToString();
+                    rut = dataReader["rut"].ToString();
+                    nick = dataReader["nick"].ToString();
+                    cargo = dataReader["cargo"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+                    list.Add(nombre);
+                    list.Add(nick);
+                    list.Add(cargo);
                 }
                 //close Data Reader
                 dataReader.Close();
