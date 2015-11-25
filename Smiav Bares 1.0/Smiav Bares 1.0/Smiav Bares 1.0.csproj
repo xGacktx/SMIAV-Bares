@@ -55,6 +55,9 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsumoConnect.cs" />
+    <Compile Include="ProductoConnect.cs" />
+    <Compile Include="UsuarioConnect.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="GarzonUI.cs">
       <SubType>Form</SubType>

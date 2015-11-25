@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace ConnectCsharpToMysql
 {
-    class DBConnect
+    class ProductoConnect
     {
         private MySqlConnection connection;
         private string server;
@@ -18,7 +18,7 @@ namespace ConnectCsharpToMysql
         private string password;
 
         //Constructor
-        public DBConnect()
+        public ProductoConnect()
         {
             Initialize();
         }
@@ -58,7 +58,7 @@ namespace ConnectCsharpToMysql
                         break;
 
                     case 1045:
-                        MessageBox.Show("usuario/contrase�a Invalidos, por favor intente nuevamente");
+                        MessageBox.Show("usuario/contraseña Invalidos, por favor intente nuevamente");
                         break;
                 }
                 return false;
@@ -81,16 +81,16 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void InsertUsuario(string rut, string clave, string cargo, string nick, string nombre)
+        public void InsertProducto(string rut, string clave, string cargo, string nick, string nombre)
         {
-            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('"+rut+"', '"+clave+"', '"+cargo+"', '"+nick+"', '"+nombre+"')";
+            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('" + rut + "', '" + clave + "', '" + cargo + "', '" + nick + "', '" + nombre + "')";
 
             //open connection
             if (this.OpenConnection() == true)
             {
                 //create command and assign the query and connection from the constructor
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                
+
                 //Execute command
                 cmd.ExecuteNonQuery();
 
@@ -100,14 +100,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Update statement
-        public void updateUsuario(string nombre, string rut, string nick, string cargo, string clave)
+        public void UpdateProducto()
         {
-            string query;
-            //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
-            if(clave == null) query = "UPDATE usuario SET nombre='"+nombre+"' , nick='"+nick+"' , cargo='"+cargo+"' WHERE rut='"+rut+"' ";
-            else{
-                query = "UPDATE usuario SET nombre='"+nombre+"' , nick='"+nick+"' , cargo='"+cargo+"', clave='"+clave+"' WHERE rut='"+rut+"' ";
-            }
+            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -127,10 +122,10 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Delete statement
-        public void Delete(string rut)
+        //Eliminar buscando por rut
+        public void DeleteProducto(string rut)
         {
-            string query = "DELETE FROM usuario WHERE rut='"+rut+"'";
+            string query = "DELETE FROM usuario WHERE rut='" + rut + "'";
 
             if (this.OpenConnection() == true)
             {
@@ -141,16 +136,16 @@ namespace ConnectCsharpToMysql
         }
 
         //Select statement
-        public List<string> SelectUsuario(string clave)
+        public List<string> SelectProducto(string clave)
         {
-            string query = "SELECT cargo, nick FROM usuario WHERE clave = '"+clave+"'";
+            string query = "SELECT cargo, nick FROM usuario WHERE clave = '" + clave + "'";
 
             //Create a list to store the result
             List<string> list = new List<string>();
 
             //Open connection
             if (this.OpenConnection() == true)
-            {   
+            {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Create a data reader and Execute the command
@@ -188,64 +183,11 @@ namespace ConnectCsharpToMysql
                 return list;
             }
         }
-        //Select Usuario mediante rut para obtener todos sus campos
-        public List<string> SelectUsuarioFull(string rut)
-        {
-            string query = "SELECT nombre, rut, nick, cargo FROM usuario WHERE rut = '" + rut + "'";
-
-            //Create a list to store the result
-            List<string> list = new List<string>();
-
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                string nombre;
-                string nick;
-                string cargo;
-                
-
-                //Read the data and store them in the list
-                while (dataReader.Read())
-                {
-                    //Console.WriteLine(String.Format("{0}, {1}",
-                    //dataReader.GetString(0), dataReader.GetString(1))
-                    //);
-                    nombre = dataReader["nombre"].ToString();
-                    rut = dataReader["rut"].ToString();
-                    nick = dataReader["nick"].ToString();
-                    cargo = dataReader["cargo"].ToString();
-                   
-                    //Console.WriteLine(cargo+" "+nick);
-                    list.Add(nombre);
-                    list.Add(nick);
-                    list.Add(cargo);                    
-                }
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
-                return list;
-            }
-            else
-            {
-                return list;
-            }
-        }
-
-
 
         //Count statement
-        public int CountUsuario(string clave, string campo)
+        public int CountProducto(string clave, string campo)
         {
-            string query = "SELECT Count(*) FROM usuario WHERE "+campo+"='"+clave+"'";
+            string query = "SELECT Count(*) FROM usuario WHERE " + campo + "='" + clave + "'";
             int Count = -1;
 
             //Open Connection
@@ -255,8 +197,8 @@ namespace ConnectCsharpToMysql
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
                 //ExecuteScalar will return one value
-                Count = int.Parse(cmd.ExecuteScalar()+"");
-                
+                Count = int.Parse(cmd.ExecuteScalar() + "");
+
                 //close Connection
                 this.CloseConnection();
 
@@ -287,7 +229,7 @@ namespace ConnectCsharpToMysql
                 path = "C:\\" + year + "-" + month + "-" + day + "-" + hour + "-" + minute + "-" + second + "-" + millisecond + ".sql";
                 StreamWriter file = new StreamWriter(path);
 
-                
+
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "mysqldump";
                 psi.RedirectStandardInput = false;
@@ -330,7 +272,7 @@ namespace ConnectCsharpToMysql
                 psi.Arguments = string.Format(@"-u{0} -p{1} -h{2} {3}", uid, password, server, database);
                 psi.UseShellExecute = false;
 
-                
+
                 Process process = Process.Start(psi);
                 process.StandardInput.WriteLine(input);
                 process.StandardInput.Close();
@@ -344,3 +286,4 @@ namespace ConnectCsharpToMysql
         }
     }
 }
+
