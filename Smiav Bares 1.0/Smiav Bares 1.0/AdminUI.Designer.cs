@@ -55,6 +55,7 @@
             this.ColumnCantidadStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBarraStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabProductos = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
             this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -330,6 +330,16 @@
             this.tabProductos.Text = "Gestión Productos";
             this.tabProductos.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(625, 158);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Refrescar Datos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(625, 243);
@@ -375,6 +385,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(18, 18);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(545, 275);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -429,16 +440,6 @@
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(625, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 38);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Refrescar Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // AdminUI
             // 

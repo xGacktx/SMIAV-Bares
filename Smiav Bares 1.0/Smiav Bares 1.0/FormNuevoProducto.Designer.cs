@@ -124,7 +124,6 @@
             // 
             this.textBoxClave.Location = new System.Drawing.Point(118, 121);
             this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(175, 20);
             this.textBoxClave.TabIndex = 9;
             // 
@@ -132,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 246);
+            this.ClientSize = new System.Drawing.Size(321, 225);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBoxClave);
