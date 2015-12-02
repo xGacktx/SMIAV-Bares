@@ -47,7 +47,7 @@ namespace Smiav_Bares_1._0
                 string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
                 string nombre = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
                 Console.WriteLine(ID);
-                switch (MessageBox.Show(this, "¿Esta seguro de eliminar el Producto " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
+                switch (MessageBox.Show(this, "¿Está seguro de eliminar el Producto " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
                 {
                     case DialogResult.OK:
                         ProductoConnect c = new ProductoConnect();
@@ -72,11 +72,14 @@ namespace Smiav_Bares_1._0
 
         private void AdminUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'smiav_dbDataSet2.insumo' table. You can move, or remove it, as needed.
+            this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
             // TODO: This line of code loads data into the 'smiav_dbDataSet1.producto' table. You can move, or remove it, as needed.
             this.productoTableAdapter.Fill(this.smiav_dbDataSet1.producto);
             // TODO: This line of code loads data into the 'smiav_dbDataSet.usuario' table. You can move, or remove it, as needed.
             this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
-
+            // TODO: This line of code loads data into the 'smiav_dbDataSet.usuario' table. You can move, or remove it, as needed.
+            this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +94,7 @@ namespace Smiav_Bares_1._0
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
             // Confirmacion para cerrar la ventana
-            switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.OKCancel))
+            switch (MessageBox.Show(this, "¿Está seguro que deseas salir?", "Confirmación", MessageBoxButtons.OKCancel))
             {
                 case DialogResult.Cancel:
                     e.Cancel = true;
@@ -124,7 +127,7 @@ namespace Smiav_Bares_1._0
                 string rut = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 string nombre = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 Console.WriteLine(rut);
-                switch (MessageBox.Show(this, "¿Esta seguro de eliminar al usuario " + nombre + "?", "Confirmacion de seguridad", MessageBoxButtons.OKCancel))
+                switch (MessageBox.Show(this, "¿Está seguro de eliminar al usuario " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
                 {
                     case DialogResult.OK:
                         UsuarioConnect c = new UsuarioConnect();
@@ -155,11 +158,68 @@ namespace Smiav_Bares_1._0
             this.productoTableAdapter.Fill(this.smiav_dbDataSet1.producto);
         }
 
+        //boton editar producto
         private void button5_Click(object sender, EventArgs e)
         {
+            // Obtiene el id de la producto seleccionada
             string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
             FormNuevoProducto L = new FormNuevoProducto(true, ID);
             L.Visible = true;
+        }
+
+        private void tabStock_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void buttonAgregarInsumo_Click(object sender, EventArgs e)
+        {
+            FormNuevoInsumo L = new FormNuevoInsumo(false, null);
+            L.Visible = true;
+        }
+
+        private void buttonEditarInsumo_Click(object sender, EventArgs e)
+        {
+            // Obtiene el id de la fila seleccionada
+            string ID = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
+            FormNuevoInsumo L = new FormNuevoInsumo(true, ID);
+            L.Visible = true;
+        }
+
+        private void buttonRefrescarInsumos_Click(object sender, EventArgs e)
+        {
+            this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
+        }
+
+        private void tabInsumos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEliminarInsumo_Click(object sender, EventArgs e)
+        {
+            if (dataGridView4.SelectedRows.Count == 1)
+            {
+                string ID = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
+                string nombre = dataGridView4.SelectedRows[0].Cells[1].Value.ToString();
+                Console.WriteLine(ID);
+                switch (MessageBox.Show(this, "¿Está seguro de eliminar el insumo " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
+                {
+                    case DialogResult.OK:
+                        InsumoConnect c = new InsumoConnect();
+                        c.DeleteInsumo(ID);
+                        MessageBox.Show(this, "El Insumo ha sido eliminado", "Información", MessageBoxButtons.OK);
+                        this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
+            }
         }
     }
 }

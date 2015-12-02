@@ -54,11 +54,11 @@ namespace ConnectCsharpToMysql
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("No se pudo conectar con el servidor.  Contacte a un administrador");
+                        MessageBox.Show("No se pudo conectar con el servidor.  Contacte a un administrador del sistema");
                         break;
 
                     case 1045:
-                        MessageBox.Show("usuario/contraseña Invalidos, por favor intente nuevamente");
+                        MessageBox.Show("usuario/contraseña Inválidos, por favor intente nuevamente");
                         break;
                 }
                 return false;

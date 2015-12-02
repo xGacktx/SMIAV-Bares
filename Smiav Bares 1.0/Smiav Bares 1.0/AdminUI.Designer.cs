@@ -49,27 +49,39 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.ColumnIDStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNombreStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTipoStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnVolumenStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCantidadStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBarraStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabProductos = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smiav_dbDataSet1 = new Smiav_Bares_1._0.smiav_dbDataSet1();
+            this.tabInsumos = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smiav_dbDataSet2 = new Smiav_Bares_1._0.smiav_dbDataSet2();
+            this.buttonRefrescarInsumos = new System.Windows.Forms.Button();
+            this.buttonEliminarInsumo = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonAgregarInsumo = new System.Windows.Forms.Button();
+            this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
+            this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
+            this.insumoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet2TableAdapters.insumoTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smiav_dbDataSet1 = new Smiav_Bares_1._0.smiav_dbDataSet1();
-            this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
-            this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
+            this.ColumnNombreStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTipoStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVolumenStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCantidadStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBarraStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,6 +93,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet1)).BeginInit();
+            this.tabInsumos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smiavdbDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +105,13 @@
             this.tabStock.Controls.Add(this.tabUsuarios);
             this.tabStock.Controls.Add(this.tabPage3);
             this.tabStock.Controls.Add(this.tabProductos);
-            this.tabStock.Location = new System.Drawing.Point(12, 12);
+            this.tabStock.Controls.Add(this.tabInsumos);
+            this.tabStock.Location = new System.Drawing.Point(18, 18);
             this.tabStock.Name = "tabStock";
             this.tabStock.SelectedIndex = 0;
             this.tabStock.Size = new System.Drawing.Size(809, 340);
             this.tabStock.TabIndex = 0;
+            this.tabStock.SelectedIndexChanged += new System.EventHandler(this.tabStock_SelectedIndexChanged);
             // 
             // tabUsuarios
             // 
@@ -264,57 +282,22 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnIDStock,
             this.ColumnNombreStock,
             this.ColumnTipoStock,
             this.ColumnVolumenStock,
             this.ColumnCantidadStock,
             this.ColumnBarraStock});
-            this.dataGridView3.Location = new System.Drawing.Point(20, 26);
+            this.dataGridView3.Location = new System.Drawing.Point(18, 18);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.ShowEditingIcon = false;
-            this.dataGridView3.Size = new System.Drawing.Size(644, 257);
+            this.dataGridView3.Size = new System.Drawing.Size(644, 275);
             this.dataGridView3.TabIndex = 0;
-            // 
-            // ColumnIDStock
-            // 
-            this.ColumnIDStock.HeaderText = "ID";
-            this.ColumnIDStock.Name = "ColumnIDStock";
-            this.ColumnIDStock.ReadOnly = true;
-            // 
-            // ColumnNombreStock
-            // 
-            this.ColumnNombreStock.HeaderText = "Nombre";
-            this.ColumnNombreStock.Name = "ColumnNombreStock";
-            this.ColumnNombreStock.ReadOnly = true;
-            // 
-            // ColumnTipoStock
-            // 
-            this.ColumnTipoStock.HeaderText = "Tipo";
-            this.ColumnTipoStock.Name = "ColumnTipoStock";
-            this.ColumnTipoStock.ReadOnly = true;
-            // 
-            // ColumnVolumenStock
-            // 
-            this.ColumnVolumenStock.HeaderText = "Volumen";
-            this.ColumnVolumenStock.Name = "ColumnVolumenStock";
-            this.ColumnVolumenStock.ReadOnly = true;
-            // 
-            // ColumnCantidadStock
-            // 
-            this.ColumnCantidadStock.HeaderText = "Cantidad";
-            this.ColumnCantidadStock.Name = "ColumnCantidadStock";
-            this.ColumnCantidadStock.ReadOnly = true;
-            // 
-            // ColumnBarraStock
-            // 
-            this.ColumnBarraStock.HeaderText = "Barra";
-            this.ColumnBarraStock.Name = "ColumnBarraStock";
-            this.ColumnBarraStock.ReadOnly = true;
             // 
             // tabProductos
             // 
@@ -391,34 +374,6 @@
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preciodescDataGridViewTextBoxColumn
-            // 
-            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
-            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento";
-            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
-            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "producto";
@@ -428,6 +383,119 @@
             // 
             this.smiav_dbDataSet1.DataSetName = "smiav_dbDataSet1";
             this.smiav_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabInsumos
+            // 
+            this.tabInsumos.Controls.Add(this.dataGridView4);
+            this.tabInsumos.Controls.Add(this.buttonRefrescarInsumos);
+            this.tabInsumos.Controls.Add(this.buttonEliminarInsumo);
+            this.tabInsumos.Controls.Add(this.buttonEditar);
+            this.tabInsumos.Controls.Add(this.buttonAgregarInsumo);
+            this.tabInsumos.Location = new System.Drawing.Point(4, 22);
+            this.tabInsumos.Name = "tabInsumos";
+            this.tabInsumos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabInsumos.Size = new System.Drawing.Size(801, 314);
+            this.tabInsumos.TabIndex = 4;
+            this.tabInsumos.Text = "Gestión Insumos";
+            this.tabInsumos.UseVisualStyleBackColor = true;
+            this.tabInsumos.Click += new System.EventHandler(this.tabInsumos_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.nombreDataGridViewTextBoxColumn2,
+            this.tipoDataGridViewTextBoxColumn,
+            this.volumenDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.insumoBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(18, 18);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(545, 275);
+            this.dataGridView4.TabIndex = 17;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn2
+            // 
+            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn2.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
+            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // volumenDataGridViewTextBoxColumn
+            // 
+            this.volumenDataGridViewTextBoxColumn.DataPropertyName = "volumen";
+            this.volumenDataGridViewTextBoxColumn.HeaderText = "volumen";
+            this.volumenDataGridViewTextBoxColumn.Name = "volumenDataGridViewTextBoxColumn";
+            this.volumenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // insumoBindingSource
+            // 
+            this.insumoBindingSource.DataMember = "insumo";
+            this.insumoBindingSource.DataSource = this.smiav_dbDataSet2;
+            // 
+            // smiav_dbDataSet2
+            // 
+            this.smiav_dbDataSet2.DataSetName = "smiav_dbDataSet2";
+            this.smiav_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonRefrescarInsumos
+            // 
+            this.buttonRefrescarInsumos.Location = new System.Drawing.Point(625, 158);
+            this.buttonRefrescarInsumos.Name = "buttonRefrescarInsumos";
+            this.buttonRefrescarInsumos.Size = new System.Drawing.Size(124, 38);
+            this.buttonRefrescarInsumos.TabIndex = 16;
+            this.buttonRefrescarInsumos.Text = "Refrescar Datos";
+            this.buttonRefrescarInsumos.UseVisualStyleBackColor = true;
+            this.buttonRefrescarInsumos.Click += new System.EventHandler(this.buttonRefrescarInsumos_Click);
+            // 
+            // buttonEliminarInsumo
+            // 
+            this.buttonEliminarInsumo.Location = new System.Drawing.Point(625, 243);
+            this.buttonEliminarInsumo.Name = "buttonEliminarInsumo";
+            this.buttonEliminarInsumo.Size = new System.Drawing.Size(124, 38);
+            this.buttonEliminarInsumo.TabIndex = 15;
+            this.buttonEliminarInsumo.Text = "Eliminar Insumo";
+            this.buttonEliminarInsumo.UseVisualStyleBackColor = true;
+            this.buttonEliminarInsumo.Click += new System.EventHandler(this.buttonEliminarInsumo_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(625, 95);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(124, 38);
+            this.buttonEditar.TabIndex = 14;
+            this.buttonEditar.Text = "Editar Insumo";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditarInsumo_Click);
+            // 
+            // buttonAgregarInsumo
+            // 
+            this.buttonAgregarInsumo.Location = new System.Drawing.Point(625, 34);
+            this.buttonAgregarInsumo.Name = "buttonAgregarInsumo";
+            this.buttonAgregarInsumo.Size = new System.Drawing.Size(124, 38);
+            this.buttonAgregarInsumo.TabIndex = 13;
+            this.buttonAgregarInsumo.Text = "Agregar Insumo";
+            this.buttonAgregarInsumo.UseVisualStyleBackColor = true;
+            this.buttonAgregarInsumo.Click += new System.EventHandler(this.buttonAgregarInsumo_Click);
             // 
             // usuarioTableAdapter
             // 
@@ -441,6 +509,70 @@
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // insumoTableAdapter
+            // 
+            this.insumoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.FillWeight = 150F;
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio en $";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preciodescDataGridViewTextBoxColumn
+            // 
+            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
+            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento $";
+            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
+            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ColumnNombreStock
+            // 
+            this.ColumnNombreStock.HeaderText = "Nombre";
+            this.ColumnNombreStock.Name = "ColumnNombreStock";
+            this.ColumnNombreStock.ReadOnly = true;
+            // 
+            // ColumnTipoStock
+            // 
+            this.ColumnTipoStock.HeaderText = "Tipo";
+            this.ColumnTipoStock.Name = "ColumnTipoStock";
+            this.ColumnTipoStock.ReadOnly = true;
+            // 
+            // ColumnVolumenStock
+            // 
+            this.ColumnVolumenStock.HeaderText = "Volumen";
+            this.ColumnVolumenStock.Name = "ColumnVolumenStock";
+            this.ColumnVolumenStock.ReadOnly = true;
+            // 
+            // ColumnCantidadStock
+            // 
+            this.ColumnCantidadStock.HeaderText = "Cantidad";
+            this.ColumnCantidadStock.Name = "ColumnCantidadStock";
+            this.ColumnCantidadStock.ReadOnly = true;
+            // 
+            // ColumnBarraStock
+            // 
+            this.ColumnBarraStock.HeaderText = "Barra";
+            this.ColumnBarraStock.Name = "ColumnBarraStock";
+            this.ColumnBarraStock.ReadOnly = true;
             // 
             // AdminUI
             // 
@@ -464,6 +596,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet1)).EndInit();
+            this.tabInsumos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smiavdbDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -487,12 +623,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombreStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTipoStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVolumenStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCantidadStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBarraStock;
         private smiav_dbDataSet smiav_dbDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private smiav_dbDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter;
@@ -500,10 +630,6 @@
         private smiav_dbDataSet1 smiav_dbDataSet1;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private smiav_dbDataSet1TableAdapters.productoTableAdapter productoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preciodescDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
@@ -511,5 +637,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabInsumos;
+        private System.Windows.Forms.Button buttonRefrescarInsumos;
+        private System.Windows.Forms.Button buttonEliminarInsumo;
+        private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.Button buttonAgregarInsumo;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private smiav_dbDataSet2 smiav_dbDataSet2;
+        private System.Windows.Forms.BindingSource insumoBindingSource;
+        private smiav_dbDataSet2TableAdapters.insumoTableAdapter insumoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciodescDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombreStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTipoStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVolumenStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCantidadStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBarraStock;
     }
 }

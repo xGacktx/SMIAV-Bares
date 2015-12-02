@@ -20,17 +20,17 @@ namespace Smiav_Bares_1._0 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("smiav_dbDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("smiav_dbDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class smiav_dbDataSet : global::System.Data.DataSet {
+    public partial class smiav_dbDataSet2 : global::System.Data.DataSet {
         
-        private usuarioDataTable tableusuario;
+        private insumoDataTable tableinsumo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public smiav_dbDataSet() {
+        public smiav_dbDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Smiav_Bares_1._0 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected smiav_dbDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected smiav_dbDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Smiav_Bares_1._0 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["usuario"] != null)) {
-                    base.Tables.Add(new usuarioDataTable(ds.Tables["usuario"]));
+                if ((ds.Tables["insumo"] != null)) {
+                    base.Tables.Add(new insumoDataTable(ds.Tables["insumo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Smiav_Bares_1._0 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public usuarioDataTable usuario {
+        public insumoDataTable insumo {
             get {
-                return this.tableusuario;
+                return this.tableinsumo;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Smiav_Bares_1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            smiav_dbDataSet cln = ((smiav_dbDataSet)(base.Clone()));
+            smiav_dbDataSet2 cln = ((smiav_dbDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Smiav_Bares_1._0 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["usuario"] != null)) {
-                    base.Tables.Add(new usuarioDataTable(ds.Tables["usuario"]));
+                if ((ds.Tables["insumo"] != null)) {
+                    base.Tables.Add(new insumoDataTable(ds.Tables["insumo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Smiav_Bares_1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableusuario = ((usuarioDataTable)(base.Tables["usuario"]));
+            this.tableinsumo = ((insumoDataTable)(base.Tables["insumo"]));
             if ((initTable == true)) {
-                if ((this.tableusuario != null)) {
-                    this.tableusuario.InitVars();
+                if ((this.tableinsumo != null)) {
+                    this.tableinsumo.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Smiav_Bares_1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "smiav_dbDataSet";
+            this.DataSetName = "smiav_dbDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/smiav_dbDataSet.xsd";
+            this.Namespace = "http://tempuri.org/smiav_dbDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableusuario = new usuarioDataTable();
-            base.Tables.Add(this.tableusuario);
+            this.tableinsumo = new insumoDataTable();
+            base.Tables.Add(this.tableinsumo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeusuario() {
+        private bool ShouldSerializeinsumo() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Smiav_Bares_1._0 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            smiav_dbDataSet ds = new smiav_dbDataSet();
+            smiav_dbDataSet2 ds = new smiav_dbDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,27 @@ namespace Smiav_Bares_1._0 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void usuarioRowChangeEventHandler(object sender, usuarioRowChangeEvent e);
+        public delegate void insumoRowChangeEventHandler(object sender, insumoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class usuarioDataTable : global::System.Data.TypedTableBase<usuarioRow> {
+        public partial class insumoDataTable : global::System.Data.TypedTableBase<insumoRow> {
             
-            private global::System.Data.DataColumn columnrut;
-            
-            private global::System.Data.DataColumn columnclave;
-            
-            private global::System.Data.DataColumn columncargo;
-            
-            private global::System.Data.DataColumn columnnick;
+            private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnnombre;
             
+            private global::System.Data.DataColumn columntipo;
+            
+            private global::System.Data.DataColumn columnvolumen;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioDataTable() {
-                this.TableName = "usuario";
+            public insumoDataTable() {
+                this.TableName = "insumo";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +298,7 @@ namespace Smiav_Bares_1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal usuarioDataTable(global::System.Data.DataTable table) {
+            internal insumoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,40 +315,16 @@ namespace Smiav_Bares_1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected usuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected insumoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn rutColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnrut;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn claveColumn {
-                get {
-                    return this.columnclave;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cargoColumn {
-                get {
-                    return this.columncargo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nickColumn {
-                get {
-                    return this.columnnick;
+                    return this.columnid;
                 }
             }
             
@@ -359,6 +333,22 @@ namespace Smiav_Bares_1._0 {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tipoColumn {
+                get {
+                    return this.columntipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn volumenColumn {
+                get {
+                    return this.columnvolumen;
                 }
             }
             
@@ -373,56 +363,55 @@ namespace Smiav_Bares_1._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRow this[int index] {
+            public insumoRow this[int index] {
                 get {
-                    return ((usuarioRow)(this.Rows[index]));
+                    return ((insumoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usuarioRowChangeEventHandler usuarioRowChanging;
+            public event insumoRowChangeEventHandler insumoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usuarioRowChangeEventHandler usuarioRowChanged;
+            public event insumoRowChangeEventHandler insumoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usuarioRowChangeEventHandler usuarioRowDeleting;
+            public event insumoRowChangeEventHandler insumoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usuarioRowChangeEventHandler usuarioRowDeleted;
+            public event insumoRowChangeEventHandler insumoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddusuarioRow(usuarioRow row) {
+            public void AddinsumoRow(insumoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRow AddusuarioRow(string rut, string clave, string cargo, string nick, string nombre) {
-                usuarioRow rowusuarioRow = ((usuarioRow)(this.NewRow()));
+            public insumoRow AddinsumoRow(int id, string nombre, string tipo, int volumen) {
+                insumoRow rowinsumoRow = ((insumoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        rut,
-                        clave,
-                        cargo,
-                        nick,
-                        nombre};
-                rowusuarioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowusuarioRow);
-                return rowusuarioRow;
+                        id,
+                        nombre,
+                        tipo,
+                        volumen};
+                rowinsumoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowinsumoRow);
+                return rowinsumoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRow FindByrut(string rut) {
-                return ((usuarioRow)(this.Rows.Find(new object[] {
-                            rut})));
+            public insumoRow FindByid(int id) {
+                return ((insumoRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                usuarioDataTable cln = ((usuarioDataTable)(base.Clone()));
+                insumoDataTable cln = ((insumoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,69 +419,64 @@ namespace Smiav_Bares_1._0 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new usuarioDataTable();
+                return new insumoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnrut = base.Columns["rut"];
-                this.columnclave = base.Columns["clave"];
-                this.columncargo = base.Columns["cargo"];
-                this.columnnick = base.Columns["nick"];
+                this.columnid = base.Columns["id"];
                 this.columnnombre = base.Columns["nombre"];
+                this.columntipo = base.Columns["tipo"];
+                this.columnvolumen = base.Columns["volumen"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnrut = new global::System.Data.DataColumn("rut", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrut);
-                this.columnclave = new global::System.Data.DataColumn("clave", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclave);
-                this.columncargo = new global::System.Data.DataColumn("cargo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncargo);
-                this.columnnick = new global::System.Data.DataColumn("nick", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnick);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
+                this.columntipo = new global::System.Data.DataColumn("tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo);
+                this.columnvolumen = new global::System.Data.DataColumn("volumen", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvolumen);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnrut}, true));
-                this.columnrut.AllowDBNull = false;
-                this.columnrut.Unique = true;
-                this.columnrut.MaxLength = 13;
-                this.columnclave.AllowDBNull = false;
-                this.columnclave.MaxLength = 6;
-                this.columncargo.AllowDBNull = false;
-                this.columncargo.MaxLength = 14;
-                this.columnnick.MaxLength = 10;
-                this.columnnombre.MaxLength = 45;
+                                this.columnid}, true));
+                this.columnid.AllowDBNull = false;
+                this.columnid.Unique = true;
+                this.columnnombre.AllowDBNull = false;
+                this.columnnombre.MaxLength = 25;
+                this.columntipo.AllowDBNull = false;
+                this.columntipo.MaxLength = 10;
+                this.columnvolumen.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRow NewusuarioRow() {
-                return ((usuarioRow)(this.NewRow()));
+            public insumoRow NewinsumoRow() {
+                return ((insumoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new usuarioRow(builder);
+                return new insumoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(usuarioRow);
+                return typeof(insumoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.usuarioRowChanged != null)) {
-                    this.usuarioRowChanged(this, new usuarioRowChangeEvent(((usuarioRow)(e.Row)), e.Action));
+                if ((this.insumoRowChanged != null)) {
+                    this.insumoRowChanged(this, new insumoRowChangeEvent(((insumoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -500,8 +484,8 @@ namespace Smiav_Bares_1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.usuarioRowChanging != null)) {
-                    this.usuarioRowChanging(this, new usuarioRowChangeEvent(((usuarioRow)(e.Row)), e.Action));
+                if ((this.insumoRowChanging != null)) {
+                    this.insumoRowChanging(this, new insumoRowChangeEvent(((insumoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -509,8 +493,8 @@ namespace Smiav_Bares_1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.usuarioRowDeleted != null)) {
-                    this.usuarioRowDeleted(this, new usuarioRowChangeEvent(((usuarioRow)(e.Row)), e.Action));
+                if ((this.insumoRowDeleted != null)) {
+                    this.insumoRowDeleted(this, new insumoRowChangeEvent(((insumoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -518,14 +502,14 @@ namespace Smiav_Bares_1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.usuarioRowDeleting != null)) {
-                    this.usuarioRowDeleting(this, new usuarioRowChangeEvent(((usuarioRow)(e.Row)), e.Action));
+                if ((this.insumoRowDeleting != null)) {
+                    this.insumoRowDeleting(this, new insumoRowChangeEvent(((insumoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveusuarioRow(usuarioRow row) {
+            public void RemoveinsumoRow(insumoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -534,7 +518,7 @@ namespace Smiav_Bares_1._0 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                smiav_dbDataSet ds = new smiav_dbDataSet();
+                smiav_dbDataSet2 ds = new smiav_dbDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -552,7 +536,7 @@ namespace Smiav_Bares_1._0 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "usuarioDataTable";
+                attribute2.FixedValue = "insumoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -596,63 +580,25 @@ namespace Smiav_Bares_1._0 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class usuarioRow : global::System.Data.DataRow {
+        public partial class insumoRow : global::System.Data.DataRow {
             
-            private usuarioDataTable tableusuario;
+            private insumoDataTable tableinsumo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal usuarioRow(global::System.Data.DataRowBuilder rb) : 
+            internal insumoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableusuario = ((usuarioDataTable)(this.Table));
+                this.tableinsumo = ((insumoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string rut {
+            public int id {
                 get {
-                    return ((string)(this[this.tableusuario.rutColumn]));
+                    return ((int)(this[this.tableinsumo.idColumn]));
                 }
                 set {
-                    this[this.tableusuario.rutColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string clave {
-                get {
-                    return ((string)(this[this.tableusuario.claveColumn]));
-                }
-                set {
-                    this[this.tableusuario.claveColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cargo {
-                get {
-                    return ((string)(this[this.tableusuario.cargoColumn]));
-                }
-                set {
-                    this[this.tableusuario.cargoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nick {
-                get {
-                    try {
-                        return ((string)(this[this.tableusuario.nickColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nick\' in table \'usuario\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusuario.nickColumn] = value;
+                    this[this.tableinsumo.idColumn] = value;
                 }
             }
             
@@ -660,40 +606,33 @@ namespace Smiav_Bares_1._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string nombre {
                 get {
-                    try {
-                        return ((string)(this[this.tableusuario.nombreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombre\' in table \'usuario\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableinsumo.nombreColumn]));
                 }
                 set {
-                    this[this.tableusuario.nombreColumn] = value;
+                    this[this.tableinsumo.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnickNull() {
-                return this.IsNull(this.tableusuario.nickColumn);
+            public string tipo {
+                get {
+                    return ((string)(this[this.tableinsumo.tipoColumn]));
+                }
+                set {
+                    this[this.tableinsumo.tipoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnickNull() {
-                this[this.tableusuario.nickColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tableusuario.nombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tableusuario.nombreColumn] = global::System.Convert.DBNull;
+            public int volumen {
+                get {
+                    return ((int)(this[this.tableinsumo.volumenColumn]));
+                }
+                set {
+                    this[this.tableinsumo.volumenColumn] = value;
+                }
             }
         }
         
@@ -701,22 +640,22 @@ namespace Smiav_Bares_1._0 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class usuarioRowChangeEvent : global::System.EventArgs {
+        public class insumoRowChangeEvent : global::System.EventArgs {
             
-            private usuarioRow eventRow;
+            private insumoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRowChangeEvent(usuarioRow row, global::System.Data.DataRowAction action) {
+            public insumoRowChangeEvent(insumoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usuarioRow Row {
+            public insumoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -730,11 +669,9 @@ namespace Smiav_Bares_1._0 {
                 }
             }
         }
-
-        public smiav_dbDataSet2.insumoDataTable insumo { get; set; }
     }
 }
-namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
+namespace Smiav_Bares_1._0.smiav_dbDataSet2TableAdapters {
     
     
     /// <summary>
@@ -746,7 +683,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class usuarioTableAdapter : global::System.ComponentModel.Component {
+    public partial class insumoTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -760,7 +697,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public usuarioTableAdapter() {
+        public insumoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -857,25 +794,23 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "usuario";
-            tableMapping.ColumnMappings.Add("rut", "rut");
-            tableMapping.ColumnMappings.Add("clave", "clave");
-            tableMapping.ColumnMappings.Add("cargo", "cargo");
-            tableMapping.ColumnMappings.Add("nick", "nick");
+            tableMapping.DataSetTable = "insumo";
+            tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("tipo", "tipo");
+            tableMapping.ColumnMappings.Add("volumen", "volumen");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `usuario` WHERE ((`rut` = @p1) AND (`clave` = @p2) AND (`cargo` = @p3" +
-                ") AND ((@p4 = 1 AND `nick` IS NULL) OR (`nick` = @p5)) AND ((@p6 = 1 AND `nombre" +
-                "` IS NULL) OR (`nombre` = @p7)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `insumo` WHERE ((`id` = @p1) AND (`nombre` = @p2) AND (`tipo` = @p3) " +
+                "AND (`volumen` = @p4))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "rut";
+            param.SourceColumn = "id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -883,7 +818,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "clave";
+            param.SourceColumn = "nombre";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -891,7 +826,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "cargo";
+            param.SourceColumn = "tipo";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -899,120 +834,89 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "nick";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nick";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p6";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p7";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
+            param.SourceColumn = "volumen";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `usuario` (`rut`, `clave`, `cargo`, `nick`, `nombre`) VALUES (@p1, @p" +
-                "2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `insumo` (`id`, `nombre`, `tipo`, `volumen`) VALUES (@p1, @p2, @p3, @" +
+                "p4)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "rut";
+            param.SourceColumn = "id";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "clave";
+            param.SourceColumn = "nombre";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "cargo";
+            param.SourceColumn = "tipo";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "nick";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
+            param.SourceColumn = "volumen";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `usuario` SET `rut` = @p1, `clave` = @p2, `cargo` = @p3, `nick` = @p4, `nombre` = @p5 WHERE ((`rut` = @p6) AND (`clave` = @p7) AND (`cargo` = @p8) AND ((@p9 = 1 AND `nick` IS NULL) OR (`nick` = @p10)) AND ((@p11 = 1 AND `nombre` IS NULL) OR (`nombre` = @p12)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `insumo` SET `id` = @p1, `nombre` = @p2, `tipo` = @p3, `volumen` = @p4 WHE" +
+                "RE ((`id` = @p5) AND (`nombre` = @p6) AND (`tipo` = @p7) AND (`volumen` = @p8))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "rut";
+            param.SourceColumn = "id";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "clave";
+            param.SourceColumn = "nombre";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "cargo";
+            param.SourceColumn = "tipo";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "nick";
+            param.SourceColumn = "volumen";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "nombre";
+            param.SourceColumn = "id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "rut";
+            param.SourceColumn = "nombre";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -1020,49 +924,15 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "clave";
+            param.SourceColumn = "tipo";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p8";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "cargo";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p9";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "nick";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p10";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nick";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p11";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p12";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
+            param.SourceColumn = "volumen";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -1080,7 +950,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `rut`, `clave`, `cargo`, `nick`, `nombre` FROM `usuario`";
+            this._commandCollection[0].CommandText = "SELECT `id`, `nombre`, `tipo`, `volumen` FROM `insumo`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1088,7 +958,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(smiav_dbDataSet.usuarioDataTable dataTable) {
+        public virtual int Fill(smiav_dbDataSet2.insumoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1101,9 +971,9 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual smiav_dbDataSet.usuarioDataTable GetData() {
+        public virtual smiav_dbDataSet2.insumoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            smiav_dbDataSet.usuarioDataTable dataTable = new smiav_dbDataSet.usuarioDataTable();
+            smiav_dbDataSet2.insumoDataTable dataTable = new smiav_dbDataSet2.insumoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1111,15 +981,15 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(smiav_dbDataSet.usuarioDataTable dataTable) {
+        public virtual int Update(smiav_dbDataSet2.insumoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(smiav_dbDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "usuario");
+        public virtual int Update(smiav_dbDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "insumo");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1141,13 +1011,8 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string p1, string p2, string p3, string p5, string p7) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(p1));
-            }
+        public virtual int Delete(int p1, string p2, string p3, int p4) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
             }
@@ -1160,22 +1025,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(p3));
             }
-            if ((p5 == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(p5));
-            }
-            if ((p7 == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p7));
-            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(p4));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1196,13 +1046,8 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, string p2, string p3, string p4, string p5) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
-            }
+        public virtual int Insert(int p1, string p2, string p3, int p4) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
             }
@@ -1215,18 +1060,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
             }
-            if ((p4 == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
-            }
-            if ((p5 == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p5));
-            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(p4));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1247,13 +1081,8 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string p2, string p3, string p4, string p5, string p6, string p7, string p8, string p10, string p12) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
-            }
+        public virtual int Update(int p1, string p2, string p3, int p4, int p5, string p6, string p7, int p8) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
             }
@@ -1266,18 +1095,8 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
             }
-            if ((p4 == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
-            }
-            if ((p5 == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5));
             if ((p6 == null)) {
                 throw new global::System.ArgumentNullException("p6");
             }
@@ -1290,28 +1109,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p7));
             }
-            if ((p8 == null)) {
-                throw new global::System.ArgumentNullException("p8");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p8));
-            }
-            if ((p10 == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p10));
-            }
-            if ((p12 == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p12));
-            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(p8));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1332,8 +1130,8 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, string p3, string p4, string p5, string p6, string p7, string p8, string p10, string p12) {
-            return this.Update(p6, p2, p3, p4, p5, p6, p7, p8, p10, p12);
+        public virtual int Update(string p2, string p3, int p4, int p5, string p6, string p7, int p8) {
+            return this.Update(p5, p2, p3, p4, p5, p6, p7, p8);
         }
     }
     
@@ -1349,7 +1147,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private usuarioTableAdapter _usuarioTableAdapter;
+        private insumoTableAdapter _insumoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1371,12 +1169,12 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public usuarioTableAdapter usuarioTableAdapter {
+        public insumoTableAdapter insumoTableAdapter {
             get {
-                return this._usuarioTableAdapter;
+                return this._insumoTableAdapter;
             }
             set {
-                this._usuarioTableAdapter = value;
+                this._insumoTableAdapter = value;
             }
         }
         
@@ -1399,9 +1197,9 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._usuarioTableAdapter != null) 
-                            && (this._usuarioTableAdapter.Connection != null))) {
-                    return this._usuarioTableAdapter.Connection;
+                if (((this._insumoTableAdapter != null) 
+                            && (this._insumoTableAdapter.Connection != null))) {
+                    return this._insumoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1416,7 +1214,7 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._usuarioTableAdapter != null)) {
+                if ((this._insumoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1428,14 +1226,14 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(smiav_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(smiav_dbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._insumoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.insumo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._usuarioTableAdapter.Update(updatedRows));
+                    result = (result + this._insumoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1447,13 +1245,13 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(smiav_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(smiav_dbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._insumoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.insumo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._usuarioTableAdapter.Update(addedRows));
+                    result = (result + this._insumoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1465,13 +1263,13 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(smiav_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(smiav_dbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._insumoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.insumo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._usuarioTableAdapter.Update(deletedRows));
+                    result = (result + this._insumoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1507,15 +1305,15 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(smiav_dbDataSet dataSet) {
+        public virtual int UpdateAll(smiav_dbDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._usuarioTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._usuarioTableAdapter.Connection) == false))) {
+            if (((this._insumoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._insumoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1551,13 +1349,13 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._usuarioTableAdapter != null)) {
-                    revertConnections.Add(this._usuarioTableAdapter, this._usuarioTableAdapter.Connection);
-                    this._usuarioTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._usuarioTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._usuarioTableAdapter.Adapter);
+                if ((this._insumoTableAdapter != null)) {
+                    revertConnections.Add(this._insumoTableAdapter, this._insumoTableAdapter.Connection);
+                    this._insumoTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._insumoTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._insumoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._insumoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._insumoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1618,9 +1416,9 @@ namespace Smiav_Bares_1._0.smiav_dbDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._usuarioTableAdapter != null)) {
-                    this._usuarioTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._usuarioTableAdapter]));
-                    this._usuarioTableAdapter.Transaction = null;
+                if ((this._insumoTableAdapter != null)) {
+                    this._insumoTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._insumoTableAdapter]));
+                    this._insumoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 59);
+            this.label1.Location = new System.Drawing.Point(21, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 89);
+            this.label3.Location = new System.Drawing.Point(21, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 124);
+            this.label5.Location = new System.Drawing.Point(22, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // textBoxRut
             // 
-            this.textBoxRut.Location = new System.Drawing.Point(118, 59);
+            this.textBoxRut.Location = new System.Drawing.Point(118, 60);
             this.textBoxRut.Name = "textBoxRut";
             this.textBoxRut.Size = new System.Drawing.Size(175, 20);
             this.textBoxRut.TabIndex = 7;
@@ -95,7 +95,7 @@
             // 
             // textBoxNick
             // 
-            this.textBoxNick.Location = new System.Drawing.Point(118, 89);
+            this.textBoxNick.Location = new System.Drawing.Point(118, 94);
             this.textBoxNick.Name = "textBoxNick";
             this.textBoxNick.Size = new System.Drawing.Size(175, 20);
             this.textBoxNick.TabIndex = 8;
@@ -123,7 +123,7 @@
             // 
             // textBoxClave
             // 
-            this.textBoxClave.Location = new System.Drawing.Point(118, 121);
+            this.textBoxClave.Location = new System.Drawing.Point(119, 125);
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.Size = new System.Drawing.Size(175, 20);
             this.textBoxClave.TabIndex = 9;

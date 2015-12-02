@@ -29,7 +29,7 @@ namespace Smiav_Bares_1._0
                 ProductoConnect c = new ProductoConnect();
                 List<string> producto = c.SelectProductoFull(IDgrid);
                 nombreProd = producto[1];
-                textBoxRut.Text = nombreProd;
+                textBoxRut.Text = producto[1];
                 textBoxNombre.Text = IDgrid;
                 textBoxNick.Text = producto[2].Substring(0, producto[2].Length - 3); ;
                 textBoxClave.Text = producto[3].Substring(0, producto[2].Length - 3);
@@ -78,7 +78,7 @@ namespace Smiav_Bares_1._0
                                 if (editar)
                                 {
                                     c.UpdateProducto(nombre, precio, precioDescuento, ID);
-                                    MessageBox.Show(this, "El producto ha sido actualizado con éxito ", "Actualizacion Exitosa", MessageBoxButtons.OK);
+                                    MessageBox.Show(this, "El producto ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
                                     this.Close();
                                 }
                                 else
@@ -100,7 +100,7 @@ namespace Smiav_Bares_1._0
                     }
                     else
                     {
-                        MessageBox.Show(this, "El ID del producto debe ser Numerico", "Ingreso Fallido", MessageBoxButtons.OK);
+                        MessageBox.Show(this, "El ID del producto debe ser Numérico", "Ingreso Fallido", MessageBoxButtons.OK);
                     }
                 }
                 else

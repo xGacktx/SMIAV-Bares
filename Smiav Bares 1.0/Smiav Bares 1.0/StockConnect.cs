@@ -1,15 +1,16 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+
 //Add MySql Library
 using MySql.Data.MySqlClient;
 
 namespace ConnectCsharpToMysql
 {
-    class DBConnect
+    class StockConnect
     {
         private MySqlConnection connection;
         private string server;
@@ -18,7 +19,7 @@ namespace ConnectCsharpToMysql
         private string password;
 
         //Constructor
-        public DBConnect()
+        public StockConnect()
         {
             Initialize();
         }
@@ -54,11 +55,11 @@ namespace ConnectCsharpToMysql
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("No se pudo conectar con el servidor.  Contacte a un administrador del sistema");
+                        MessageBox.Show("No se pudo conectar con el servidor.  Contacte a un administrador");
                         break;
 
                     case 1045:
-                        MessageBox.Show("usuario/contraseÒa Inv·lidos, por favor intente nuevamente");
+                        MessageBox.Show("usuario/contrase√±a Inv√°lidos, por favor intente nuevamente");
                         break;
                 }
                 return false;
@@ -81,16 +82,16 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void InsertUsuario(string rut, string clave, string cargo, string nick, string nombre)
+        public void InsertInsumo(string id, string nombre, string tipo, string volumen)
         {
-            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('"+rut+"', '"+clave+"', '"+cargo+"', '"+nick+"', '"+nombre+"')";
+            string query = "INSERT INTO insumo (id, nombre, tipo, volumen) VALUES('" + id + "', '" + nombre + "', '" + tipo + "', '" + volumen + "')";
 
             //open connection
             if (this.OpenConnection() == true)
             {
                 //create command and assign the query and connection from the constructor
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                
+
                 //Execute command
                 cmd.ExecuteNonQuery();
 
@@ -100,14 +101,12 @@ namespace ConnectCsharpToMysql
         }
 
         //Update statement
-        public void updateUsuario(string nombre, string rut, string nick, string cargo, string clave)
+        public void UpdateInsumo(string ID, string nom, string tipo, string volumen)
         {
             string query;
             //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
-            if(clave == null) query = "UPDATE usuario SET nombre='"+nombre+"' , nick='"+nick+"' , cargo='"+cargo+"' WHERE rut='"+rut+"' ";
-            else{
-                query = "UPDATE usuario SET nombre='"+nombre+"' , nick='"+nick+"' , cargo='"+cargo+"', clave='"+clave+"' WHERE rut='"+rut+"' ";
-            }
+            Console.WriteLine("volumen: "+volumen+" id: "+ID);
+            query = "UPDATE insumo SET id='" + ID + "' , nombre='" + nom + "' , tipo='" + tipo + "' , volumen='" + volumen + "' WHERE ID='" + ID + "' ";
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -127,10 +126,10 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Delete statement
-        public void Delete(string rut)
+        //Eliminar buscando por rut
+        public void DeleteInsumo(string ID)
         {
-            string query = "DELETE FROM usuario WHERE rut='"+rut+"'";
+            string query = "DELETE FROM insumo WHERE id='" + ID + "'";
 
             if (this.OpenConnection() == true)
             {
@@ -141,16 +140,16 @@ namespace ConnectCsharpToMysql
         }
 
         //Select statement
-        public List<string> SelectUsuario(string clave)
+        public List<string> SelectStock(string clave)
         {
-            string query = "SELECT cargo, nick FROM usuario WHERE clave = '"+clave+"'";
+            string query = "SELECT pb.Id, pb.Name, pb.MobileNo, e.email FROM phonebook pb INNER JOIN email e ON e.Id= pb.Id";
 
             //Create a list to store the result
             List<string> list = new List<string>();
 
             //Open connection
             if (this.OpenConnection() == true)
-            {   
+            {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Create a data reader and Execute the command
@@ -189,10 +188,10 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Select Usuario mediante rut para obtener todos sus campos
-        public List<string> SelectUsuarioFull(string rut)
+        // retorna todos los datos del un insumo
+        public List<string> SelectInsumoFull(string ID)
         {
-            string query = "SELECT nombre, rut, nick, cargo FROM usuario WHERE rut = '" + rut + "'";
+            string query = "SELECT id, nombre, tipo, volumen FROM insumo WHERE id = '" + ID + "'";
 
             //Create a list to store the result
             List<string> list = new List<string>();
@@ -205,10 +204,10 @@ namespace ConnectCsharpToMysql
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
+                string Id;
                 string nombre;
-                string nick;
-                string cargo;
-                
+                string tipo;
+                string volumen;
 
                 //Read the data and store them in the list
                 while (dataReader.Read())
@@ -217,14 +216,15 @@ namespace ConnectCsharpToMysql
                     //dataReader.GetString(0), dataReader.GetString(1))
                     //);
                     nombre = dataReader["nombre"].ToString();
-                    rut = dataReader["rut"].ToString();
-                    nick = dataReader["nick"].ToString();
-                    cargo = dataReader["cargo"].ToString();
-                   
+                    Id = dataReader["id"].ToString();
+                    tipo = dataReader["tipo"].ToString();
+                    volumen = dataReader["volumen"].ToString();
+
                     //Console.WriteLine(cargo+" "+nick);
+                    list.Add(Id);
                     list.Add(nombre);
-                    list.Add(nick);
-                    list.Add(cargo);                    
+                    list.Add(tipo);
+                    list.Add(volumen);
                 }
                 //close Data Reader
                 dataReader.Close();
@@ -241,12 +241,10 @@ namespace ConnectCsharpToMysql
             }
         }
 
-
-
         //Count statement
-        public int CountUsuario(string clave, string campo)
+        public int CountInsumo(string clave, string campo)
         {
-            string query = "SELECT Count(*) FROM usuario WHERE "+campo+"='"+clave+"'";
+            string query = "SELECT Count(*) FROM insumo WHERE " + campo + "='" + clave + "'";
             int Count = -1;
 
             //Open Connection
@@ -256,8 +254,8 @@ namespace ConnectCsharpToMysql
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
                 //ExecuteScalar will return one value
-                Count = int.Parse(cmd.ExecuteScalar()+"");
-                
+                Count = int.Parse(cmd.ExecuteScalar() + "");
+
                 //close Connection
                 this.CloseConnection();
 
@@ -288,7 +286,7 @@ namespace ConnectCsharpToMysql
                 path = "C:\\" + year + "-" + month + "-" + day + "-" + hour + "-" + minute + "-" + second + "-" + millisecond + ".sql";
                 StreamWriter file = new StreamWriter(path);
 
-                
+
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "mysqldump";
                 psi.RedirectStandardInput = false;
@@ -331,7 +329,7 @@ namespace ConnectCsharpToMysql
                 psi.Arguments = string.Format(@"-u{0} -p{1} -h{2} {3}", uid, password, server, database);
                 psi.UseShellExecute = false;
 
-                
+
                 Process process = Process.Start(psi);
                 process.StandardInput.WriteLine(input);
                 process.StandardInput.Close();

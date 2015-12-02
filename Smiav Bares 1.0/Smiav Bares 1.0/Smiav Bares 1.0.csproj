@@ -55,6 +55,12 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNuevoInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoInsumo.Designer.cs">
+      <DependentUpon>FormNuevoInsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,17 @@
     </Compile>
     <Compile Include="InsumoConnect.cs" />
     <Compile Include="ProductoConnect.cs" />
+    <Compile Include="smiav_dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smiav_dbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockConnect.cs" />
     <Compile Include="UsuarioConnect.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="GarzonUI.cs">
@@ -109,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoInsumo.resx">
+      <DependentUpon>FormNuevoInsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoProducto.resx">
       <DependentUpon>FormNuevoProducto.cs</DependentUpon>
@@ -168,6 +188,28 @@
     </None>
     <None Include="smiav_dbDataSet1.xss">
       <DependentUpon>smiav_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet2.xsc">
+      <DependentUpon>smiav_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet2.xss">
+      <DependentUpon>smiav_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet3.xsc">
+      <DependentUpon>smiav_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet3.xss">
+      <DependentUpon>smiav_dbDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -83,7 +83,7 @@ namespace Smiav_Bares_1._0
                                 }
                                 else
                                 {
-                                    MessageBox.Show(this, "La contraseña de Jefe Personal debe ser de 6 digitos", "Ingreso Fallido", MessageBoxButtons.OK);
+                                    MessageBox.Show(this, "La contraseña de Jefe Personal debe ser de 6 dígitos", "Ingreso Fallido", MessageBoxButtons.OK);
                                 }
                             }
                             else
@@ -104,7 +104,7 @@ namespace Smiav_Bares_1._0
                                 }
                                 else
                                 {
-                                    MessageBox.Show(this, "La clave del usuario debe ser de 4 digitos", "Ingreso Exitoso", MessageBoxButtons.OK);
+                                    MessageBox.Show(this, "La clave del usuario debe ser de 4 digitos", "Ingreso Fallido", MessageBoxButtons.OK);
                                 }
                             }
                         }
@@ -126,7 +126,7 @@ namespace Smiav_Bares_1._0
                     if (contraseña.Equals("") && confirmcontra.Equals("") )
                     {             
                         c.UpdateUsuario(nombre, rutgrid, nick, cargo, null);
-                        MessageBox.Show(this, "El usuario ha sido actualizado con éxito ", "Actualizacion Exitosa", MessageBoxButtons.OK);
+                        MessageBox.Show(this, "El usuario ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
                         this.Close();                    
                     }
                     else
@@ -156,7 +156,7 @@ namespace Smiav_Bares_1._0
                                 }
                                 else
                                 {
-                                    MessageBox.Show(this, "La contraseña de Jefe Personal debe ser de 6 digitos", "Ingreso Fallido", MessageBoxButtons.OK);
+                                    MessageBox.Show(this, "La contraseña del Jefe de Personal debe ser de 6 dígitos", "Ingreso Fallido", MessageBoxButtons.OK);
                                 }
                             }
                             else
@@ -172,12 +172,12 @@ namespace Smiav_Bares_1._0
                                     }
                                     else
                                     {
-                                        MessageBox.Show(this, "Contraseña no valida", "Ingreso Fallido", MessageBoxButtons.OK);
+                                        MessageBox.Show(this, "Contraseña no válida", "Actualización Fallida", MessageBoxButtons.OK);
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show(this, "La clave del usuario debe ser de 4 digitos", "Ingreso Exitoso", MessageBoxButtons.OK);
+                                    MessageBox.Show(this, "La clave del usuario debe ser de 4 dígitos", "Actualización Fallida", MessageBoxButtons.OK);
                                 }
                             }                            
                         }

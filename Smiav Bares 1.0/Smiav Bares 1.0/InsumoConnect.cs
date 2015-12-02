@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+
 //Add MySql Library
 using MySql.Data.MySqlClient;
 
@@ -81,9 +82,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void InsertInsumo(string rut, string clave, string cargo, string nick, string nombre)
+        public void InsertInsumo(string id, string nombre, string tipo, string volumen)
         {
-            string query = "INSERT INTO usuario (rut, clave, cargo, nick, nombre) VALUES('" + rut + "', '" + clave + "', '" + cargo + "', '" + nick + "', '" + nombre + "')";
+            string query = "INSERT INTO insumo (id, nombre, tipo, volumen) VALUES('" + id + "', '" + nombre + "', '" + tipo + "', '" + volumen + "')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -100,9 +101,12 @@ namespace ConnectCsharpToMysql
         }
 
         //Update statement
-        public void UpdateInsumo()
+        public void UpdateInsumo(string ID, string nom, string tipo, string volumen)
         {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+            string query;
+            //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
+            Console.WriteLine("volumen: "+volumen+" id: "+ID);
+            query = "UPDATE insumo SET id='" + ID + "' , nombre='" + nom + "' , tipo='" + tipo + "' , volumen='" + volumen + "' WHERE ID='" + ID + "' ";
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -123,9 +127,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Eliminar buscando por rut
-        public void DeleteInsumo(string rut)
+        public void DeleteInsumo(string ID)
         {
-            string query = "DELETE FROM usuario WHERE rut='" + rut + "'";
+            string query = "DELETE FROM insumo WHERE id='" + ID + "'";
 
             if (this.OpenConnection() == true)
             {
@@ -138,7 +142,7 @@ namespace ConnectCsharpToMysql
         //Select statement
         public List<string> SelectInsumo(string clave)
         {
-            string query = "SELECT cargo, nick FROM usuario WHERE clave = '" + clave + "'";
+            string query = "SELECT cargo, nick FROM insumo WHERE clave = '" + clave + "'";
 
             //Create a list to store the result
             List<string> list = new List<string>();
@@ -184,10 +188,63 @@ namespace ConnectCsharpToMysql
             }
         }
 
+        // retorna todos los datos del un insumo
+        public List<string> SelectInsumoFull(string ID)
+        {
+            string query = "SELECT id, nombre, tipo, volumen FROM insumo WHERE id = '" + ID + "'";
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string Id;
+                string nombre;
+                string tipo;
+                string volumen;
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+                    nombre = dataReader["nombre"].ToString();
+                    Id = dataReader["id"].ToString();
+                    tipo = dataReader["tipo"].ToString();
+                    volumen = dataReader["volumen"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+                    list.Add(Id);
+                    list.Add(nombre);
+                    list.Add(tipo);
+                    list.Add(volumen);
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
         //Count statement
         public int CountInsumo(string clave, string campo)
         {
-            string query = "SELECT Count(*) FROM usuario WHERE " + campo + "='" + clave + "'";
+            string query = "SELECT Count(*) FROM insumo WHERE " + campo + "='" + clave + "'";
             int Count = -1;
 
             //Open Connection
