@@ -142,7 +142,11 @@ namespace ConnectCsharpToMysql
         //Select statement
         public List<string> SelectStock(string clave)
         {
-            string query = "SELECT pb.Id, pb.Name, pb.MobileNo, e.email FROM phonebook pb INNER JOIN email e ON e.Id= pb.Id";
+            string query = "SELECT i.nombre, i.tipo, i_s.volumen, i_s.cantidad, i_s.id_barra_ist FROM insumo as i, insumo_stock as i_s where i.id=i_s.id_insumo_ist;";
+
+
+                
+                
 
             //Create a list to store the result
             List<string> list = new List<string>();
@@ -152,7 +156,14 @@ namespace ConnectCsharpToMysql
             {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+
+                /*DataSet ds = new DataSet();
+
+                adap.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                //Create a data reader and Execute the command*/
+
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
                 string cargo;
