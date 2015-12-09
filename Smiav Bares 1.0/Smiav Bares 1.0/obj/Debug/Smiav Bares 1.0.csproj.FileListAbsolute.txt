@@ -71,3 +71,4 @@ C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\ob
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
 C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache

@@ -5,6 +5,9 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 
+//to use DataTable
+using System.Data;
+
 //Add MySql Library
 using MySql.Data.MySqlClient;
 
@@ -82,9 +85,9 @@ namespace ConnectCsharpToMysql
         }
 
         //Insert statement
-        public void InsertInsumo(string id, string nombre, string tipo, string volumen)
+        public void InsertStock(string id_insumo, string id_barra, string volumen, string cantidad)
         {
-            string query = "INSERT INTO insumo (id, nombre, tipo, volumen) VALUES('" + id + "', '" + nombre + "', '" + tipo + "', '" + volumen + "')";
+            string query = "INSERT INTO Stock (id_inusmo_ist, id_barra_ist, volumen, cantidad) VALUES('" + id_insumo + "', '" + id_barra + "', '" + volumen + "', '" + cantidad + "')";
 
             //open connection
             if (this.OpenConnection() == true)
@@ -139,64 +142,24 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Select statement
-        public List<string> SelectStock(string clave)
+        //Select statement to load datagridview
+        public BindingSource SelectStock()
         {
             string query = "SELECT i.nombre, i.tipo, i_s.volumen, i_s.cantidad, i_s.id_barra_ist FROM insumo as i, insumo_stock as i_s where i.id=i_s.id_insumo_ist;";
 
 
+            MySqlDataAdapter MyDA = new MySqlDataAdapter();
+            MyDA.SelectCommand = new MySqlCommand(query, connection);
+
+            DataTable table = new DataTable();
+            MyDA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            return bSource;
+            
                 
-                
-
-            //Create a list to store the result
-            List<string> list = new List<string>();
-
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
-
-                /*DataSet ds = new DataSet();
-
-                adap.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0].DefaultView;
-                //Create a data reader and Execute the command*/
-
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                string cargo;
-                string nick;
-
-                //Read the data and store them in the list
-                while (dataReader.Read())
-                {
-                    //Console.WriteLine(String.Format("{0}, {1}",
-                    //dataReader.GetString(0), dataReader.GetString(1))
-                    //);
-
-                    cargo = dataReader["cargo"].ToString();
-                    nick = dataReader["nick"].ToString();
-
-                    //Console.WriteLine(cargo+" "+nick);
-
-                    list.Add(cargo);
-                    list.Add(nick);
-                }
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
-                return list;
-            }
-            else
-            {
-                return list;
-            }
         }
 
         // retorna todos los datos del un insumo

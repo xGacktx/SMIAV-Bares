@@ -29,6 +29,10 @@ namespace Smiav_Bares_1._0
 
         private void FormIngresoStock_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'smiav_dbDataSet4.insumo' table. You can move, or remove it, as needed.
+            this.insumoTableAdapter1.Fill(this.smiav_dbDataSet4.insumo);
+            // TODO: This line of code loads data into the 'smiav_dbDataSet3.insumo' table. You can move, or remove it, as needed.
+            this.insumoTableAdapter.Fill(this.smiav_dbDataSet3.insumo);
 
         }
     }

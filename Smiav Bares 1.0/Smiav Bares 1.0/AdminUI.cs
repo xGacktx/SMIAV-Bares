@@ -80,6 +80,12 @@ namespace Smiav_Bares_1._0
             this.usuarioTableAdapter.Fill(this.smiav_dbDataSet.usuario);
             // TODO: This line of code loads data into the 'smiav_dbDataSet.usuario' table. You can move, or remove it, as needed.
             this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
+            
+            StockConnect sc = new StockConnect();
+
+            BindingSource bSource = sc.SelectStock();
+
+            dataGridView3.DataSource = bSource;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,6 +226,11 @@ namespace Smiav_Bares_1._0
             {
                 MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

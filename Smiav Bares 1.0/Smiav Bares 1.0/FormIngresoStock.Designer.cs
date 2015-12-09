@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresoStock));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.smiav_dbDataSet3 = new Smiav_Bares_1._0.smiav_dbDataSet3();
+            this.insumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insumoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet3TableAdapters.insumoTableAdapter();
+            this.insumoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.smiav_dbDataSet4 = new Smiav_Bares_1._0.smiav_dbDataSet4();
+            this.insumoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.insumoTableAdapter1 = new Smiav_Bares_1._0.smiav_dbDataSet4TableAdapters.insumoTableAdapter();
+            this.insumoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -68,30 +81,22 @@
             "Primer Piso",
             "Segundo Piso",
             "Bodega"});
-            this.comboBox1.Location = new System.Drawing.Point(102, 163);
+            this.comboBox1.Location = new System.Drawing.Point(102, 131);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 21);
             this.comboBox1.TabIndex = 25;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 126);
+            this.textBox4.Location = new System.Drawing.Point(102, 94);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(67, 20);
             this.textBox4.TabIndex = 23;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(102, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 163);
+            this.label5.Location = new System.Drawing.Point(57, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 18;
@@ -100,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 126);
+            this.label4.Location = new System.Drawing.Point(44, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 17;
@@ -109,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 95);
+            this.label3.Location = new System.Drawing.Point(45, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 16;
@@ -124,70 +129,93 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Nombre Insumo";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tipo";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Ron",
-            "Pisco",
-            "Tequila",
-            "Wisky",
-            "Agua Ardiente",
-            "Vino tinto",
-            "Vino Blanco",
-            "Bebida Gaseosa",
-            "Agua Mineral"});
-            this.comboBox2.Location = new System.Drawing.Point(102, 59);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(170, 21);
-            this.comboBox2.TabIndex = 28;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // comboBox3
             // 
+            this.comboBox3.DataSource = this.insumoBindingSource3;
+            this.comboBox3.DisplayMember = "volumen";
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "1500cc",
-            "1000cc",
-            "750cc",
-            "330cc"});
-            this.comboBox3.Location = new System.Drawing.Point(102, 92);
+            this.comboBox3.Location = new System.Drawing.Point(102, 60);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(170, 21);
             this.comboBox3.TabIndex = 29;
+            this.comboBox3.ValueMember = "volumen";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DataSource = this.insumoBindingSource;
+            this.comboBox4.DisplayMember = "nombre";
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(102, 23);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(170, 21);
+            this.comboBox4.TabIndex = 30;
+            this.comboBox4.ValueMember = "nombre";
+            // 
+            // smiav_dbDataSet3
+            // 
+            this.smiav_dbDataSet3.DataSetName = "smiav_dbDataSet3";
+            this.smiav_dbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // insumoBindingSource
+            // 
+            this.insumoBindingSource.DataMember = "insumo";
+            this.insumoBindingSource.DataSource = this.smiav_dbDataSet3;
+            // 
+            // insumoTableAdapter
+            // 
+            this.insumoTableAdapter.ClearBeforeFill = true;
+            // 
+            // insumoBindingSource1
+            // 
+            this.insumoBindingSource1.DataMember = "insumo";
+            this.insumoBindingSource1.DataSource = this.smiav_dbDataSet3;
+            // 
+            // smiav_dbDataSet4
+            // 
+            this.smiav_dbDataSet4.DataSetName = "smiav_dbDataSet4";
+            this.smiav_dbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // insumoBindingSource2
+            // 
+            this.insumoBindingSource2.DataMember = "insumo";
+            this.insumoBindingSource2.DataSource = this.smiav_dbDataSet4;
+            // 
+            // insumoTableAdapter1
+            // 
+            this.insumoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // insumoBindingSource3
+            // 
+            this.insumoBindingSource3.DataMember = "insumo";
+            this.insumoBindingSource3.DataSource = this.smiav_dbDataSet4;
             // 
             // FormIngresoStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 261);
+            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIngresoStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Ingreso Stock";
             this.Load += new System.EventHandler(this.FormIngresoStock_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insumoBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,13 +227,19 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private smiav_dbDataSet3 smiav_dbDataSet3;
+        private System.Windows.Forms.BindingSource insumoBindingSource;
+        private smiav_dbDataSet3TableAdapters.insumoTableAdapter insumoTableAdapter;
+        private System.Windows.Forms.BindingSource insumoBindingSource1;
+        private smiav_dbDataSet4 smiav_dbDataSet4;
+        private System.Windows.Forms.BindingSource insumoBindingSource2;
+        private smiav_dbDataSet4TableAdapters.insumoTableAdapter insumoTableAdapter1;
+        private System.Windows.Forms.BindingSource insumoBindingSource3;
     }
 }

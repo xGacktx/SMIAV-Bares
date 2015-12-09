@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smiav_dbDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="smiav_dbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StockConnect.cs" />
     <Compile Include="UsuarioConnect.cs" />
     <Compile Include="DBConnect.cs" />
@@ -210,6 +215,17 @@
     </None>
     <None Include="smiav_dbDataSet3.xss">
       <DependentUpon>smiav_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet4.xsc">
+      <DependentUpon>smiav_dbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet4.xss">
+      <DependentUpon>smiav_dbDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
