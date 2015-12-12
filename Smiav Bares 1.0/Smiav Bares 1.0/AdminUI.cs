@@ -239,5 +239,10 @@ namespace Smiav_Bares_1._0
         {
 
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

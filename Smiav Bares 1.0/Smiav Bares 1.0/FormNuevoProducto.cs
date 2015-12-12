@@ -17,6 +17,7 @@ namespace Smiav_Bares_1._0
         private bool editar;
         private string IDgrid;
         private string nombreProd;
+        private bool productoCreado;
 
         public FormNuevoProducto(bool editar, string ID)
         {
@@ -29,21 +30,22 @@ namespace Smiav_Bares_1._0
                 ProductoConnect c = new ProductoConnect();
                 List<string> producto = c.SelectProductoFull(IDgrid);
                 nombreProd = producto[1];
-                textBoxRut.Text = producto[1];
-                textBoxNombre.Text = IDgrid;
-                textBoxNick.Text = producto[2].Substring(0, producto[2].Length - 3); ;
-                textBoxClave.Text = producto[3].Substring(0, producto[2].Length - 3);
+                textBoxNombre.Text = producto[1];
+                textBoxID.Text = IDgrid;
+                textBoxPrecio.Text = producto[2].Substring(0, producto[2].Length - 3); ;
+                textBoxDescuento.Text = producto[3].Substring(0, producto[2].Length - 3);
+                productoCreado = true;
                 
             }
         }
 
         // agregar un nuevo producto, validados campos vacios
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
-            string ID = textBoxNombre.Text;
-            string nombre = textBoxRut.Text;
-            string precio = textBoxNick.Text;
-            string precioDescuento = textBoxClave.Text;
+            string ID = textBoxID.Text;
+            string nombre = textBoxNombre.Text;
+            string precio = textBoxPrecio.Text;
+            string precioDescuento = textBoxDescuento.Text;
 
             nombre = nombre.ToUpper();
 
@@ -81,13 +83,12 @@ namespace Smiav_Bares_1._0
                                 {
                                     c.UpdateProducto(nombre.ToUpper(), precio, precioDescuento, ID);
                                     MessageBox.Show(this, "El producto ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
-                                    this.Close();
                                 }
                                 else
                                 {
                                     c.InsertProducto(ID, nombre.ToUpper(), precio, precioDescuento);
-                                    MessageBox.Show(this, "El Producto ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
-                                    this.Close();
+                                    MessageBox.Show(this, "El Producto ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);                               
+                                    productoCreado = true;                                  
                                 }
                             }
                             else
@@ -112,7 +113,7 @@ namespace Smiav_Bares_1._0
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -137,9 +138,107 @@ namespace Smiav_Bares_1._0
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonEliminarInsumo_Click_1(object sender, EventArgs e)
+        {
+            if (productoCreado)
+            {
+                if (dginsumosproducto.SelectedRows.Count == 1)
+                {
+                    string ID_insumo = dginsumosproducto.SelectedRows[0].Cells[0].Value.ToString();
+                    
+                    string nombre = dginsumosproducto.SelectedRows[0].Cells[1].Value.ToString();
+                    switch (MessageBox.Show(this, "¿Está seguro de eliminar el insumo " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
+                    {
+                        case DialogResult.OK:
+                            ProductoConnect c = new ProductoConnect();
+                            c.eliminarInsumo(textBoxID.Text, ID_insumo);
+                            MessageBox.Show(this, "El Insumo ha sido eliminado", "Información", MessageBoxButtons.OK);
+                            refresh();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(this, "Debe seleccionar una fila a eliminar", "Información", MessageBoxButtons.OK);
+                }
+            }            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void refresh()
+        {
+            ProductoConnect sc = new ProductoConnect();
+            BindingSource bSource = sc.SelectInsumos(IDgrid);
+            dginsumosproducto.DataSource = bSource;
+            dginsumosproducto.Columns[0].HeaderText = "ID";
+            dginsumosproducto.Columns[0].Visible = false;
+            dginsumosproducto.Columns[1].HeaderText = "TIPO";
+            dginsumosproducto.Columns[2].HeaderText = "NOMBRE";
+            dginsumosproducto.Columns[2].Width = 145;
+            dginsumosproducto.Columns[3].HeaderText = "VOLUMEN";
+        }
+
+        private void FormNuevoProducto_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'smiav_dbDataSet2.insumo' table. You can move, or remove it, as needed.
+            this.insumoTableAdapter.Fill(this.smiav_dbDataSet2.insumo);
+           //mi codigo
+            ProductoConnect sc = new ProductoConnect();
+            BindingSource bSource = sc.SelectInsumos(IDgrid);
+            dginsumosproducto.DataSource = bSource;
+            dginsumosproducto.Columns[0].HeaderText = "ID";
+            dginsumosproducto.Columns[0].Visible = false;
+            dginsumosproducto.Columns[1].HeaderText = "TIPO";            
+            dginsumosproducto.Columns[2].HeaderText = "NOMBRE";
+            dginsumosproducto.Columns[2].Width = 145;
+            dginsumosproducto.Columns[3].HeaderText = "VOLUMEN";
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxInsumos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAgregarInsumo_Click(object sender, EventArgs e)
+        {
+            if (productoCreado)
+            {
+                string ID_insumo = comboBoxInsumos.SelectedValue.ToString();    
+                string volumen = comboBoxVolumen.Text;
+                string ID_producto = textBoxID.Text;
+                if (volumen != "") {
+                    ProductoConnect c = new ProductoConnect();
+                    c.agregarInsumo(ID_producto, ID_insumo, volumen);
+                    MessageBox.Show(this, "El Insumo ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
+                    refresh();
+                
+                 
+                }
+                else
+                {
+                    MessageBox.Show(this, "Debe Seleccionar la cantidad", "Información", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Primero debe crear un producto", "Información", MessageBoxButtons.OK);
+            }
         }
     }
 }

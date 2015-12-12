@@ -7,6 +7,10 @@ using System.IO;
 //Add MySql Library
 using MySql.Data.MySqlClient;
 
+//to use DataTable
+using System.Data;
+
+
 namespace ConnectCsharpToMysql
 {
     class ProductoConnect
@@ -137,6 +141,53 @@ namespace ConnectCsharpToMysql
             }
         }
 
+        //Agregar Insumos a un Producto (receta)
+        public void agregarInsumo(string ID_Producto, string ID_Insumo, string volumen)
+        {
+            string query = "INSERT INTO insumo_producto (id_producto_ipr,id_insumo_ipr,volumen) VALUES('" + ID_Producto + "', '" + ID_Insumo + "', '" + volumen + "')";
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+        //Eliminar insumos de un producto
+        public void eliminarInsumo(string ID_Producto, string ID_Insumo)
+        {
+            string query = "DELETE FROM insumo_producto WHERE id_producto_ipr='" + ID_Producto + "' AND id_insumo_ipr='" + ID_Insumo + "'";
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
+        //Seleccionar insumos de un producto dado
+        public BindingSource SelectInsumos(string id_producto)
+        {
+            string query = "SELECT ins.id,ins.tipo,ins.nombre, ip.volumen FROM insumo ins INNER JOIN insumo_producto ip ON ins.id = ip.id_insumo_ipr WHERE (ip.id_producto_ipr = '" + id_producto + "')";
+            
+            MySqlDataAdapter MyDA = new MySqlDataAdapter();
+            MyDA.SelectCommand = new MySqlCommand(query, connection);
+
+            DataTable table = new DataTable();
+            MyDA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            return bSource;
+        }
+                
         //Select statement
         public List<string> SelectProducto(string clave)
         {
