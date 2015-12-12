@@ -117,5 +117,10 @@ namespace Smiav_Bares_1._0
         {
             this.Close();
         }
+
+        private void comboBoxVolumen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

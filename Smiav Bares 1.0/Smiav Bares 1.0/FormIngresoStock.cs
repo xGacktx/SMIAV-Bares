@@ -35,5 +35,15 @@ namespace Smiav_Bares_1._0
             this.insumoTableAdapter.Fill(this.smiav_dbDataSet3.insumo);
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
