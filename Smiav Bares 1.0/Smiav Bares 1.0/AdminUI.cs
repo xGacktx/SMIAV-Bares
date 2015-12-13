@@ -85,7 +85,14 @@ namespace Smiav_Bares_1._0
 
             BindingSource bSource = sc.SelectStock();
 
+
             dataGridView3.DataSource = bSource;
+            dataGridView3.Columns[0].HeaderText = "NOMBRE";
+            dataGridView3.Columns[0].Width = 157;
+            dataGridView3.Columns[1].HeaderText = "TIPO";
+            dataGridView3.Columns[2].HeaderText = "VOLUMEN";
+            dataGridView3.Columns[3].HeaderText = "VOLUMEN STOCK";
+            dataGridView3.Columns[4].HeaderText = "ALMACÉN";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

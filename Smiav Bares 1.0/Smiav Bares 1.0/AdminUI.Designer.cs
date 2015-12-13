@@ -37,11 +37,6 @@
             this.botonEditarUsuario = new System.Windows.Forms.Button();
             this.botonAgregarUsuario = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet = new Smiav_Bares_1._0.smiav_dbDataSet();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -54,18 +49,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet1 = new Smiav_Bares_1._0.smiav_dbDataSet1();
             this.tabInsumos = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet2 = new Smiav_Bares_1._0.smiav_dbDataSet2();
             this.buttonRefrescarInsumos = new System.Windows.Forms.Button();
@@ -77,6 +64,19 @@
             this.productoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet1TableAdapters.productoTableAdapter();
             this.insumoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet2TableAdapters.insumoTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
+            this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -126,7 +126,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(625, 158);
+            this.button10.Location = new System.Drawing.Point(654, 158);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(124, 38);
             this.button10.TabIndex = 4;
@@ -136,7 +136,7 @@
             // 
             // botonEliminarUsuario
             // 
-            this.botonEliminarUsuario.Location = new System.Drawing.Point(625, 243);
+            this.botonEliminarUsuario.Location = new System.Drawing.Point(654, 243);
             this.botonEliminarUsuario.Name = "botonEliminarUsuario";
             this.botonEliminarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonEliminarUsuario.TabIndex = 3;
@@ -146,7 +146,7 @@
             // 
             // botonEditarUsuario
             // 
-            this.botonEditarUsuario.Location = new System.Drawing.Point(625, 95);
+            this.botonEditarUsuario.Location = new System.Drawing.Point(654, 95);
             this.botonEditarUsuario.Name = "botonEditarUsuario";
             this.botonEditarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonEditarUsuario.TabIndex = 2;
@@ -156,7 +156,7 @@
             // 
             // botonAgregarUsuario
             // 
-            this.botonAgregarUsuario.Location = new System.Drawing.Point(625, 34);
+            this.botonAgregarUsuario.Location = new System.Drawing.Point(654, 34);
             this.botonAgregarUsuario.Name = "botonAgregarUsuario";
             this.botonAgregarUsuario.Size = new System.Drawing.Size(124, 38);
             this.botonAgregarUsuario.TabIndex = 1;
@@ -184,44 +184,9 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 275);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // rutDataGridViewTextBoxColumn
-            // 
-            this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
-            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
-            this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
-            this.rutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cargoDataGridViewTextBoxColumn
-            // 
-            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
-            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
-            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
-            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nickDataGridViewTextBoxColumn
-            // 
-            this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
-            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
-            this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
-            this.nickDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claveDataGridViewTextBoxColumn
-            // 
-            this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
-            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
-            this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
-            this.claveDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usuarioBindingSource
             // 
@@ -249,18 +214,18 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(697, 120);
+            this.button8.Location = new System.Drawing.Point(656, 120);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(98, 38);
+            this.button8.Size = new System.Drawing.Size(124, 38);
             this.button8.TabIndex = 2;
             this.button8.Text = "Editar Stock";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(697, 26);
+            this.button7.Location = new System.Drawing.Point(656, 26);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 38);
+            this.button7.Size = new System.Drawing.Size(124, 38);
             this.button7.TabIndex = 1;
             this.button7.Text = "Abastecer Stock";
             this.button7.UseVisualStyleBackColor = true;
@@ -354,36 +319,6 @@
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.FillWeight = 150F;
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio en $";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preciodescDataGridViewTextBoxColumn
-            // 
-            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
-            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento $";
-            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
-            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "producto";
@@ -428,34 +363,6 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(545, 275);
             this.dataGridView4.TabIndex = 17;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn2
-            // 
-            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn2.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
-            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // volumenDataGridViewTextBoxColumn
-            // 
-            this.volumenDataGridViewTextBoxColumn.DataPropertyName = "volumen";
-            this.volumenDataGridViewTextBoxColumn.HeaderText = "volumen";
-            this.volumenDataGridViewTextBoxColumn.Name = "volumenDataGridViewTextBoxColumn";
-            this.volumenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // insumoBindingSource
             // 
@@ -526,13 +433,109 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(697, 209);
+            this.button2.Location = new System.Drawing.Point(656, 209);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 38);
+            this.button2.Size = new System.Drawing.Size(124, 38);
             this.button2.TabIndex = 12;
             this.button2.Text = "Refrescar Datos";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // rutDataGridViewTextBoxColumn
+            // 
+            this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
+            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
+            this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
+            this.rutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cargoDataGridViewTextBoxColumn
+            // 
+            this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
+            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
+            this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nickDataGridViewTextBoxColumn
+            // 
+            this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
+            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
+            this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
+            this.nickDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claveDataGridViewTextBoxColumn
+            // 
+            this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
+            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
+            this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
+            this.claveDataGridViewTextBoxColumn.ReadOnly = true;
+            this.claveDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn2
+            // 
+            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn2.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
+            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn2.Width = 202;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // volumenDataGridViewTextBoxColumn
+            // 
+            this.volumenDataGridViewTextBoxColumn.DataPropertyName = "volumen";
+            this.volumenDataGridViewTextBoxColumn.HeaderText = "volumen";
+            this.volumenDataGridViewTextBoxColumn.Name = "volumenDataGridViewTextBoxColumn";
+            this.volumenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.FillWeight = 150F;
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn1.Width = 202;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio en $";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preciodescDataGridViewTextBoxColumn
+            // 
+            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
+            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento $";
+            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
+            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AdminUI
             // 
@@ -590,11 +593,6 @@
         private System.Windows.Forms.BindingSource productoBindingSource;
         private smiav_dbDataSet1TableAdapters.productoTableAdapter productoTableAdapter;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabInsumos;
         private System.Windows.Forms.Button buttonRefrescarInsumos;
@@ -605,14 +603,19 @@
         private smiav_dbDataSet2 smiav_dbDataSet2;
         private System.Windows.Forms.BindingSource insumoBindingSource;
         private smiav_dbDataSet2TableAdapters.insumoTableAdapter insumoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn volumenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn preciodescDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumenDataGridViewTextBoxColumn;
     }
 }

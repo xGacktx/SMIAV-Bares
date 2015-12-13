@@ -37,7 +37,7 @@ namespace Smiav_Bares_1._0
                 List<string> usuario = c.SelectUsuario(clave);
                 int cont = c.CountUsuario(clave, "clave");
 
-                if (cont == 1 && usuario[0].Equals("Jefe Personal"))
+                if (cont == 1 && usuario[0].Equals("JEFE PERSONAL"))
                 {
                     //cierra la ventana actual y muestra la siguiente
                     this.Hide();

@@ -103,7 +103,7 @@ namespace ConnectCsharpToMysql
         public void UpdateProducto(string nom, string precio, string precioDescuento, string ID)
         {
             string query;
-            //UPDATE `smiav_db`.`usuario` SET `clave`='1234', `cargo`='Mesero', `nick`='jorguito', `nombre`='Jorge ' WHERE `rut`='16245345-1';
+   
             query = "UPDATE producto SET id='"+ ID +"' , nombre='" + nom + "' , precio='" + precio + "' , precio_desc='" + precioDescuento + "' WHERE ID='" + ID + "' ";
 
             //Open connection

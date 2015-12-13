@@ -145,7 +145,7 @@ namespace ConnectCsharpToMysql
         //Select statement to load datagridview
         public BindingSource SelectStock()
         {
-            string query = "SELECT i.nombre, i.tipo, i_s.volumen, i_s.cantidad, i_s.id_barra_ist FROM insumo as i, insumo_stock as i_s where i.id=i_s.id_insumo_ist;";
+            string query = "SELECT i.nombre, i.tipo, i.volumen, i_s.volumen_total, i_s.id_barra_ist FROM insumo as i, insumo_stock as i_s where i.id=i_s.id_insumo_ist;";
 
 
             MySqlDataAdapter MyDA = new MySqlDataAdapter();

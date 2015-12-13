@@ -44,6 +44,9 @@ namespace Smiav_Bares_1._0
             string contraseña = textBoxClave.Text;
             string confirmcontra = textBoxClave2.Text;
             string cargo = comboBoxCargo.Text;
+
+            nombre = nombre.ToUpper();
+
             UsuarioConnect c = new UsuarioConnect();
 
             if (!editar)
@@ -72,7 +75,7 @@ namespace Smiav_Bares_1._0
 
                                     if (contClave == 0)
                                     {
-                                        c.InsertUsuario(rut, contraseña, cargo, nick, nombre);
+                                        c.InsertUsuario(rut, contraseña, cargo, nick.ToUpper(), nombre.ToUpper());
                                         MessageBox.Show(this, "El usuario ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
                                         this.Close();                                        
                                     }
@@ -91,8 +94,8 @@ namespace Smiav_Bares_1._0
                                 if (contraseña.Length == 4)
                                 {
                                     if (contClave == 0)
-                                    { 
-                                        c.InsertUsuario(rut, contraseña, cargo, nick, nombre);
+                                    {
+                                        c.InsertUsuario(rut, contraseña, cargo.ToUpper(), nick.ToUpper(), nombre.ToUpper());
                                         MessageBox.Show(this, "El usuario ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
                                         this.Close();
                                         
@@ -124,8 +127,8 @@ namespace Smiav_Bares_1._0
                 }
                 else {
                     if (contraseña.Equals("") && confirmcontra.Equals("") )
-                    {             
-                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, null);
+                    {
+                        c.UpdateUsuario(nombre.ToUpper(), rutgrid, nick.ToUpper(), cargo.ToUpper(), null);
                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
                         this.Close();                    
                     }
@@ -145,7 +148,7 @@ namespace Smiav_Bares_1._0
 
                                     if (contClave == 0)
                                     {
-                                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, contraseña);
+                                        c.UpdateUsuario(nombre.ToUpper(), rutgrid, nick.ToUpper(), cargo.ToUpper(), contraseña);
                                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito", "Ingreso Actualización", MessageBoxButtons.OK);
                                         this.Close();
                                     }
@@ -165,7 +168,7 @@ namespace Smiav_Bares_1._0
                                 {
                                     if (contClave == 0)
                                     {
-                                        c.UpdateUsuario(nombre, rutgrid, nick, cargo, contraseña);
+                                        c.UpdateUsuario(nombre.ToUpper(), rutgrid, nick.ToUpper(), cargo.ToUpper(), contraseña);
                                         MessageBox.Show(this, "El usuario ha sido actualizado con éxito", "Ingreso Actualización", MessageBoxButtons.OK);
                                         this.Close();
 

@@ -45,6 +45,11 @@ namespace Smiav_Bares_1._0
             string tipo = textBoxTipo.Text;
             string volumen = comboBoxVolumen.Text;
 
+            //quita el 'ml'
+            volumen = volumen.Substring(0, volumen.Length - 2);
+
+            Console.WriteLine("vol = "+ volumen);
+
             Console.WriteLine("volumen: "+volumen);
 
             InsumoConnect c = new InsumoConnect();
@@ -80,13 +85,13 @@ namespace Smiav_Bares_1._0
                                 if (editar)
                                 {
                                     Console.WriteLine("editar");
-                                    c.UpdateInsumo(ID, nombre, tipo, volumen);
+                                    c.UpdateInsumo(ID, nombre.ToUpper(), tipo.ToUpper(), volumen);
                                     MessageBox.Show(this, "El Insumo ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    c.InsertInsumo(ID, nombre, tipo, volumen);
+                                    c.InsertInsumo(ID, nombre.ToUpper(), tipo.ToUpper(), volumen);
                                     MessageBox.Show(this, "El Insumo ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
                                     this.Close();
                                 }

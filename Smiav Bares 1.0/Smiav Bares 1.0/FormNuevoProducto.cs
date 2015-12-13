@@ -45,6 +45,8 @@ namespace Smiav_Bares_1._0
             string precio = textBoxNick.Text;
             string precioDescuento = textBoxClave.Text;
 
+            nombre = nombre.ToUpper();
+
             ProductoConnect c = new ProductoConnect();
 
             // busca campos vacios
@@ -77,13 +79,13 @@ namespace Smiav_Bares_1._0
                                 //se estamos editando
                                 if (editar)
                                 {
-                                    c.UpdateProducto(nombre, precio, precioDescuento, ID);
+                                    c.UpdateProducto(nombre.ToUpper(), precio, precioDescuento, ID);
                                     MessageBox.Show(this, "El producto ha sido actualizado con éxito ", "Actualización Exitosa", MessageBoxButtons.OK);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    c.InsertProducto(ID, nombre, precio, precioDescuento);
+                                    c.InsertProducto(ID, nombre.ToUpper(), precio, precioDescuento);
                                     MessageBox.Show(this, "El Producto ha sido ingresado con éxito", "Ingreso Exitoso", MessageBoxButtons.OK);
                                     this.Close();
                                 }
