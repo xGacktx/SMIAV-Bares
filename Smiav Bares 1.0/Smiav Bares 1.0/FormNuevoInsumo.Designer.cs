@@ -121,17 +121,18 @@
             // 
             this.comboBoxVolumen.FormattingEnabled = true;
             this.comboBoxVolumen.Items.AddRange(new object[] {
-            "200ml",
-            "250ml",
-            "500ml",
-            "750ml",
-            "1000ml",
-            "1200ml",
-            "1500ml"});
+            "200",
+            "250",
+            "500",
+            "750",
+            "1000",
+            "1200",
+            "1500"});
             this.comboBoxVolumen.Location = new System.Drawing.Point(118, 127);
             this.comboBoxVolumen.Name = "comboBoxVolumen";
             this.comboBoxVolumen.Size = new System.Drawing.Size(174, 21);
             this.comboBoxVolumen.TabIndex = 24;
+            this.comboBoxVolumen.SelectedIndexChanged += new System.EventHandler(this.comboBoxVolumen_SelectedIndexChanged);
             // 
             // FormNuevoInsumo
             // 
