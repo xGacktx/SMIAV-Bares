@@ -152,6 +152,7 @@
             this.Name = "FormNuevoInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Nuevo Insumo";
+            this.Load += new System.EventHandler(this.FormNuevoInsumo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
