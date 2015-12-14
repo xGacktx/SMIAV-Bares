@@ -28,31 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2Piso = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonMesa1 = new System.Windows.Forms.Button();
-            this.buttonMesa2 = new System.Windows.Forms.Button();
-            this.buttonMesa3 = new System.Windows.Forms.Button();
-            this.buttonMesa4 = new System.Windows.Forms.Button();
-            this.buttonMesa5 = new System.Windows.Forms.Button();
-            this.buttonMesa6 = new System.Windows.Forms.Button();
-            this.buttonMesa7 = new System.Windows.Forms.Button();
-            this.buttonMesa8 = new System.Windows.Forms.Button();
-            this.buttonMesa9 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2Piso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2Piso
-            // 
-            this.label2Piso.AutoSize = true;
-            this.label2Piso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label2Piso.Location = new System.Drawing.Point(146, 62);
-            this.label2Piso.Name = "label2Piso";
-            this.label2Piso.Size = new System.Drawing.Size(101, 31);
-            this.label2Piso.TabIndex = 23;
-            this.label2Piso.Text = "PISO 2";
             // 
             // pictureBox2
             // 
@@ -70,158 +60,114 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonMesa1
+            // button9
             // 
-            this.buttonMesa1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa1.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa1.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa1.Location = new System.Drawing.Point(1114, 441);
-            this.buttonMesa1.Name = "buttonMesa1";
-            this.buttonMesa1.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa1.TabIndex = 24;
-            this.buttonMesa1.Text = "1";
-            this.buttonMesa1.UseVisualStyleBackColor = false;
+            this.button9.Location = new System.Drawing.Point(432, 584);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 85);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa2
+            // button10
             // 
-            this.buttonMesa2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa2.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa2.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa2.Location = new System.Drawing.Point(1114, 578);
-            this.buttonMesa2.Name = "buttonMesa2";
-            this.buttonMesa2.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa2.TabIndex = 25;
-            this.buttonMesa2.Text = "2";
-            this.buttonMesa2.UseVisualStyleBackColor = false;
+            this.button10.Location = new System.Drawing.Point(292, 584);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 85);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa3
+            // button7
             // 
-            this.buttonMesa3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa3.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa3.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa3.Location = new System.Drawing.Point(984, 578);
-            this.buttonMesa3.Name = "buttonMesa3";
-            this.buttonMesa3.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa3.TabIndex = 26;
-            this.buttonMesa3.Text = "3";
-            this.buttonMesa3.UseVisualStyleBackColor = false;
+            this.button7.Location = new System.Drawing.Point(562, 584);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 85);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa4
+            // button8
             // 
-            this.buttonMesa4.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa4.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa4.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa4.Location = new System.Drawing.Point(850, 578);
-            this.buttonMesa4.Name = "buttonMesa4";
-            this.buttonMesa4.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa4.TabIndex = 27;
-            this.buttonMesa4.Text = "4";
-            this.buttonMesa4.UseVisualStyleBackColor = false;
+            this.button8.Location = new System.Drawing.Point(152, 584);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 85);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa5
+            // button5
             // 
-            this.buttonMesa5.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa5.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa5.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa5.Location = new System.Drawing.Point(711, 578);
-            this.buttonMesa5.Name = "buttonMesa5";
-            this.buttonMesa5.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa5.TabIndex = 28;
-            this.buttonMesa5.Text = "5";
-            this.buttonMesa5.UseVisualStyleBackColor = false;
+            this.button5.Location = new System.Drawing.Point(844, 584);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 85);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa6
+            // button6
             // 
-            this.buttonMesa6.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa6.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa6.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa6.Location = new System.Drawing.Point(568, 578);
-            this.buttonMesa6.Name = "buttonMesa6";
-            this.buttonMesa6.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa6.TabIndex = 29;
-            this.buttonMesa6.Text = "6";
-            this.buttonMesa6.UseVisualStyleBackColor = false;
+            this.button6.Location = new System.Drawing.Point(704, 584);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 85);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa7
+            // button3
             // 
-            this.buttonMesa7.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa7.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa7.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa7.Location = new System.Drawing.Point(432, 578);
-            this.buttonMesa7.Name = "buttonMesa7";
-            this.buttonMesa7.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa7.TabIndex = 30;
-            this.buttonMesa7.Text = "7";
-            this.buttonMesa7.UseVisualStyleBackColor = false;
+            this.button3.Location = new System.Drawing.Point(1124, 584);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 85);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa8
+            // button4
             // 
-            this.buttonMesa8.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa8.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa8.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa8.Location = new System.Drawing.Point(293, 578);
-            this.buttonMesa8.Name = "buttonMesa8";
-            this.buttonMesa8.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa8.TabIndex = 31;
-            this.buttonMesa8.Text = "8";
-            this.buttonMesa8.UseVisualStyleBackColor = false;
+            this.button4.Location = new System.Drawing.Point(984, 584);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 85);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // buttonMesa9
+            // button2
             // 
-            this.buttonMesa9.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMesa9.BackgroundImage = global::Smiav_Bares_1._0.Properties.Resources.mesas1;
-            this.buttonMesa9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonMesa9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonMesa9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.buttonMesa9.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonMesa9.Location = new System.Drawing.Point(152, 578);
-            this.buttonMesa9.Name = "buttonMesa9";
-            this.buttonMesa9.Size = new System.Drawing.Size(85, 85);
-            this.buttonMesa9.TabIndex = 32;
-            this.buttonMesa9.Text = "9";
-            this.buttonMesa9.UseVisualStyleBackColor = false;
+            this.button2.Location = new System.Drawing.Point(1124, 428);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 85);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label2Piso
+            // 
+            this.label2Piso.AutoSize = true;
+            this.label2Piso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label2Piso.Location = new System.Drawing.Point(146, 62);
+            this.label2Piso.Name = "label2Piso";
+            this.label2Piso.Size = new System.Drawing.Size(101, 31);
+            this.label2Piso.TabIndex = 23;
+            this.label2Piso.Text = "PISO 2";
             // 
             // GarzonUI2P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 730);
-            this.Controls.Add(this.buttonMesa9);
-            this.Controls.Add(this.buttonMesa8);
-            this.Controls.Add(this.buttonMesa7);
-            this.Controls.Add(this.buttonMesa6);
-            this.Controls.Add(this.buttonMesa5);
-            this.Controls.Add(this.buttonMesa4);
-            this.Controls.Add(this.buttonMesa3);
-            this.Controls.Add(this.buttonMesa2);
-            this.Controls.Add(this.buttonMesa1);
             this.Controls.Add(this.label2Piso);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Name = "GarzonUI2P";
             this.Text = "SMIAV Bares 1.0";
             this.Load += new System.EventHandler(this.GarzonUI2P_Load);
@@ -236,15 +182,15 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2Piso;
-        private System.Windows.Forms.Button buttonMesa1;
-        private System.Windows.Forms.Button buttonMesa2;
-        private System.Windows.Forms.Button buttonMesa3;
-        private System.Windows.Forms.Button buttonMesa4;
-        private System.Windows.Forms.Button buttonMesa5;
-        private System.Windows.Forms.Button buttonMesa6;
-        private System.Windows.Forms.Button buttonMesa7;
-        private System.Windows.Forms.Button buttonMesa8;
-        private System.Windows.Forms.Button buttonMesa9;
     }
 }

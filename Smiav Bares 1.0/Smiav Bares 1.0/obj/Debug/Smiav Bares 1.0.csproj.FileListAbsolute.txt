@@ -1,19 +1,78 @@
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache
+C:\Users\Kakarota\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
+C:\Users\Lenovo\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+C:\Users\Lenovo\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+C:\Users\Lenovo\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
+C:\Users\JavierO\Dropbox\New City Bar Proyecto\Smiav Bares UI\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+D:\Documentos\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormSelectPiso.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI1P.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoInsumo.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.ComandaUI.resources
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoProducto.resources
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI2P.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoProducto.resources
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoProductoComanda.resources
+C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoInsumo.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe.config
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.exe
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\bin\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.AdminUI.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI1P.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoInsumo.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoProducto.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.ComandaUI.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormIngresoStock.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormNuevoUsuario.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.LoginAdmin.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.MainWindow.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.Properties.Resources.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.FormSelectPiso.resources
+C:\Users\JavierO\Documents\GitHub\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav_Bares_1._0.GarzonUI2P.resources

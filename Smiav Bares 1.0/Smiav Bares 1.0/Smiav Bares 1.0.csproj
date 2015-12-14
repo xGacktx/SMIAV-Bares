@@ -55,12 +55,6 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormIngresoProductoComanda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormIngresoProductoComanda.Designer.cs">
-      <DependentUpon>FormIngresoProductoComanda.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSelectPiso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +154,6 @@
     </Compile>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormIngresoProductoComanda.resx">
-      <DependentUpon>FormIngresoProductoComanda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSelectPiso.resx">
       <DependentUpon>FormSelectPiso.cs</DependentUpon>
@@ -285,12 +276,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New_City_bar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mesas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mesas1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
