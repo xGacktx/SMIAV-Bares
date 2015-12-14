@@ -28,38 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonPrimerPiso = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonPrimerPiso
             // 
-            this.button1.Location = new System.Drawing.Point(71, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(422, 66);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPrimerPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrimerPiso.Location = new System.Drawing.Point(71, 68);
+            this.buttonPrimerPiso.Name = "buttonPrimerPiso";
+            this.buttonPrimerPiso.Size = new System.Drawing.Size(422, 66);
+            this.buttonPrimerPiso.TabIndex = 0;
+            this.buttonPrimerPiso.Text = "Primero Piso";
+            this.buttonPrimerPiso.UseVisualStyleBackColor = true;
+            this.buttonPrimerPiso.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button2.Location = new System.Drawing.Point(71, 165);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(422, 66);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Segundo Piso";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(139, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 31);
+            this.label1.Size = new System.Drawing.Size(306, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "SELECCION DE PISO";
             // 
@@ -70,7 +72,7 @@
             this.ClientSize = new System.Drawing.Size(564, 262);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonPrimerPiso);
             this.Name = "FormSelectPiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIMIAV Bares 1.0";
@@ -81,7 +83,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonPrimerPiso;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
     }

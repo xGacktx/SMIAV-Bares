@@ -22,7 +22,7 @@ namespace Smiav_Bares_1._0
             base.OnFormClosing(e);
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
-
+            /*
             // Confirmacion para cerrar la ventana
             switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.YesNo))
             {
@@ -31,7 +31,7 @@ namespace Smiav_Bares_1._0
                     break;
                 default:
                     break;
-            }
+            }*/
         }
 
         private void ComandaUI_Load(object sender, EventArgs e)
@@ -61,6 +61,8 @@ namespace Smiav_Bares_1._0
 
         private void button3_Click(object sender, EventArgs e)
         {
+            FormIngresoProductoComanda l = new FormIngresoProductoComanda("Cervezas");
+            l.Visible = true;
 
         }
 

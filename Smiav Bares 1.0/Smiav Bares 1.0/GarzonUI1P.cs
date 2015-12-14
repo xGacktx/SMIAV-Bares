@@ -42,44 +42,47 @@ namespace Smiav_Bares_1._0
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void buttonMesa8_Click(object sender, EventArgs e)
         {
-
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -88,6 +91,29 @@ namespace Smiav_Bares_1._0
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMesa10_Click(object sender, EventArgs e)
+        {
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
+        }
+
+        private void buttonMesa9_Click(object sender, EventArgs e)
+        {
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
+        }
+
+        private void buttonMesa1_Click(object sender, EventArgs e)
+        {
+            ComandaUI L = new ComandaUI();
+            L.Visible = true;
         }
     }
 }

@@ -63,6 +63,26 @@ namespace Smiav_Bares_1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mesas {
+            get {
+                object obj = ResourceManager.GetObject("mesas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mesas1 {
+            get {
+                object obj = ResourceManager.GetObject("mesas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_City_bar {
             get {
                 object obj = ResourceManager.GetObject("New_City_bar", resourceCulture);
