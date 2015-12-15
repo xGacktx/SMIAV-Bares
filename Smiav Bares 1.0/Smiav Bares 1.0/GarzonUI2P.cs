@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Smiav_Bares_1._0
 {
-    public partial class GarzonUI : Form
+    public partial class GarzonUI2P : Form
     {
-        public GarzonUI()
+        public GarzonUI2P()
         {
             InitializeComponent();
+        }
+
+        private void GarzonUI2P_Load(object sender, EventArgs e)
+        {
+
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -24,9 +29,9 @@ namespace Smiav_Bares_1._0
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
             // Confirmacion para cerrar la ventana
-            switch (MessageBox.Show(this, "¿Estas seguro que deseas salir?", "Cerrar", MessageBoxButtons.YesNo))
+            switch (MessageBox.Show(this, "¿Está seguro que deseas salir?", "Confirmación", MessageBoxButtons.OKCancel))
             {
-                case DialogResult.No:
+                case DialogResult.Cancel:
                     e.Cancel = true;
                     break;
                 default:

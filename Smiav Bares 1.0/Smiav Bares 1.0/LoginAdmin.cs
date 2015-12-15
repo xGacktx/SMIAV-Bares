@@ -53,7 +53,7 @@ namespace Smiav_Bares_1._0
                     //categoria Garzon
                     if (categoria == 1)
                     {
-                        GarzonUI L = new GarzonUI();
+                        FormSelectPiso L = new FormSelectPiso();
                         L.Closed += (s, args) => this.Close();
                         L.Show();
                     }

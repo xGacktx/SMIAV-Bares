@@ -55,6 +55,18 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSelectPiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectPiso.Designer.cs">
+      <DependentUpon>FormSelectPiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarzonUI1P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarzonUI1P.Designer.cs">
+      <DependentUpon>GarzonUI1P.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     </Compile>
     <Compile Include="FormNuevoProducto.Designer.cs">
       <DependentUpon>FormNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarzonUI2P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarzonUI2P.Designer.cs">
+      <DependentUpon>GarzonUI2P.cs</DependentUpon>
     </Compile>
     <Compile Include="InsumoConnect.cs" />
     <Compile Include="ProductoConnect.cs" />
@@ -92,11 +110,11 @@
     <Compile Include="StockConnect.cs" />
     <Compile Include="UsuarioConnect.cs" />
     <Compile Include="DBConnect.cs" />
-    <Compile Include="GarzonUI.cs">
+    <Compile Include="ComandaUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GarzonUI.Designer.cs">
-      <DependentUpon>GarzonUI.cs</DependentUpon>
+    <Compile Include="ComandaUI.Designer.cs">
+      <DependentUpon>ComandaUI.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIngresoStock.cs">
       <SubType>Form</SubType>
@@ -137,20 +155,29 @@
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectPiso.resx">
+      <DependentUpon>FormSelectPiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GarzonUI1P.resx">
+      <DependentUpon>GarzonUI1P.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoInsumo.resx">
       <DependentUpon>FormNuevoInsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoProducto.resx">
       <DependentUpon>FormNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GarzonUI.resx">
-      <DependentUpon>GarzonUI.cs</DependentUpon>
+    <EmbeddedResource Include="ComandaUI.resx">
+      <DependentUpon>ComandaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresoStock.resx">
       <DependentUpon>FormIngresoStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GarzonUI2P.resx">
+      <DependentUpon>GarzonUI2P.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAdmin.resx">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
