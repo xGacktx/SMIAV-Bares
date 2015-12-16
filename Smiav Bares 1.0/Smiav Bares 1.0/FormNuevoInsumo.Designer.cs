@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoInsumo));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBoxTipo = new System.Windows.Forms.TextBox();
@@ -149,6 +150,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Nuevo Insumo";

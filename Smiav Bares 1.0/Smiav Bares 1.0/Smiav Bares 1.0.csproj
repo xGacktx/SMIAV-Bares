@@ -55,11 +55,11 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormIngresoProductoComanda.cs">
+    <Compile Include="FormCantidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormIngresoProductoComanda.Designer.cs">
-      <DependentUpon>FormIngresoProductoComanda.cs</DependentUpon>
+    <Compile Include="FormCantidad.Designer.cs">
+      <DependentUpon>FormCantidad.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLoginGarzon.cs">
       <SubType>Form</SubType>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormIngresoProductoComanda.resx">
-      <DependentUpon>FormIngresoProductoComanda.cs</DependentUpon>
+    <EmbeddedResource Include="FormCantidad.resx">
+      <DependentUpon>FormCantidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoginGarzon.resx">
       <DependentUpon>FormLoginGarzon.cs</DependentUpon>

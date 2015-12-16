@@ -187,11 +187,31 @@ namespace ConnectCsharpToMysql
 
             return bSource;
         }
-                
+
+        //Select statement to load datagridview
+        public BindingSource SelectProducto(string clave)
+        {
+            string query = "SELECT id,nombre,precio,precio_desc FROM producto WHERE categoria = '" + clave + "'";
+
+
+            MySqlDataAdapter MyDA = new MySqlDataAdapter();
+            MyDA.SelectCommand = new MySqlCommand(query, connection);
+
+            DataTable table = new DataTable();
+            MyDA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            return bSource;
+
+        }
+
+         /*       
         //Select statement
         public List<string> SelectProducto(string clave)
         {
-            string query = "SELECT cargo, nick FROM producto WHERE clave = '" + clave + "'";
+            string query = "SELECT * FROM producto WHERE tipo = '" + clave + "'";
 
             //Create a list to store the result
             List<string> list = new List<string>();
@@ -204,23 +224,19 @@ namespace ConnectCsharpToMysql
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                string cargo;
-                string nick;
+                string id,nombre,precio,precio_desc;  
 
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    //Console.WriteLine(String.Format("{0}, {1}",
-                    //dataReader.GetString(0), dataReader.GetString(1))
-                    //);
-
-                    cargo = dataReader["cargo"].ToString();
-                    nick = dataReader["nick"].ToString();
-
-                    //Console.WriteLine(cargo+" "+nick);
-
-                    list.Add(cargo);
-                    list.Add(nick);
+                    id = dataReader["id"].ToString();
+                    nombre = dataReader["nombre"].ToString();
+                    precio = dataReader["precio"].ToString();
+                    precio_desc = dataReader["precio_desc"].ToString();
+                    list.Add(id);
+                    list.Add(nombre);
+                    list.Add(precio);
+                    list.Add(precio_desc);
                 }
                 //close Data Reader
                 dataReader.Close();
@@ -235,7 +251,7 @@ namespace ConnectCsharpToMysql
             {
                 return list;
             }
-        }
+        }*/
 
         // retorna todos los datos del un usuario
         public List<string> SelectProductoFull(string ID)

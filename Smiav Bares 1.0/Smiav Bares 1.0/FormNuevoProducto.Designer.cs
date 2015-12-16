@@ -306,6 +306,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Formulario Producto";
             this.Load += new System.EventHandler(this.FormNuevoProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dginsumosproducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet5)).EndInit();

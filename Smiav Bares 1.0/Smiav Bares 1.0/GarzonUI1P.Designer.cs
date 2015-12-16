@@ -276,6 +276,7 @@
             this.Controls.Add(this.buttonMesa3);
             this.Controls.Add(this.buttonMesa4);
             this.Controls.Add(this.buttonMesa2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GarzonUI1P";
             this.Text = "SMIAV Bares 1.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
