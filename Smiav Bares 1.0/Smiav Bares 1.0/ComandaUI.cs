@@ -170,8 +170,9 @@ namespace Smiav_Bares_1._0
         {
             FormCantidad l = new FormCantidad();
             l.Visible = true;
+            //this.Enabled = false;
         }
-
+        
         private void button7_Click(object sender, EventArgs e)
         {
             panelProductos.Visible = true;

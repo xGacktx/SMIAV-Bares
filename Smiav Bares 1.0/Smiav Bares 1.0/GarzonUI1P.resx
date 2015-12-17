@@ -692,7 +692,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDQAACw0B7QfALAAALPpJREFUeF7t1oGS3Lqx
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAACwwBP0AiyAAALPpJREFUeF7t1oGS3Lqx
         bNH7/z/tZx2/ORzuKY16GgmgQO0bsRxWXQmZJICm/+8///mPJE333//79R9SHM+aXlMOJSmFP9bSLDx7
         +l45lKQE/kBLs/EM6vfKoSSN4I+ytBLPo2rlUJLexR9jaQeeS31VDiXpXfwhlnbh2dRdOZSkd/FHWNqF
         Z1N35VCS3sUfYWkXnk3dlUNJegd/gKWdeD51Vw4l6R38AZZ24xnVpRxK0jv44yvtxjOqSzmUpHfwx1fa
@@ -888,6 +888,9 @@
         gg==
 </value>
   </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAAAIABoBAAAVgAAACAgAAAAACAAqBAAAL4EAAAwMAAAAAAgAKglAABmFQAAQEAAAAAA

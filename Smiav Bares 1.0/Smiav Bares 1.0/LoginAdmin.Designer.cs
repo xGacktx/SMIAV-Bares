@@ -102,6 +102,7 @@ namespace Smiav_Bares_1._0
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -103,7 +103,7 @@ namespace Smiav_Bares_1._0
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            Console.WriteLine("keypressed");
+            //Console.WriteLine("keypressed");
             if (e.KeyCode == Keys.Enter)
             {
                 button1.PerformClick();

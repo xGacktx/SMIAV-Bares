@@ -15,6 +15,7 @@ namespace Smiav_Bares_1._0
         public FormCantidad()
         {
             InitializeComponent();
+            this.TopMost = true;
         }
         int n;
         private void buttonMas_Click(object sender, EventArgs e)
@@ -41,6 +42,11 @@ namespace Smiav_Bares_1._0
                 }
 
             }     
+        }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

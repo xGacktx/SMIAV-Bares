@@ -33,6 +33,7 @@
             this.textBoxNum = new System.Windows.Forms.TextBox();
             this.buttonMas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonMenos
@@ -77,15 +78,28 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Ingrese Cantidad";
             // 
+            // buttonAceptar
+            // 
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptar.Location = new System.Drawing.Point(33, 167);
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.Size = new System.Drawing.Size(340, 48);
+            this.buttonAceptar.TabIndex = 9;
+            this.buttonAceptar.Text = "Aceptar";
+            this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            // 
             // FormCantidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 188);
+            this.ClientSize = new System.Drawing.Size(410, 241);
+            this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.buttonMenos);
             this.Controls.Add(this.textBoxNum);
             this.Controls.Add(this.buttonMas);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCantidad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -101,5 +115,6 @@
         private System.Windows.Forms.TextBox textBoxNum;
         private System.Windows.Forms.Button buttonMas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonAceptar;
     }
 }

@@ -47,6 +47,7 @@
             this.panelCategoria = new System.Windows.Forms.Panel();
             this.labelCategorias = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelProductos.SuspendLayout();
@@ -67,6 +67,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.labelProductoComanda);
             this.panel1.Controls.Add(this.buttonEliminar);
             this.panel1.Controls.Add(this.buttonIngresar);
@@ -281,6 +282,17 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.button12.Location = new System.Drawing.Point(262, 436);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(172, 119);
+            this.button12.TabIndex = 16;
+            this.button12.Text = "JUGO";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -391,27 +403,18 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button12.Location = new System.Drawing.Point(262, 436);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(172, 119);
-            this.button12.TabIndex = 16;
-            this.button12.Text = "JUGO";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // ComandaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 730);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComandaUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SMIAV Bares 1.0";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ComandaUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -422,6 +425,7 @@
             this.panelCategoria.ResumeLayout(false);
             this.panelCategoria.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
