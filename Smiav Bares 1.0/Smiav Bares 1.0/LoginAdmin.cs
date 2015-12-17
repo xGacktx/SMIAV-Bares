@@ -53,7 +53,7 @@ namespace Smiav_Bares_1._0
                     //categoria Garzon
                     if (categoria == 1)
                     {
-                        FormSelectPiso L = new FormSelectPiso();
+                        FormSelectPiso L = new FormSelectPiso(true);
                         L.Closed += (s, args) => this.Close();
                         L.Show();
                     }
@@ -61,7 +61,7 @@ namespace Smiav_Bares_1._0
                     //categoria Bartender
                     if (categoria == 2)
                     {
-                        AdminUI L = new AdminUI();
+                        FormSelectPiso L = new FormSelectPiso(false);
                         L.Closed += (s, args) => this.Close();
                         L.Show();
                     }
@@ -69,7 +69,7 @@ namespace Smiav_Bares_1._0
                     //categoria Cajera
                     if (categoria == 3)
                     {
-                        AdminUI L = new AdminUI();
+                        CajeraUI L = new CajeraUI();
                         L.Closed += (s, args) => this.Close();
                         L.Show();
                     }

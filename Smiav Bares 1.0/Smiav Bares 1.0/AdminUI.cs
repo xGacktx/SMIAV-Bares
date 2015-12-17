@@ -14,9 +14,10 @@ namespace Smiav_Bares_1._0
 {
     public partial class AdminUI : Form
     {
+      
         public AdminUI()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace Smiav_Bares_1._0
             L.Visible = true;
       
         }
-        
+                        
         //abastecer stock
         private void button7_Click(object sender, EventArgs e)
         {
@@ -39,13 +40,14 @@ namespace Smiav_Bares_1._0
             form.Visible = true;
         }
 
+        
         // Boton Eliminar Producto
         private void button4_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count == 1)
+            if (dataGridViewProductos.SelectedRows.Count == 1)
             {
-                string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-                string nombre = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+                string ID = dataGridViewProductos.SelectedRows[0].Cells[0].Value.ToString();
+                string nombre = dataGridViewProductos.SelectedRows[0].Cells[1].Value.ToString();
                 Console.WriteLine(ID);
                 switch (MessageBox.Show(this, "¿Está seguro de eliminar el Producto " + nombre + "?", "Confirmación de seguridad", MessageBoxButtons.OKCancel))
                 {
@@ -93,6 +95,8 @@ namespace Smiav_Bares_1._0
             dataGridView3.Columns[2].HeaderText = "VOLUMEN";
             dataGridView3.Columns[3].HeaderText = "VOLUMEN STOCK";
             dataGridView3.Columns[4].HeaderText = "ALMACÉN";
+
+            dataGridViewProductos.Columns[0].Width = 83;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -175,7 +179,7 @@ namespace Smiav_Bares_1._0
         private void button5_Click(object sender, EventArgs e)
         {
             // Obtiene el id de la producto seleccionada
-            string ID = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            string ID = dataGridViewProductos.SelectedRows[0].Cells[0].Value.ToString();
             FormNuevoProducto L = new FormNuevoProducto(true, ID);
             L.Visible = true;
         }

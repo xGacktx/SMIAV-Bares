@@ -12,17 +12,28 @@ namespace Smiav_Bares_1._0
 {
     public partial class FormSelectPiso : Form
     {
-        public FormSelectPiso()
+        private bool garzon;
+        public FormSelectPiso(bool garzon)
         {
             InitializeComponent();
+            this.garzon = garzon;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GarzonUI1P L = new GarzonUI1P();
-            L.Closed += (s, args) => this.Close();
-            L.Show();
+            if(garzon){
+                this.Hide();
+                GarzonUI1P L = new GarzonUI1P();
+                L.Closed += (s, args) => this.Close();
+                L.Show();
+            }
+            else
+            {
+                this.Hide();
+                BartenderUI L = new BartenderUI();
+                L.Closed += (s, args) => this.Close();
+                L.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

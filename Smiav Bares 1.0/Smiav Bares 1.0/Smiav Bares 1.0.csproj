@@ -55,6 +55,18 @@
     <Compile Include="AdminUI.Designer.cs">
       <DependentUpon>AdminUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="BartenderUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BartenderUI.Designer.cs">
+      <DependentUpon>BartenderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CajeraUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajeraUI.Designer.cs">
+      <DependentUpon>CajeraUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCantidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smiav_dbDataSet51.xsd</DependentUpon>
     </Compile>
+    <Compile Include="smiav_dbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smiav_dbDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StockConnect.cs" />
     <Compile Include="UsuarioConnect.cs" />
     <Compile Include="DBConnect.cs" />
@@ -166,6 +183,12 @@
     </Compile>
     <EmbeddedResource Include="AdminUI.resx">
       <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BartenderUI.resx">
+      <DependentUpon>BartenderUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajeraUI.resx">
+      <DependentUpon>CajeraUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCantidad.resx">
       <DependentUpon>FormCantidad.cs</DependentUpon>
@@ -288,6 +311,17 @@
     <None Include="smiav_dbDataSet51.xss">
       <DependentUpon>smiav_dbDataSet51.xsd</DependentUpon>
     </None>
+    <None Include="smiav_dbDataSet6.xsc">
+      <DependentUpon>smiav_dbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="smiav_dbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smiav_dbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smiav_dbDataSet6.xss">
+      <DependentUpon>smiav_dbDataSet6.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -300,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mesas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesa2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
