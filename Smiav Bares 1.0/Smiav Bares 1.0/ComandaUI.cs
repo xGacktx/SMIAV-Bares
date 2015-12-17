@@ -14,9 +14,15 @@ namespace Smiav_Bares_1._0
 {
     public partial class ComandaUI : Form
     {
-        public ComandaUI()
+        private string nombreGarzon;
+        private int mesa;
+        public ComandaUI(String nombreGarzon,int mesa)
         {
             InitializeComponent();
+            labelNombreGarzon.Text = nombreGarzon;
+            labelNumMesa.Text = mesa+"";
+            this.nombreGarzon = nombreGarzon;
+            this.mesa = mesa;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

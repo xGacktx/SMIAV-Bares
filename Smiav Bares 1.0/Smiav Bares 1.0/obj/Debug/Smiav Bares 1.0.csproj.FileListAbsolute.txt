@@ -18,4 +18,3 @@ C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\De
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csproj.GenerateResource.Cache
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.exe
 C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.pdb
-C:\Users\xGacktx\Source\Repos\SMIAV-Bares\Smiav Bares 1.0\Smiav Bares 1.0\obj\Debug\Smiav Bares 1.0.csprojResolveAssemblyReference.cache

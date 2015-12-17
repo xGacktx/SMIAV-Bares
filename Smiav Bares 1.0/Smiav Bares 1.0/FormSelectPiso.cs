@@ -19,6 +19,7 @@ namespace Smiav_Bares_1._0
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             GarzonUI1P L = new GarzonUI1P();
             L.Closed += (s, args) => this.Close();
             L.Show();
@@ -26,6 +27,7 @@ namespace Smiav_Bares_1._0
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             GarzonUI2P L= new GarzonUI2P();
             L.Closed += (s, args) => this.Close();
             L.Show();

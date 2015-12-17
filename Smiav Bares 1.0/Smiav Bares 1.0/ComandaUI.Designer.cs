@@ -34,9 +34,9 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelGarzonNom = new System.Windows.Forms.Label();
+            this.labelNombreGarzon = new System.Windows.Forms.Label();
             this.labelGarzon = new System.Windows.Forms.Label();
-            this.labelMesaNum = new System.Windows.Forms.Label();
+            this.labelNumMesa = new System.Windows.Forms.Label();
             this.labelMesa = new System.Windows.Forms.Label();
             this.panelProductos = new System.Windows.Forms.Panel();
             this.buttonFinalizar = new System.Windows.Forms.Button();
@@ -72,9 +72,9 @@
             this.panel1.Controls.Add(this.buttonEliminar);
             this.panel1.Controls.Add(this.buttonIngresar);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.labelGarzonNom);
+            this.panel1.Controls.Add(this.labelNombreGarzon);
             this.panel1.Controls.Add(this.labelGarzon);
-            this.panel1.Controls.Add(this.labelMesaNum);
+            this.panel1.Controls.Add(this.labelNumMesa);
             this.panel1.Controls.Add(this.labelMesa);
             this.panel1.Controls.Add(this.panelProductos);
             this.panel1.Controls.Add(this.panelCategoria);
@@ -129,16 +129,16 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // labelGarzonNom
+            // labelNombreGarzon
             // 
-            this.labelGarzonNom.AutoSize = true;
-            this.labelGarzonNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelGarzonNom.Location = new System.Drawing.Point(265, 64);
-            this.labelGarzonNom.Name = "labelGarzonNom";
-            this.labelGarzonNom.Size = new System.Drawing.Size(100, 17);
-            this.labelGarzonNom.TabIndex = 3;
-            this.labelGarzonNom.Text = "NOMGARZON";
-            this.labelGarzonNom.Click += new System.EventHandler(this.labelGarzonNom_Click);
+            this.labelNombreGarzon.AutoSize = true;
+            this.labelNombreGarzon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelNombreGarzon.Location = new System.Drawing.Point(265, 64);
+            this.labelNombreGarzon.Name = "labelNombreGarzon";
+            this.labelNombreGarzon.Size = new System.Drawing.Size(100, 17);
+            this.labelNombreGarzon.TabIndex = 3;
+            this.labelNombreGarzon.Text = "NOMGARZON";
+            this.labelNombreGarzon.Click += new System.EventHandler(this.labelGarzonNom_Click);
             // 
             // labelGarzon
             // 
@@ -151,16 +151,16 @@
             this.labelGarzon.Text = "Garzon :";
             this.labelGarzon.Click += new System.EventHandler(this.labelGarzon_Click);
             // 
-            // labelMesaNum
+            // labelNumMesa
             // 
-            this.labelMesaNum.AutoSize = true;
-            this.labelMesaNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelMesaNum.Location = new System.Drawing.Point(92, 64);
-            this.labelMesaNum.Name = "labelMesaNum";
-            this.labelMesaNum.Size = new System.Drawing.Size(39, 17);
-            this.labelMesaNum.TabIndex = 1;
-            this.labelMesaNum.Text = "NUM";
-            this.labelMesaNum.Click += new System.EventHandler(this.labelMesaNum_Click);
+            this.labelNumMesa.AutoSize = true;
+            this.labelNumMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelNumMesa.Location = new System.Drawing.Point(92, 64);
+            this.labelNumMesa.Name = "labelNumMesa";
+            this.labelNumMesa.Size = new System.Drawing.Size(39, 17);
+            this.labelNumMesa.TabIndex = 1;
+            this.labelNumMesa.Text = "NUM";
+            this.labelNumMesa.Click += new System.EventHandler(this.labelMesaNum_Click);
             // 
             // labelMesa
             // 
@@ -432,9 +432,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelGarzonNom;
+        private System.Windows.Forms.Label labelNombreGarzon;
         private System.Windows.Forms.Label labelGarzon;
-        private System.Windows.Forms.Label labelMesaNum;
+        private System.Windows.Forms.Label labelNumMesa;
         private System.Windows.Forms.Label labelMesa;
         private System.Windows.Forms.Panel panelCategoria;
         private System.Windows.Forms.DataGridView dataGridView1;

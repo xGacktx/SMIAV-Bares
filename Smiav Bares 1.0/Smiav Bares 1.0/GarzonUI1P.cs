@@ -42,43 +42,43 @@ namespace Smiav_Bares_1._0
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(7);
             L.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(2);
             L.Visible = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(5);
             L.Visible = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(6);
             L.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(3);
             L.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(4);
             L.Visible = true;
         }
 
         private void buttonMesa8_Click(object sender, EventArgs e)
-        {
-            ComandaUI L = new ComandaUI();
+        {            
+            FormLoginGarzon L = new FormLoginGarzon(8);
             L.Visible = true;
         }
 
@@ -100,19 +100,19 @@ namespace Smiav_Bares_1._0
 
         private void buttonMesa10_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(10);
             L.Visible = true;
         }
 
         private void buttonMesa9_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(9);
             L.Visible = true;
         }
 
         private void buttonMesa1_Click(object sender, EventArgs e)
         {
-            ComandaUI L = new ComandaUI();
+            FormLoginGarzon L = new FormLoginGarzon(1);
             L.Visible = true;
         }
     }
