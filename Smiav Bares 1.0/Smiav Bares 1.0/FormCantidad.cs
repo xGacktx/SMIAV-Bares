@@ -46,6 +46,7 @@ namespace Smiav_Bares_1._0
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
     }

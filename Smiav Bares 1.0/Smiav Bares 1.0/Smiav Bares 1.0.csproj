@@ -67,6 +67,7 @@
     <Compile Include="CajeraUI.Designer.cs">
       <DependentUpon>CajeraUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComandaConnect.cs" />
     <Compile Include="FormCantidad.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -15,7 +15,10 @@ namespace Smiav_Bares_1._0
     public partial class ComandaUI : Form
     {
         private string nombreGarzon;
-        private int mesa;
+        private int mesa, fila = 0;
+
+        private string nom_prod, id_com, id_prod, cantidad, tipo_venta, precio, rut_garzon;
+
         public ComandaUI(String nombreGarzon,int mesa)
         {
             InitializeComponent();
@@ -151,10 +154,13 @@ namespace Smiav_Bares_1._0
         {
 
         }
-
+/// <summary>
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -174,8 +180,31 @@ namespace Smiav_Bares_1._0
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            FormCantidad l = new FormCantidad();
-            l.Visible = true;
+
+            nom_prod = dgProductos.SelectedRows[0].Cells[1].Value.ToString();
+            string tot = dgProductos.SelectedRows[0].Cells[2].Value.ToString();
+            int total;
+            int cant;
+            bool isNumeric = int.TryParse(tot.Substring(0, tot.Length-3), out total);
+            bool isNumero = int.TryParse(textBox1.Text, out cant);
+            Console.WriteLine(nom_prod);
+            Console.WriteLine(textBox1.Text);
+            Console.WriteLine(isNumeric);
+            Console.WriteLine(isNumero);
+            if(isNumeric && isNumero)
+            {
+                Console.WriteLine("sonnumeros");
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[fila].Cells[0].Value = nom_prod;
+                dataGridView1.Rows[fila].Cells[1].Value = cant;
+                total = total * cant;
+                dataGridView1.Rows[fila].Cells[2].Value = total ;
+                dataGridView1.Update();
+                fila++;
+            }
+
+            //FormCantidad l = new FormCantidad();
+            //l.Visible = true;
             //this.Enabled = false;
         }
         
@@ -282,6 +311,11 @@ namespace Smiav_Bares_1._0
             dgProductos.Columns[2].HeaderText = "PRECIO LISTA";
             dgProductos.Columns[3].HeaderText = "PRECIO DESCUENTO";
             dgProductos.Columns[1].Width = 320;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panelProductos.Visible = false;
         }
     }
 }
