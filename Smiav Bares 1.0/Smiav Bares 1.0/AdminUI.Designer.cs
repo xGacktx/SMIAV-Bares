@@ -50,18 +50,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridViewProductos = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet1 = new Smiav_Bares_1._0.smiav_dbDataSet1();
             this.tabInsumos = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insumoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smiav_dbDataSet2 = new Smiav_Bares_1._0.smiav_dbDataSet2();
             this.buttonRefrescarInsumos = new System.Windows.Forms.Button();
@@ -72,11 +64,19 @@
             this.insumoTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet2TableAdapters.insumoTableAdapter();
             this.usuarioTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSetTableAdapters.usuarioTableAdapter();
             this.smiavdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nickDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciodescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabStock.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,7 +120,7 @@
             this.tabUsuarios.Padding = new System.Windows.Forms.Padding(3);
             this.tabUsuarios.Size = new System.Drawing.Size(801, 314);
             this.tabUsuarios.TabIndex = 0;
-            this.tabUsuarios.Text = "Gestión Usuarios";
+            this.tabUsuarios.Text = "GESTÍON USUARIOS";
             this.tabUsuarios.UseVisualStyleBackColor = true;
             this.tabUsuarios.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -210,7 +210,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(801, 314);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Gestión Stock";
+            this.tabPage3.Text = "GESTÍON STOCK";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -269,7 +269,7 @@
             this.tabProductos.Padding = new System.Windows.Forms.Padding(3);
             this.tabProductos.Size = new System.Drawing.Size(801, 314);
             this.tabProductos.TabIndex = 3;
-            this.tabProductos.Text = "Gestión Productos";
+            this.tabProductos.Text = "GESTÍON PRODUCTOS";
             this.tabProductos.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -333,36 +333,6 @@
             this.dataGridViewProductos.TabIndex = 7;
             this.dataGridViewProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.FillWeight = 150F;
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn1.Width = 202;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio en $";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preciodescDataGridViewTextBoxColumn
-            // 
-            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
-            this.preciodescDataGridViewTextBoxColumn.HeaderText = "Precio Descuento $";
-            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
-            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "producto";
@@ -385,7 +355,7 @@
             this.tabInsumos.Padding = new System.Windows.Forms.Padding(3);
             this.tabInsumos.Size = new System.Drawing.Size(801, 314);
             this.tabInsumos.TabIndex = 4;
-            this.tabInsumos.Text = "Gestión Insumos";
+            this.tabInsumos.Text = "GESTÍON INSUMOS";
             this.tabInsumos.UseVisualStyleBackColor = true;
             this.tabInsumos.Click += new System.EventHandler(this.tabInsumos_Click);
             // 
@@ -407,35 +377,6 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(545, 275);
             this.dataGridView4.TabIndex = 17;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn2
-            // 
-            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn2.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
-            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn2.Width = 202;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "tipo";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // volumenDataGridViewTextBoxColumn
-            // 
-            this.volumenDataGridViewTextBoxColumn.DataPropertyName = "volumen";
-            this.volumenDataGridViewTextBoxColumn.HeaderText = "volumen";
-            this.volumenDataGridViewTextBoxColumn.Name = "volumenDataGridViewTextBoxColumn";
-            this.volumenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // insumoBindingSource
             // 
@@ -504,17 +445,46 @@
             this.smiavdbDataSetBindingSource.DataSource = this.smiav_dbDataSet;
             this.smiavdbDataSetBindingSource.Position = 0;
             // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn2
+            // 
+            this.nombreDataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn2.HeaderText = "NOMBRE";
+            this.nombreDataGridViewTextBoxColumn2.Name = "nombreDataGridViewTextBoxColumn2";
+            this.nombreDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn2.Width = 202;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "TIPO";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // volumenDataGridViewTextBoxColumn
+            // 
+            this.volumenDataGridViewTextBoxColumn.DataPropertyName = "volumen";
+            this.volumenDataGridViewTextBoxColumn.HeaderText = "VOLUMEN ";
+            this.volumenDataGridViewTextBoxColumn.Name = "volumenDataGridViewTextBoxColumn";
+            this.volumenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // rutDataGridViewTextBoxColumn
             // 
             this.rutDataGridViewTextBoxColumn.DataPropertyName = "rut";
-            this.rutDataGridViewTextBoxColumn.HeaderText = "Rut";
+            this.rutDataGridViewTextBoxColumn.HeaderText = "RUT";
             this.rutDataGridViewTextBoxColumn.Name = "rutDataGridViewTextBoxColumn";
             this.rutDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cargoDataGridViewTextBoxColumn
             // 
             this.cargoDataGridViewTextBoxColumn.DataPropertyName = "cargo";
-            this.cargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.cargoDataGridViewTextBoxColumn.HeaderText = "CARGO";
             this.cargoDataGridViewTextBoxColumn.Name = "cargoDataGridViewTextBoxColumn";
             this.cargoDataGridViewTextBoxColumn.ReadOnly = true;
             this.cargoDataGridViewTextBoxColumn.Width = 150;
@@ -522,7 +492,7 @@
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "NOMBRE";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             this.nombreDataGridViewTextBoxColumn.Width = 180;
@@ -530,7 +500,7 @@
             // nickDataGridViewTextBoxColumn
             // 
             this.nickDataGridViewTextBoxColumn.DataPropertyName = "nick";
-            this.nickDataGridViewTextBoxColumn.HeaderText = "Nick";
+            this.nickDataGridViewTextBoxColumn.HeaderText = "NICK";
             this.nickDataGridViewTextBoxColumn.Name = "nickDataGridViewTextBoxColumn";
             this.nickDataGridViewTextBoxColumn.ReadOnly = true;
             this.nickDataGridViewTextBoxColumn.Width = 128;
@@ -538,11 +508,41 @@
             // claveDataGridViewTextBoxColumn
             // 
             this.claveDataGridViewTextBoxColumn.DataPropertyName = "clave";
-            this.claveDataGridViewTextBoxColumn.HeaderText = "Clave";
+            this.claveDataGridViewTextBoxColumn.HeaderText = "CLAVE";
             this.claveDataGridViewTextBoxColumn.Name = "claveDataGridViewTextBoxColumn";
             this.claveDataGridViewTextBoxColumn.ReadOnly = true;
             this.claveDataGridViewTextBoxColumn.Visible = false;
             this.claveDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.FillWeight = 150F;
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "NOMBRE";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn1.Width = 202;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "PRECIO LISTA";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preciodescDataGridViewTextBoxColumn
+            // 
+            this.preciodescDataGridViewTextBoxColumn.DataPropertyName = "precio_desc";
+            this.preciodescDataGridViewTextBoxColumn.HeaderText = "PRECIO DESCUENTO";
+            this.preciodescDataGridViewTextBoxColumn.Name = "preciodescDataGridViewTextBoxColumn";
+            this.preciodescDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AdminUI
             // 
@@ -611,6 +611,12 @@
         private System.Windows.Forms.BindingSource insumoBindingSource;
         private smiav_dbDataSet2TableAdapters.insumoTableAdapter insumoTableAdapter;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
@@ -619,11 +625,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn volumenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rutDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nickDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claveDataGridViewTextBoxColumn;
     }
 }
