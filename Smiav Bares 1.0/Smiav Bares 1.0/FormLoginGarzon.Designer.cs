@@ -238,6 +238,7 @@
             this.Name = "FormLoginGarzon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Garzon";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FormLoginGarzon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

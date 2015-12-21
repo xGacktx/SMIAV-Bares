@@ -105,6 +105,7 @@ namespace Smiav_Bares_1._0
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -123,11 +124,7 @@ namespace Smiav_Bares_1._0
                 {
                     //cierra la ventana actual y muestra la siguiente
                     this.Hide();                
-                   
-                    //mensaje de bienvenida
-                   // MessageBox.Show(this, "Bienvenida(o) " + usuario[1], "Inicio de sesión exitoso",
-                    //MessageBoxButtons.OK);
-                    
+                                                       
                     //Abrir Comanda
                     ComandaUI l = new ComandaUI(usuario[1],mesa);
                     l.Visible = true;

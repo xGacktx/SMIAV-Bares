@@ -283,6 +283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 278);
+            this.Controls.Add(this.dginsumosproducto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxVolumen);
             this.Controls.Add(this.comboBoxInsumos);
@@ -291,7 +292,6 @@
             this.Controls.Add(this.buttonAgregarInsumo);
             this.Controls.Add(this.buttonEliminarInsumo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dginsumosproducto);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBoxDescuento);

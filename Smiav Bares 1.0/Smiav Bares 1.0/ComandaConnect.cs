@@ -305,6 +305,26 @@ namespace ConnectCsharpToMysql
                 return list;
             }
         }
+        
+        // retorna todos los produtos de una comanda       
+        public BindingSource SelectProdComanda(int comanda)
+        {
+            string query = @"SELECT prod.nombre, pa.cantidad ,prod.precio FROM producto prod INNER JOIN
+                            prod_atencion pa ON prod.id = pa.id_producto_pat
+                           WHERE (pa.id_comanda_pat = '" + comanda + "')";
+            //string query = @"Select * from insumo where (insumo.id = '" + comanda +"')";
+            MySqlDataAdapter MyDA = new MySqlDataAdapter();
+            MyDA.SelectCommand = new MySqlCommand(query, connection);
+
+            DataTable table = new DataTable();
+            MyDA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            return bSource;
+        }
+        
 
         //Count statement
         public int CountProducto(string clave, string campo)
