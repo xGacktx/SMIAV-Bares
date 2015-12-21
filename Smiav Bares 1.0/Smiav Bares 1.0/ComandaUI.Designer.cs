@@ -29,21 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComandaUI));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelProductosComanda = new System.Windows.Forms.Panel();
             this.labelProductoComanda = new System.Windows.Forms.Label();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgProdComanda = new System.Windows.Forms.DataGridView();
             this.labelNombreGarzon = new System.Windows.Forms.Label();
             this.labelGarzon = new System.Windows.Forms.Label();
             this.labelNumMesa = new System.Windows.Forms.Label();
             this.labelMesa = new System.Windows.Forms.Label();
-            this.panelProductos = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonAgregar = new System.Windows.Forms.Button();
-            this.labelCategoria = new System.Windows.Forms.Label();
-            this.dgProductos = new System.Windows.Forms.DataGridView();
             this.panelCategoria = new System.Windows.Forms.Panel();
             this.labelCategorias = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
@@ -58,36 +52,40 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelProductos = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonAgregar = new System.Windows.Forms.Button();
+            this.labelCategoria = new System.Windows.Forms.Label();
+            this.dgProductos = new System.Windows.Forms.DataGridView();
+            this.panelProductosComanda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProdComanda)).BeginInit();
+            this.panelCategoria.SuspendLayout();
             this.panelProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
-            this.panelCategoria.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelProductosComanda
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.labelProductoComanda);
-            this.panel1.Controls.Add(this.buttonEliminar);
-            this.panel1.Controls.Add(this.buttonIngresar);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.labelNombreGarzon);
-            this.panel1.Controls.Add(this.labelGarzon);
-            this.panel1.Controls.Add(this.labelNumMesa);
-            this.panel1.Controls.Add(this.labelMesa);
-            this.panel1.Controls.Add(this.panelProductos);
-            this.panel1.Controls.Add(this.panelCategoria);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 730);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelProductosComanda.AutoSize = true;
+            this.panelProductosComanda.Controls.Add(this.labelProductoComanda);
+            this.panelProductosComanda.Controls.Add(this.buttonEliminar);
+            this.panelProductosComanda.Controls.Add(this.buttonIngresar);
+            this.panelProductosComanda.Controls.Add(this.dgProdComanda);
+            this.panelProductosComanda.Controls.Add(this.labelNombreGarzon);
+            this.panelProductosComanda.Controls.Add(this.labelGarzon);
+            this.panelProductosComanda.Controls.Add(this.labelNumMesa);
+            this.panelProductosComanda.Controls.Add(this.labelMesa);
+            this.panelProductosComanda.Controls.Add(this.panelProductos);
+            this.panelProductosComanda.Controls.Add(this.panelCategoria);
+            this.panelProductosComanda.Location = new System.Drawing.Point(12, 12);
+            this.panelProductosComanda.Name = "panelProductosComanda";
+            this.panelProductosComanda.Size = new System.Drawing.Size(1367, 796);
+            this.panelProductosComanda.TabIndex = 0;
+            this.panelProductosComanda.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // labelProductoComanda
             // 
@@ -108,10 +106,11 @@
             this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "ELIMINAR";
             this.buttonEliminar.UseVisualStyleBackColor = true;
-            this.buttonEliminar.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEliminar.Click += new System.EventHandler(this.button2_Eliminar);
             // 
             // buttonIngresar
             // 
+            this.buttonIngresar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonIngresar.Location = new System.Drawing.Point(20, 607);
             this.buttonIngresar.Name = "buttonIngresar";
@@ -119,23 +118,18 @@
             this.buttonIngresar.TabIndex = 5;
             this.buttonIngresar.Text = "INGRESAR";
             this.buttonIngresar.UseVisualStyleBackColor = true;
-            this.buttonIngresar.Click += new System.EventHandler(this.button1_Click);
+            this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
             // 
-            // dataGridView1
+            // dgProdComanda
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 108);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(345, 447);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgProdComanda.AllowUserToAddRows = false;
+            this.dgProdComanda.AllowUserToDeleteRows = false;
+            this.dgProdComanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProdComanda.Location = new System.Drawing.Point(20, 108);
+            this.dgProdComanda.Name = "dgProdComanda";
+            this.dgProdComanda.ReadOnly = true;
+            this.dgProdComanda.Size = new System.Drawing.Size(345, 447);
+            this.dgProdComanda.TabIndex = 4;
             // 
             // labelNombreGarzon
             // 
@@ -146,7 +140,6 @@
             this.labelNombreGarzon.Size = new System.Drawing.Size(100, 17);
             this.labelNombreGarzon.TabIndex = 3;
             this.labelNombreGarzon.Text = "NOMGARZON";
-            this.labelNombreGarzon.Click += new System.EventHandler(this.labelGarzonNom_Click);
             // 
             // labelGarzon
             // 
@@ -157,7 +150,6 @@
             this.labelGarzon.Size = new System.Drawing.Size(63, 17);
             this.labelGarzon.TabIndex = 2;
             this.labelGarzon.Text = "Garzon :";
-            this.labelGarzon.Click += new System.EventHandler(this.labelGarzon_Click);
             // 
             // labelNumMesa
             // 
@@ -168,7 +160,6 @@
             this.labelNumMesa.Size = new System.Drawing.Size(39, 17);
             this.labelNumMesa.TabIndex = 1;
             this.labelNumMesa.Text = "NUM";
-            this.labelNumMesa.Click += new System.EventHandler(this.labelMesaNum_Click);
             // 
             // labelMesa
             // 
@@ -179,73 +170,6 @@
             this.labelMesa.Size = new System.Drawing.Size(69, 17);
             this.labelMesa.TabIndex = 0;
             this.labelMesa.Text = "Mesa Nº: ";
-            this.labelMesa.Click += new System.EventHandler(this.labelMesa_Click);
-            // 
-            // panelProductos
-            // 
-            this.panelProductos.Controls.Add(this.button1);
-            this.panelProductos.Controls.Add(this.label1);
-            this.panelProductos.Controls.Add(this.textBox1);
-            this.panelProductos.Controls.Add(this.buttonAgregar);
-            this.panelProductos.Controls.Add(this.labelCategoria);
-            this.panelProductos.Controls.Add(this.dgProductos);
-            this.panelProductos.Location = new System.Drawing.Point(412, 3);
-            this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(926, 724);
-            this.panelProductos.TabIndex = 18;
-            this.panelProductos.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.Location = new System.Drawing.Point(679, 299);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "CANTIDAD:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBox1.Location = new System.Drawing.Point(783, 297);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "1";
-            // 
-            // buttonAgregar
-            // 
-            this.buttonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.Location = new System.Drawing.Point(706, 176);
-            this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(128, 51);
-            this.buttonAgregar.TabIndex = 8;
-            this.buttonAgregar.Text = "Agregar";
-            this.buttonAgregar.UseVisualStyleBackColor = true;
-            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
-            // 
-            // labelCategoria
-            // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.labelCategoria.Location = new System.Drawing.Point(276, 37);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(189, 31);
-            this.labelCategoria.TabIndex = 6;
-            this.labelCategoria.Text = "PRODUCTOS";
-            // 
-            // dgProductos
-            // 
-            this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(80, 105);
-            this.dgProductos.Name = "dgProductos";
-            this.dgProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgProductos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgProductos.RowTemplate.Height = 50;
-            this.dgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProductos.Size = new System.Drawing.Size(563, 447);
-            this.dgProductos.TabIndex = 5;
             // 
             // panelCategoria
             // 
@@ -262,9 +186,9 @@
             this.panelCategoria.Controls.Add(this.button6);
             this.panelCategoria.Controls.Add(this.button4);
             this.panelCategoria.Controls.Add(this.button3);
-            this.panelCategoria.Location = new System.Drawing.Point(412, 3);
+            this.panelCategoria.Location = new System.Drawing.Point(421, 3);
             this.panelCategoria.Name = "panelCategoria";
-            this.panelCategoria.Size = new System.Drawing.Size(917, 706);
+            this.panelCategoria.Size = new System.Drawing.Size(905, 790);
             this.panelCategoria.TabIndex = 1;
             this.panelCategoria.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -410,41 +334,112 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Column1
+            // panelProductos
             // 
-            this.Column1.HeaderText = "NOMBRE";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.panelProductos.Controls.Add(this.button2);
+            this.panelProductos.Controls.Add(this.button15);
+            this.panelProductos.Controls.Add(this.button1);
+            this.panelProductos.Controls.Add(this.label1);
+            this.panelProductos.Controls.Add(this.textBox1);
+            this.panelProductos.Controls.Add(this.buttonAgregar);
+            this.panelProductos.Controls.Add(this.labelCategoria);
+            this.panelProductos.Controls.Add(this.dgProductos);
+            this.panelProductos.Location = new System.Drawing.Point(421, 3);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(926, 693);
+            this.panelProductos.TabIndex = 18;
+            this.panelProductos.Visible = false;
             // 
-            // Column2
+            // button2
             // 
-            this.Column2.HeaderText = "CANTIDAD";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(697, 303);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 35);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // Column3
+            // button15
             // 
-            this.Column3.HeaderText = "PRECIO";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Location = new System.Drawing.Point(840, 303);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(42, 35);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "+";
+            this.button15.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(706, 389);
+            this.button1.Location = new System.Drawing.Point(730, 397);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 51);
             this.button1.TabIndex = 12;
             this.button1.Text = "Volver";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.buttonVolver_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(745, 272);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "CANTIDAD:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(758, 303);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(67, 35);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "1";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonAgregar
+            // 
+            this.buttonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregar.Location = new System.Drawing.Point(730, 176);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(128, 51);
+            this.buttonAgregar.TabIndex = 8;
+            this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.labelCategoria.Location = new System.Drawing.Point(276, 37);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(189, 31);
+            this.labelCategoria.TabIndex = 6;
+            this.labelCategoria.Text = "PRODUCTOS";
+            // 
+            // dgProductos
+            // 
+            this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProductos.Location = new System.Drawing.Point(80, 105);
+            this.dgProductos.Name = "dgProductos";
+            this.dgProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgProductos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgProductos.RowTemplate.Height = 50;
+            this.dgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgProductos.Size = new System.Drawing.Size(563, 447);
+            this.dgProductos.TabIndex = 5;
             // 
             // ComandaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 730);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelProductosComanda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComandaUI";
@@ -452,14 +447,14 @@
             this.Text = "SMIAV Bares 1.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ComandaUI_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelProductosComanda.ResumeLayout(false);
+            this.panelProductosComanda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProdComanda)).EndInit();
+            this.panelCategoria.ResumeLayout(false);
+            this.panelCategoria.PerformLayout();
             this.panelProductos.ResumeLayout(false);
             this.panelProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
-            this.panelCategoria.ResumeLayout(false);
-            this.panelCategoria.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,13 +462,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelProductosComanda;
         private System.Windows.Forms.Label labelNombreGarzon;
         private System.Windows.Forms.Label labelGarzon;
         private System.Windows.Forms.Label labelNumMesa;
         private System.Windows.Forms.Label labelMesa;
         private System.Windows.Forms.Panel panelCategoria;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonIngresar;
         private System.Windows.Forms.Button button4;
@@ -496,9 +490,9 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button button1;
+        protected System.Windows.Forms.DataGridView dgProdComanda;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button15;
     }
 }
