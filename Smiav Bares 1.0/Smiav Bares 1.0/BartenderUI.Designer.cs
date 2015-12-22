@@ -33,9 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.smiav_dbDataSet6 = new Smiav_Bares_1._0.smiav_dbDataSet6();
-            this.comandaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comandaTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet6TableAdapters.comandaTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idventacomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rutgarzonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +40,16 @@
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comentarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comandaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smiav_dbDataSet6 = new Smiav_Bares_1._0.smiav_dbDataSet6();
+            this.comandaTableAdapter = new Smiav_Bares_1._0.smiav_dbDataSet6TableAdapters.comandaTableAdapter();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelNombreBartender = new System.Windows.Forms.Label();
             this.labelTextoPiso = new System.Windows.Forms.Label();
             this.labelPiso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,20 +88,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(864, 548);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // smiav_dbDataSet6
-            // 
-            this.smiav_dbDataSet6.DataSetName = "smiav_dbDataSet6";
-            this.smiav_dbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comandaBindingSource
-            // 
-            this.comandaBindingSource.DataMember = "comanda";
-            this.comandaBindingSource.DataSource = this.smiav_dbDataSet6;
-            // 
-            // comandaTableAdapter
-            // 
-            this.comandaTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -146,6 +132,20 @@
             this.comentarioDataGridViewTextBoxColumn.DataPropertyName = "comentario";
             this.comentarioDataGridViewTextBoxColumn.HeaderText = "comentario";
             this.comentarioDataGridViewTextBoxColumn.Name = "comentarioDataGridViewTextBoxColumn";
+            // 
+            // comandaBindingSource
+            // 
+            this.comandaBindingSource.DataMember = "comanda";
+            this.comandaBindingSource.DataSource = this.smiav_dbDataSet6;
+            // 
+            // smiav_dbDataSet6
+            // 
+            this.smiav_dbDataSet6.DataSetName = "smiav_dbDataSet6";
+            this.smiav_dbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comandaTableAdapter
+            // 
+            this.comandaTableAdapter.ClearBeforeFill = true;
             // 
             // labelNombre
             // 
@@ -207,8 +207,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BartenderUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comandaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smiav_dbDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

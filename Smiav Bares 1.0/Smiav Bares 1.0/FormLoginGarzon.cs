@@ -14,11 +14,15 @@ namespace Smiav_Bares_1._0
     public partial class FormLoginGarzon : Form
     {
         private int mesa;
-        public FormLoginGarzon(int mesa)
+        private string garzon;
+        private string comanda;
+        public FormLoginGarzon(int mesa, string comanda, string garzon)
         {
             InitializeComponent();
             this.TopMost = true;
             this.mesa = mesa;
+            this.comanda = comanda;
+            this.garzon = garzon;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -120,20 +124,48 @@ namespace Smiav_Bares_1._0
                 List<string> usuario = c.SelectUsuario(clave);
                 int cont = c.CountUsuario(clave, "clave");
 
-                if (cont == 1 && usuario[0].Equals("GARZÓN"))
+                Console.WriteLine("nomgarzon: "+ garzon);
+                
+                //nombre del garzon, usuario
+                if(garzon == null)
                 {
-                    //cierra la ventana actual y muestra la siguiente
-                    this.Hide();                
-                                                       
-                    //Abrir Comanda
-                    ComandaUI l = new ComandaUI(usuario[1],mesa);
-                    l.Visible = true;
+                    if (cont == 1 && usuario[0].Equals("GARZÓN"))
+                    {
+                        //cierra la ventana actual y muestra la siguiente
+                        this.Hide();
+
+                        //Abrir Comanda
+                        ComandaUI l = new ComandaUI(usuario[1], mesa);
+                        l.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Clave Inválida", "Inicio de sesión fallida",
+                        MessageBoxButtons.OK);
+                    }
                 }
-                else
+                
+
+                if (garzon != null)
                 {
-                    MessageBox.Show(this, "Clave Inválida", "Inicio de sesión fallida",
-                    MessageBoxButtons.OK);
+                    Console.WriteLine("usuario: "+usuario[1]+" garzon: "+garzon);
+                    if (cont == 1 && usuario[0].Equals("GARZÓN") && usuario[1].Equals(garzon))
+                    {
+                        //cierra la ventana actual y muestra la siguiente
+                        this.Hide();
+
+                        //Abrir Comanda
+                        ComandaUI l = new ComandaUI(usuario[1], mesa);
+                        l.Visible = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("user=garzon");
+                        MessageBox.Show(this, "Clave Inválida", "Inicio de sesión fallida",
+                        MessageBoxButtons.OK);
+                    }
                 }
+                
             }
             else
             {

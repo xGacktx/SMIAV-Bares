@@ -11,19 +11,34 @@ using ConnectCsharpToMysql;
 
 namespace Smiav_Bares_1._0
 {
-    public partial class GarzonUI1P : Form 
+    public partial class GarzonUI1P : Form
     {
-        private int mesaActiva,i;        
+        private int mesaActiva;
+        //cantidad de mesas en la interfaz 1er piso
+        private static int cantMesas = 10;
+        //arreglo de datos de mesas donde se guardaran la comanda(id) y garzon(nick)
+        private string[,] mesas = new string[cantMesas+1, 2];
+
         public GarzonUI1P()
         {
             InitializeComponent();
             //comentario para commit           
-         
-        }           
 
+        }
+
+        //abre un "listener" que verifica el final de n proceso(en este caso el de el ingreso de una comanda)
         private void GarzonUI_Load(object sender, EventArgs e)
         {
+            CompleteEvents.Complete += new CompleteEvents.CompleteHandler(CompleteEvents_Complete);
+        }
 
+        //cuando el proceso de completa, se llama a este metodo y recibe los datos del ingreso de la comanda
+        void CompleteEvents_Complete(CompleteEventArgs args)
+        {
+            Console.WriteLine(string.Format("La operacion se completó correctamente \n Resultado: mesa:{0} comanda:{1} garzon:{2}", args.Mesa, args.Comanda, args.Garzon));
+            // cargo los campos de comanda(id) y garzon(nombre) al arreglo de mesas
+            mesas[args.Mesa, 0] = args.Comanda;
+            mesas[args.Mesa, 1] = args.Garzon;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -42,183 +57,72 @@ namespace Smiav_Bares_1._0
                     break;
             }
         }
-        // ###### Botones Mesas ######33
+
+        // ###### Botones Mesas ######
         private void buttonMesa1_Click(object sender, EventArgs e)
-        {           
-            FormLoginGarzon L = new FormLoginGarzon(1);
+        {
+            FormLoginGarzon L = new FormLoginGarzon(1, mesas[1, 0], mesas[1, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa2_Click(object sender, EventArgs e)
         {
-            FormLoginGarzon L = new FormLoginGarzon(2);
+            FormLoginGarzon L = new FormLoginGarzon(2, mesas[2, 0], mesas[2, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa3_Click(object sender, EventArgs e)
         {
-            FormLoginGarzon L = new FormLoginGarzon(3);
+            FormLoginGarzon L = new FormLoginGarzon(3, mesas[3, 0], mesas[3, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa4_Click(object sender, EventArgs e)
         {
-            FormLoginGarzon L = new FormLoginGarzon(4);
+            FormLoginGarzon L = new FormLoginGarzon(4, mesas[4, 0], mesas[4, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa5_Click(object sender, EventArgs e)
         {
-           
-            //FormLoginGarzon caca = new FormLoginGarzon(5);
-            ComandaUI caca = new ComandaUI("caca", 9);
-            //caca.Visible = true;
-            DialogResult res = caca.ShowDialog();
-            if (res == DialogResult.OK) Console.WriteLine(caca.datosEntreForm);
-           // string caca = L.datosEntreForm;
-            
+
+            FormLoginGarzon L = new FormLoginGarzon(5, mesas[5, 0], mesas[5, 1]);
+            L.Visible = true;
+
         }
 
         private void buttonMesa6_Click(object sender, EventArgs e)
         {
-            FormLoginGarzon L = new FormLoginGarzon(6);
+            FormLoginGarzon L = new FormLoginGarzon(6, mesas[6, 0], mesas[6, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa7_Click(object sender, EventArgs e)
         {
-            FormLoginGarzon L = new FormLoginGarzon(7);
+            FormLoginGarzon L = new FormLoginGarzon(7, mesas[7, 0], mesas[7, 1]);
             L.Visible = true;
         }
-        
+
         private void buttonMesa8_Click(object sender, EventArgs e)
-        {            
-            FormLoginGarzon L = new FormLoginGarzon(8);
+        {
+            FormLoginGarzon L = new FormLoginGarzon(8, mesas[8, 0], mesas[8, 1]);
             L.Visible = true;
         }
 
         private void buttonMesa9_Click(object sender, EventArgs e)
         {
-            /*FormLoginGarzon L = new FormLoginGarzon(9);
-            L.Visible = true;*/
+            FormLoginGarzon L = new FormLoginGarzon(9, mesas[9, 0], mesas[9, 1]);
+            L.Visible = true;
             mesaActiva = 9;
-            panelLogin.Visible = true;
+            //panelLogin.Visible = true;
         }
         private void buttonMesa10_Click(object sender, EventArgs e)
         {
-            /*FormLoginGarzon L = new FormLoginGarzon(10);
-            L.Visible = true;*/
+            FormLoginGarzon L = new FormLoginGarzon(10, mesas[10, 0], mesas[10, 1]);
+            L.Visible = true;
             mesaActiva = 10;
-            //if (estadoMesa[9] == true) buttonMesa9.BackColor = Color.Red;
-            panelLogin.Visible = true;
         }
         // ######## Fin Botones Mesas #############
-             
-        // ########  Codigo LOGIN Garzon  ##########
-        private void button0_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "0";
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "1";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "2";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "3";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "4";
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "5";
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "6";
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "7";
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "8";
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length < 4)
-                textBoxPassword.Text = textBoxPassword.Text + "9";
-        }
-
-        private void buttonOk_Click(object sender, EventArgs e)
-        {
-            // LOGIN
-            DBConnect c = new DBConnect();
-            string clave = textBoxPassword.Text;
-
-            if (!clave.Equals(""))
-            {
-
-                List<string> usuario = c.SelectUsuario(clave);
-                int cont = c.CountUsuario(clave, "clave");
-
-                if (cont == 1 && usuario[0].Equals("GARZÓN"))
-                {
-                    
-                    //Abrir Comanda
-                    ComandaUI l = new ComandaUI(1,usuario[1], mesaActiva);
-                    l.Visible = true;
-                    textBoxPassword.Text = "";
-                    panelLogin.Visible = false;
-                }
-                else
-                {
-                    MessageBox.Show(this, "Clave Inválida", "Inicio de sesión fallida",
-                    MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show(this, "Ingrese su clave", "Inicio de sesión fallida",
-                MessageBoxButtons.OK);
-            }
-        }
-
-        private void buttonBorrar_Click(object sender, EventArgs e)
-        {
-            if (textBoxPassword.Text.Length > 0)
-                textBoxPassword.Text = textBoxPassword.Text.Substring(0, textBoxPassword.Text.Length - 1);
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            panelLogin.Visible = false;
-        }
     }
-    //################# Fin Login ###############
 }

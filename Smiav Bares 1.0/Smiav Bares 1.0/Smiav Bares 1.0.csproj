@@ -68,6 +68,7 @@
       <DependentUpon>CajeraUI.cs</DependentUpon>
     </Compile>
     <Compile Include="ComandaConnect.cs" />
+    <Compile Include="Events.cs" />
     <Compile Include="FormCantidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,7 @@
     </Compile>
     <Compile Include="InsumoConnect.cs" />
     <Compile Include="ProductoConnect.cs" />
+    <Compile Include="RecolectaDatos.cs" />
     <Compile Include="smiav_dbDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
