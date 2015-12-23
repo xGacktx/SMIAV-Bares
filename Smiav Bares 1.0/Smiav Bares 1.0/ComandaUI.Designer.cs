@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComandaUI));
             this.panelProductosComanda = new System.Windows.Forms.Panel();
             this.labelProductoComanda = new System.Windows.Forms.Label();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
             this.dgProdComanda = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelNombreGarzon = new System.Windows.Forms.Label();
             this.labelGarzon = new System.Windows.Forms.Label();
             this.labelNumMesa = new System.Windows.Forms.Label();
@@ -61,9 +66,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelProductosComanda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProdComanda)).BeginInit();
             this.panelProductos.SuspendLayout();
@@ -119,7 +121,7 @@
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(150, 65);
             this.buttonIngresar.TabIndex = 5;
-            this.buttonIngresar.Text = "INGRESAR";
+            this.buttonIngresar.Text = "CANCELAR";
             this.buttonIngresar.UseVisualStyleBackColor = true;
             this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
             // 
@@ -127,6 +129,14 @@
             // 
             this.dgProdComanda.AllowUserToAddRows = false;
             this.dgProdComanda.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProdComanda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProdComanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProdComanda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -135,48 +145,75 @@
             this.dgProdComanda.Location = new System.Drawing.Point(20, 108);
             this.dgProdComanda.Name = "dgProdComanda";
             this.dgProdComanda.ReadOnly = true;
-            this.dgProdComanda.Size = new System.Drawing.Size(345, 447);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProdComanda.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgProdComanda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgProdComanda.Size = new System.Drawing.Size(380, 447);
             this.dgProdComanda.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "NOMBRE";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "CANTIDAD";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PRECIO";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // labelNombreGarzon
             // 
             this.labelNombreGarzon.AutoSize = true;
-            this.labelNombreGarzon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelNombreGarzon.Location = new System.Drawing.Point(265, 64);
+            this.labelNombreGarzon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelNombreGarzon.Location = new System.Drawing.Point(282, 66);
             this.labelNombreGarzon.Name = "labelNombreGarzon";
-            this.labelNombreGarzon.Size = new System.Drawing.Size(100, 17);
+            this.labelNombreGarzon.Size = new System.Drawing.Size(118, 20);
             this.labelNombreGarzon.TabIndex = 3;
             this.labelNombreGarzon.Text = "NOMGARZON";
             // 
             // labelGarzon
             // 
             this.labelGarzon.AutoSize = true;
-            this.labelGarzon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelGarzon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelGarzon.Location = new System.Drawing.Point(196, 64);
             this.labelGarzon.Name = "labelGarzon";
-            this.labelGarzon.Size = new System.Drawing.Size(63, 17);
+            this.labelGarzon.Size = new System.Drawing.Size(89, 20);
             this.labelGarzon.TabIndex = 2;
-            this.labelGarzon.Text = "Garzon :";
+            this.labelGarzon.Text = "GARZÓN :";
             // 
             // labelNumMesa
             // 
             this.labelNumMesa.AutoSize = true;
-            this.labelNumMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelNumMesa.Location = new System.Drawing.Point(92, 64);
+            this.labelNumMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelNumMesa.Location = new System.Drawing.Point(101, 66);
             this.labelNumMesa.Name = "labelNumMesa";
-            this.labelNumMesa.Size = new System.Drawing.Size(39, 17);
+            this.labelNumMesa.Size = new System.Drawing.Size(47, 20);
             this.labelNumMesa.TabIndex = 1;
             this.labelNumMesa.Text = "NUM";
             // 
             // labelMesa
             // 
             this.labelMesa.AutoSize = true;
-            this.labelMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.labelMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelMesa.Location = new System.Drawing.Point(17, 64);
             this.labelMesa.Name = "labelMesa";
-            this.labelMesa.Size = new System.Drawing.Size(69, 17);
+            this.labelMesa.Size = new System.Drawing.Size(89, 20);
             this.labelMesa.TabIndex = 0;
-            this.labelMesa.Text = "Mesa Nº: ";
+            this.labelMesa.Text = "MESA Nº: ";
             // 
             // panelProductos
             // 
@@ -442,24 +479,6 @@
             this.button3.Text = "CERVEZA";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "NOMBRE";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "CANTIDAD";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PRECIO";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // ComandaUI
             // 

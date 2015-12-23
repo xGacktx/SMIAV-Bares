@@ -15,7 +15,7 @@ namespace Smiav_Bares_1._0
     public partial class ComandaUI : Form
     {
         private string nombreGarzon;
-        private int mesa, n, fila = 0;
+        private int mesa, n, fila = 0, cantProdAgregados = 0;
         public string datosEntreForm;
         private string idComanda;
         private string nom_prod, id_com, id_prod, cantidad, tipo_venta, precio, rut_garzon;
@@ -89,46 +89,99 @@ namespace Smiav_Bares_1._0
                     precio = cantProd*precioProd;
 
                     dgProdComanda.Rows.Add();
+                    dgProdComanda.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
                     dgProdComanda.Rows[i].Cells[0].Value = nomProd;
                     dgProdComanda.Rows[i].Cells[1].Value = cantProd;
                     dgProdComanda.Rows[i].Cells[2].Value = precio;
-                    dgProdComanda.Update();
+                    fila++;
                 }
+                dgProdComanda.Update();
             }
-            
-            
            
         }
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
-            DatosComanda datos = DatosComanda.Instance();
-            ComandaConnect cc = new ComandaConnect();
-            string rutgarzon = cc.SelectRutGarzon(nombreGarzon);
-            //agrega la comanda
-            string comanda = cc.InsertComanda(rutgarzon, mesa);
-            string nombre, cantidad, idprod;
-            int cantProductos = dgProdComanda.Rows.Count;
 
-            for (int i = 0; i < cantProductos; i++)
+            if(buttonIngresar.Text.Equals("ENVIAR"))
             {
-                nombre = dgProdComanda.Rows[i].Cells[0].Value.ToString();
-                Console.WriteLine("nomprod:"+nombre);
-                idprod = cc.SelectIDProducto(nombre);
-                Console.WriteLine("idprod: "+idprod);
-                cantidad = dgProdComanda.Rows[i].Cells[1].Value.ToString();
-                cc.InsertProdComanda(comanda, idprod, cantidad, "comanda");
-                Console.WriteLine(i);
-            }
-           
+                if(idComanda == null)
+                {
+                    DatosComanda datos = DatosComanda.Instance();
+                    ComandaConnect cc = new ComandaConnect();
+                    string rutgarzon = cc.SelectRutGarzon(nombreGarzon);
+                    //agrega la comanda
+                    string comanda = cc.InsertComanda(rutgarzon, mesa);
+                    string nombre, cantidad, idprod;
+                    int cantProductos = dgProdComanda.Rows.Count;
 
+                    for (int i = 0; i < cantProductos; i++)
+                    {
+                        nombre = dgProdComanda.Rows[i].Cells[0].Value.ToString();
+                        Console.WriteLine("nomprod:" + nombre);
+                        idprod = cc.SelectIDProducto(nombre);
+                        Console.WriteLine("idprod: " + idprod);
+                        cantidad = dgProdComanda.Rows[i].Cells[1].Value.ToString();
+                        cc.InsertProdComanda(comanda, idprod, cantidad, "comanda");
+                        Console.WriteLine(i);
+                    }
+
+                    CompleteEvents.RaiseEvent(mesa, comanda, nombreGarzon);
+                    //enviar informacion a la mierda de mesas
+                    this.Close();
+                }
+                else
+                {
+                    string idprod, nombreProd;
+                    
+                    Console.WriteLine("hay COmanda: "+idComanda);
+                    ComandaConnect cc = new ComandaConnect();
+                    int cantProductos = dgProdComanda.Rows.Count;
+                    for (int i = 0; i < cantProductos; i++)
+                    {
+                        if(dgProdComanda.Rows[i].DefaultCellStyle.BackColor != Color.LightGreen)
+                        {
+                            Console.WriteLine("fila");
+                            nombreProd = dgProdComanda.Rows[i].Cells[0].Value.ToString();
+                            idprod = cc.SelectIDProducto(nombreProd);
+                            cantidad = dgProdComanda.Rows[i].Cells[1].Value.ToString();
+                            cc.InsertProdComanda(idComanda, idprod, cantidad, "comanda");
+                        }
+                        
+                    }
+                    this.Close();
+                    
+                }
+                
+            }
+            else
+            {
+                this.Close();
+            }
             
-            CompleteEvents.RaiseEvent(mesa, comanda, nombreGarzon);
-            //enviar informacion a la mierda de mesas
-            this.Close();
         }
         private void button2_Eliminar(object sender, EventArgs e)
         {
+            if (dgProdComanda.SelectedRows.Count == 1)
+            {
+                if(dgProdComanda.SelectedRows[0].DefaultCellStyle.BackColor != Color.LightGreen){
+                    dgProdComanda.Rows.RemoveAt(dgProdComanda.SelectedRows[0].Index);
+                    fila--;
+                    cantProdAgregados--;
+                    if(cantProdAgregados == 0)
+                    {
+                        buttonIngresar.Text = "CANCELAR"; 
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error, seleccione un fila nueva");
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Error, seleccione un fila");
+            }
             //Eliminar producto de forma local sin haber ingresado a la comanda aun
             //Hay que hacer el caso de eliminar un producto que ya este ingresado en comanda para que despliegue el login administradora
         }
@@ -165,7 +218,9 @@ namespace Smiav_Bares_1._0
                 dgProdComanda.Update();
                 fila++;
                 textBox1.Text = "1";
+                cantProdAgregados++;
             }
+            buttonIngresar.Text = "ENVIAR" ;
             
         }
 
