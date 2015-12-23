@@ -74,10 +74,19 @@ namespace Smiav_Bares_1._0
                         L.Show();
                     }
 
+                    //ingreso admin para administrar comandas
+                    if (categoria == 4)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        //mensaje de bienvenida
+                        MessageBox.Show(this, "Bienvenida(o) " + usuario[1], "Inicio de sesión exitoso",
+                        MessageBoxButtons.OK);
+                    }
 
-                    //mensaje de bienvenida
-                    MessageBox.Show(this, "Bienvenida(o) " + usuario[1], "Inicio de sesión exitoso",
-                    MessageBoxButtons.OK);
+                    
                 }
                 else 
                 {

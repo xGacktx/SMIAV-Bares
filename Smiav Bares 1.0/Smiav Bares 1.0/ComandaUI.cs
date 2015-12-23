@@ -15,7 +15,7 @@ namespace Smiav_Bares_1._0
     public partial class ComandaUI : Form
     {
         private string nombreGarzon;
-        private int mesa, n, fila = 0, cantProdAgregados = 0;
+        private int mesa, n, fila = 0, cantProdAgregados = 0, total = 0;
         public string datosEntreForm;
         private string idComanda;
         private string nom_prod, id_com, id_prod, cantidad, tipo_venta, precio, rut_garzon;
@@ -39,7 +39,7 @@ namespace Smiav_Bares_1._0
            
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        /*protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
 
@@ -54,7 +54,7 @@ namespace Smiav_Bares_1._0
                 default:
                     break;
             }
-        }
+        }*/
 
         private void ComandaUI_Load(object sender, EventArgs e)
         {
@@ -90,11 +90,14 @@ namespace Smiav_Bares_1._0
 
                     dgProdComanda.Rows.Add();
                     dgProdComanda.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                    dgProdComanda.Rows[i].DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, 12.0F, FontStyle.Regular);
                     dgProdComanda.Rows[i].Cells[0].Value = nomProd;
                     dgProdComanda.Rows[i].Cells[1].Value = cantProd;
                     dgProdComanda.Rows[i].Cells[2].Value = precio;
                     fila++;
+                    total += precio;
                 }
+                label3.Text = total + "";
                 dgProdComanda.Update();
             }
            
@@ -165,6 +168,10 @@ namespace Smiav_Bares_1._0
             if (dgProdComanda.SelectedRows.Count == 1)
             {
                 if(dgProdComanda.SelectedRows[0].DefaultCellStyle.BackColor != Color.LightGreen){
+                    int totmenos;
+                    int.TryParse(dgProdComanda.SelectedRows[0].Cells[2].Value.ToString(), out totmenos);
+                    total -= totmenos;
+                    label3.Text = total + "";
                     dgProdComanda.Rows.RemoveAt(dgProdComanda.SelectedRows[0].Index);
                     fila--;
                     cantProdAgregados--;
@@ -175,6 +182,7 @@ namespace Smiav_Bares_1._0
                 }
                 else
                 {
+                    MessageBox.Show(this, "Seleccione un Fila Nueva", "Error", MessageBoxButtons.OK);
                     Console.WriteLine("Error, seleccione un fila nueva");
                 }
             }
@@ -211,9 +219,11 @@ namespace Smiav_Bares_1._0
             {
                 //Console.WriteLine("sonnumeros");
                 dgProdComanda.Rows.Add();
+                dgProdComanda.Rows[fila].DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, 12.0F, FontStyle.Regular);
                 dgProdComanda.Rows[fila].Cells[0].Value = nom_prod;
                 dgProdComanda.Rows[fila].Cells[1].Value = cant;
                 total = total * cant;
+                this.total += total;
                 dgProdComanda.Rows[fila].Cells[2].Value = total ;
                 dgProdComanda.Update();
                 fila++;
@@ -221,6 +231,7 @@ namespace Smiav_Bares_1._0
                 cantProdAgregados++;
             }
             buttonIngresar.Text = "ENVIAR" ;
+            label3.Text = this.total+"";
             
         }
 
@@ -329,6 +340,26 @@ namespace Smiav_Bares_1._0
                     textBox1.Text = n + "";
                 }
             }   
+        }
+
+        //boton pedir cuenta
+        private void button16_Click(object sender, EventArgs e)
+        {
+            
+            switch (MessageBox.Show(this, "¿Esta SEGURO que desea pedir la cuenta para esta Comanda?", "Confirmacíon", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.Yes:
+                    this.Close();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            LoginAdmin l = new LoginAdmin(4);
+            l.Show();
         }
         
        // ############### Fin Panel categoria ##############

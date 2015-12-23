@@ -30,7 +30,7 @@ namespace Smiav_Bares_1._0
             else
             {
                 this.Hide();
-                BartenderUI L = new BartenderUI();
+                BartenderUI L = new BartenderUI(1);
                 L.Closed += (s, args) => this.Close();
                 L.Show();
             }
