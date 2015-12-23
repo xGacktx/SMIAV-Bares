@@ -135,7 +135,7 @@ namespace Smiav_Bares_1._0
                         this.Hide();
 
                         //Abrir Comanda
-                        ComandaUI l = new ComandaUI(usuario[1], mesa);
+                        ComandaUI l = new ComandaUI(usuario[1], mesa, comanda);
                         l.Visible = true;
                     }
                     else
@@ -155,7 +155,7 @@ namespace Smiav_Bares_1._0
                         this.Hide();
 
                         //Abrir Comanda
-                        ComandaUI l = new ComandaUI(usuario[1], mesa);
+                        ComandaUI l = new ComandaUI(usuario[1], mesa, comanda);
                         l.Visible = true;
                     }
                     else

@@ -141,6 +141,126 @@ namespace ConnectCsharpToMysql
             }
         }
 
+        public string InsertComanda(string rutGarzon, int numMesa)
+        {
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+
+            //estado = 0 ->finalizada(pagada y shaooo)
+            //estado = 1 ->activa(en preparacion)
+            //estado = 2 ->lista(preparada)
+            //estado = 3 ->cuenta pedida(por pagar)
+            string estado = "1";
+            string query = "INSERT INTO comanda (id, id_venta_com, rut_garzon, num_mesa, fecha, estado, comentario) VALUES(null, null,'" + rutGarzon + "','" + numMesa + "','" + sqlFormattedDate + "','" + estado + "', null)";
+            
+            if (this.OpenConnection() == true)
+            {
+                //create mysql command
+                MySqlCommand cmd = new MySqlCommand();
+                //Assign the query using CommandText
+                cmd.CommandText = query;
+                //Assign the connection using Connection
+                cmd.Connection = connection;
+
+                //Execute query
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+
+            string idComanda = SelectComanda(sqlFormattedDate, numMesa+"");
+
+
+            return idComanda;
+        }
+
+        public string SelectComanda(string fecha, string mesa)
+        {
+            string query = "SELECT id FROM comanda WHERE fecha = '" + fecha + "' AND num_mesa = '" + mesa + "'";
+
+            string idcomanda = "";
+            //Create a list to store the result
+
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+                    idcomanda = dataReader["id"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return idcomanda;
+            }
+            else
+            {
+                return idcomanda;
+            }
+ 
+
+        }
+
+        public string SelectRutGarzon(string nick)
+        {
+            string query = "SELECT rut FROM usuario WHERE nick = '" + nick + "'";
+
+            //Create a list to store the result
+            string rutGarzon = "";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+
+                    rutGarzon = dataReader["rut"].ToString();
+
+                    //Console.WriteLine(cargo+" "+nick);
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return rutGarzon;
+            }
+            else
+            {
+                return rutGarzon;
+            }
+        }
+
         //Agregar Insumos a un Producto (receta)
         public void agregarInsumo(string ID_Producto, string ID_Insumo, string volumen)
         {
@@ -207,15 +327,14 @@ namespace ConnectCsharpToMysql
 
         }
 
-        /*       
+            
        //Select statement
-       public List<string> SelectProducto(string clave)
+       public string SelectIDProducto(string clave)
        {
-           string query = "SELECT * FROM producto WHERE tipo = '" + clave + "'";
+           string query = "SELECT id FROM producto WHERE nombre = '" + clave + "'";
 
-           //Create a list to store the result
-           List<string> list = new List<string>();
-
+           //Create a string to store the result
+           string id = "";  
            //Open connection
            if (this.OpenConnection() == true)
            {
@@ -224,19 +343,12 @@ namespace ConnectCsharpToMysql
                //Create a data reader and Execute the command
                MySqlDataReader dataReader = cmd.ExecuteReader();
 
-               string id,nombre,precio,precio_desc;  
+               
 
                //Read the data and store them in the list
                while (dataReader.Read())
                {
                    id = dataReader["id"].ToString();
-                   nombre = dataReader["nombre"].ToString();
-                   precio = dataReader["precio"].ToString();
-                   precio_desc = dataReader["precio_desc"].ToString();
-                   list.Add(id);
-                   list.Add(nombre);
-                   list.Add(precio);
-                   list.Add(precio_desc);
                }
                //close Data Reader
                dataReader.Close();
@@ -245,13 +357,13 @@ namespace ConnectCsharpToMysql
                this.CloseConnection();
 
                //return list to be displayed
-               return list;
+               return id;
            }
            else
            {
-               return list;
+               return id;
            }
-       }*/
+       }
 
         // retorna todos los datos del un usuario
         public List<string> SelectProductoFull(string ID)
@@ -307,22 +419,52 @@ namespace ConnectCsharpToMysql
         }
         
         // retorna todos los produtos de una comanda       
-        public BindingSource SelectProdComanda(int comanda)
+        public List<string[]> SelectProdComanda(string idcomanda)
         {
-            string query = @"SELECT prod.nombre, pa.cantidad ,prod.precio FROM producto prod INNER JOIN
-                            prod_atencion pa ON prod.id = pa.id_producto_pat
-                           WHERE (pa.id_comanda_pat = '" + comanda + "')";
-            //string query = @"Select * from insumo where (insumo.id = '" + comanda +"')";
-            MySqlDataAdapter MyDA = new MySqlDataAdapter();
-            MyDA.SelectCommand = new MySqlCommand(query, connection);
+            string query = "SELECT id_producto_pat, cantidad FROM prod_atencion WHERE id_comanda_pat = '" + idcomanda + "'";
 
-            DataTable table = new DataTable();
-            MyDA.Fill(table);
+            string idprod;
+            string cantidad;
 
-            BindingSource bSource = new BindingSource();
-            bSource.DataSource = table;
+            //Create a list of an string array to store the result(filas de productos con respectivos datos id y cantidad)
+            List<string[]> list = new List<string[]>();
 
-            return bSource;
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    //Console.WriteLine(String.Format("{0}, {1}",
+                    //dataReader.GetString(0), dataReader.GetString(1))
+                    //);
+                    idprod = dataReader["id_producto_pat"].ToString();
+                    cantidad = dataReader["cantidad"].ToString();
+                    string[] prod = { idprod, cantidad };
+                    //Console.WriteLine(cargo+" "+nick);
+                    list.Add(prod);
+
+                }
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
         }
         
 

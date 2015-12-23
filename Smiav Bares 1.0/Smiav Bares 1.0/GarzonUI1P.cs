@@ -17,7 +17,7 @@ namespace Smiav_Bares_1._0
         //cantidad de mesas en la interfaz 1er piso
         private static int cantMesas = 10;
         //arreglo de datos de mesas donde se guardaran la comanda(id) y garzon(nick)
-        private string[,] mesas = new string[cantMesas+1, 2];
+        private string[,] mesas = new string[cantMesas+1, 2]; 
 
         public GarzonUI1P()
         {
@@ -39,6 +39,52 @@ namespace Smiav_Bares_1._0
             // cargo los campos de comanda(id) y garzon(nombre) al arreglo de mesas
             mesas[args.Mesa, 0] = args.Comanda;
             mesas[args.Mesa, 1] = args.Garzon;
+            PintaMesas();
+                
+        }
+
+        private void PintaMesas()
+        {
+            if (mesas[1, 0] != null)
+            {
+                buttonMesa1.BackColor = Color.LightGreen;
+            }
+            if (mesas[2, 0] != null)
+            {
+                buttonMesa2.BackColor = Color.LightGreen;
+            }
+            if (mesas[3, 0] != null)
+            {
+                buttonMesa3.BackColor = Color.LightGreen;
+            }
+            if (mesas[4, 0] != null)
+            {
+                buttonMesa4.BackColor = Color.LightGreen;
+            }
+            if (mesas[5, 0] != null)
+            {
+                buttonMesa5.BackColor = Color.LightGreen;
+            }
+            if (mesas[6, 0] != null)
+            {
+                buttonMesa6.BackColor = Color.LightGreen;
+            }
+            if (mesas[7, 0] != null)
+            {
+                buttonMesa7.BackColor = Color.LightGreen;
+            }
+            if (mesas[8, 0] != null)
+            {
+                buttonMesa8.BackColor = Color.LightGreen;
+            }
+            if (mesas[9, 0] != null)
+            {
+                buttonMesa9.BackColor = Color.LightGreen;
+            }
+            if (mesas[10, 0] != null)
+            {
+                buttonMesa10.BackColor = Color.LightGreen;
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -113,14 +159,11 @@ namespace Smiav_Bares_1._0
         {
             FormLoginGarzon L = new FormLoginGarzon(9, mesas[9, 0], mesas[9, 1]);
             L.Visible = true;
-            mesaActiva = 9;
-            //panelLogin.Visible = true;
         }
         private void buttonMesa10_Click(object sender, EventArgs e)
         {
             FormLoginGarzon L = new FormLoginGarzon(10, mesas[10, 0], mesas[10, 1]);
             L.Visible = true;
-            mesaActiva = 10;
         }
         // ######## Fin Botones Mesas #############
 

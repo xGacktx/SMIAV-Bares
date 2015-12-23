@@ -17,29 +17,25 @@ namespace Smiav_Bares_1._0
         private string nombreGarzon;
         private int mesa, n, fila = 0;
         public string datosEntreForm;
-        private int idComanda;
+        private string idComanda;
         private string nom_prod, id_com, id_prod, cantidad, tipo_venta, precio, rut_garzon;
 
-        public ComandaUI(String nombreGarzon,int mesa)
+        public ComandaUI(string nombreGarzon,int mesa, string idComanda)
         {
             InitializeComponent();
             labelNombreGarzon.Text = nombreGarzon;
             labelNumMesa.Text = mesa+"";
             this.nombreGarzon = nombreGarzon;
             this.mesa = mesa;
+            this.idComanda = idComanda;
         }
         public ComandaUI(int id, String nombreGarzon, int mesa)
         {
             InitializeComponent();
-            this.idComanda = id;
+            this.idComanda = id+"";
+
             //codigo cargar datos
-            ComandaConnect sc = new ComandaConnect();
-            BindingSource bSource = sc.SelectProdComanda(1);
-            dgProdComanda.DataSource = bSource;
-            dgProdComanda.Columns[0].HeaderText = "NOMBRE";
-            dgProdComanda.Columns[0].Width = 140;
-            dgProdComanda.Columns[1].HeaderText = "CANTIDAD";
-            dgProdComanda.Columns[2].HeaderText = "PRECIO";
+            
            
         }
 
@@ -63,13 +59,71 @@ namespace Smiav_Bares_1._0
         private void ComandaUI_Load(object sender, EventArgs e)
         {
 
+            dgProdComanda.Columns[0].HeaderText = "NOMBRE";
+            dgProdComanda.Columns[0].Width = 140;
+            dgProdComanda.Columns[1].HeaderText = "CANTIDAD";
+            dgProdComanda.Columns[2].HeaderText = "PRECIO";
+
+            if(idComanda != null)
+            {
+                ComandaConnect cc = new ComandaConnect();
+                List<string[]> datosProdCom= cc.SelectProdComanda(idComanda);
+                string idProd;
+                string nomProd;
+                int cantProd, precioProd, precioProdDesc, precio;
+
+                int cantProdCom = datosProdCom.Count;
+            
+                for (int i = 0; i < cantProdCom; i++ )
+                {
+                    idProd = datosProdCom[i][0];
+                    int.TryParse(datosProdCom[i][1], out cantProd);
+
+                    List<string> datosProd = cc.SelectProductoFull(idProd);
+                
+                    nomProd = datosProd[1];
+                    int.TryParse(datosProd[2].ToString().Substring(0, datosProd[2].ToString().Length - 3) , out precioProd);
+                    int.TryParse(datosProd[3].ToString().Substring(0, datosProd[3].ToString().Length - 3), out precioProdDesc);
+
+                    Console.WriteLine("precioProd: "+precioProd+" cantProd: "+cantProd);
+                    precio = cantProd*precioProd;
+
+                    dgProdComanda.Rows.Add();
+                    dgProdComanda.Rows[i].Cells[0].Value = nomProd;
+                    dgProdComanda.Rows[i].Cells[1].Value = cantProd;
+                    dgProdComanda.Rows[i].Cells[2].Value = precio;
+                    dgProdComanda.Update();
+                }
+            }
+            
+            
+           
         }
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
             DatosComanda datos = DatosComanda.Instance();
-            CompleteEvents.RaiseEvent(mesa, "2", nombreGarzon);
-            // Ingresar Comanda comanda
+            ComandaConnect cc = new ComandaConnect();
+            string rutgarzon = cc.SelectRutGarzon(nombreGarzon);
+            //agrega la comanda
+            string comanda = cc.InsertComanda(rutgarzon, mesa);
+            string nombre, cantidad, idprod;
+            int cantProductos = dgProdComanda.Rows.Count;
+
+            for (int i = 0; i < cantProductos; i++)
+            {
+                nombre = dgProdComanda.Rows[i].Cells[0].Value.ToString();
+                Console.WriteLine("nomprod:"+nombre);
+                idprod = cc.SelectIDProducto(nombre);
+                Console.WriteLine("idprod: "+idprod);
+                cantidad = dgProdComanda.Rows[i].Cells[1].Value.ToString();
+                cc.InsertProdComanda(comanda, idprod, cantidad, "comanda");
+                Console.WriteLine(i);
+            }
+           
+
+            
+            CompleteEvents.RaiseEvent(mesa, comanda, nombreGarzon);
             //enviar informacion a la mierda de mesas
             this.Close();
         }

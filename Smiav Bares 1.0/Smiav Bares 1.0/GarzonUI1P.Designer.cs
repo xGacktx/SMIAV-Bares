@@ -61,7 +61,7 @@
             this.buttonMesa10.FlatAppearance.BorderSize = 0;
             this.buttonMesa10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMesa10.ForeColor = System.Drawing.Color.Black;
-            this.buttonMesa10.Location = new System.Drawing.Point(489, 130);
+            this.buttonMesa10.Location = new System.Drawing.Point(489, 135);
             this.buttonMesa10.Name = "buttonMesa10";
             this.buttonMesa10.Size = new System.Drawing.Size(164, 95);
             this.buttonMesa10.TabIndex = 16;
